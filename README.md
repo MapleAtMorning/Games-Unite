@@ -1,2 +1,2 @@
 # Games Unite
- Games Unite Website
+The github page for the Unoffical Games Unite Website
