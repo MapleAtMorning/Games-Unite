@@ -1,0 +1,56 @@
+/* Carousel Handler */
+#carouselHolder {
+	background-color: #2f2e31;
+	overflow: hidden;
+	position: relative;
+    z-index: 1;
+}
+
+#mainCarousel {
+	opacity: 0.6;
+    width: 100%;
+    transform: translate(0, -15em);
+	position: absolute;
+}
+
+#carouselContent {
+	position: relative;
+	text-align: center;
+	color: white;
+}
+#carouselContent h2 {filter: drop-shadow(0.2em 0.2em 0.1em #191d1f);}
+
+
+/* Main Hero */
+h1{
+    font-size: 5em;
+    font-weight: 700;
+	filter: drop-shadow(0.05em 0.05em 0.1em #191d1f);
+}
+
+#heroLogo{
+	max-height: 25em;
+	filter: drop-shadow(0.3em 0.3em 0.25em #191d1f);
+}
+
+
+/* Features / Body */
+
+#featuresTitle{
+	font-size: 3em;
+}
+
+#featuresParagraph{
+	font-size:1.5em;
+}
+
+#playNow{
+	background-color: #4bf5a3;
+	color: black;
+}
+
+#playNow:hover{background-color: #50ce91;}
+
+main{
+	padding-top: 4.7em;
+}

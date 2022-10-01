@@ -1,0 +1,41 @@
+h1,h2{text-align: center;}
+h1{font-size: 3.5em}
+h2{font-size:1.5em}
+
+#navScroller{
+    background-color:#192125;
+    width: 100%;
+    margin-top: 3.6em;
+}
+
+.dropdown-menu{
+    background-color:#192125;
+    margin-top: 1em;
+}
+
+h4~p {
+    margin-left: 0;
+    color: #cacaca;
+}
+
+.gotoPoint{text-align: center;}
+.gotoPoint a{text-decoration: none; color: #4bf5a3;}
+
+main{
+    margin-top: 10em;
+}
+
+.btn-success{
+    width: 7em;
+    margin: 0 0.6em 0 0.6em;
+    color: black;
+    --bs-btn-bg: #4bf5a3;
+    --bs-btn-hover-bg: #45bd83;
+    --bs-btn-active-color: #4bf5a3;
+    --bs-btn-border-color: #45bd83;
+    --bs-btn-hover-border-color: #46aa7a;
+}
+
+@media only screen and (min-width: 992px) {
+    h4~p {margin-left: 1.5em;}
+}
