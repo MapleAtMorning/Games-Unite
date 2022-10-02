@@ -15,10 +15,8 @@
         <link rel="stylesheet" href="styles/commands.css">
         <link rel="shortcut icon" href="img/placeLogoTransparent.png">
     </head>
-
     <body>
-
-        <header class="px-lg-5 py-2 vw-100 navbar navbar-dark gu-bg navbar-expand-lg fixed-top">
+        <header class="px-lg-5 py-2 navbar navbar-dark gu-bg navbar-expand-lg fixed-top">
             <div class="container-fluid">
                 <div class="navbar-brand">
                     <img class="headerLogo" src="img/placeLogoTransparent.png" alt="Games Unite Logo">
@@ -51,79 +49,87 @@
             <nav id="navScroller" class="navbar-expand-lg p-0 fixed-top">
                 <nav class="nav offcanvas offcanvas-start text-bg-dark p-2 ms-0 ms-lg-5 d-flex d-lg-block text-center" id="sidebarContent" aria-labelledby="sidebarContent">
                     <button type="button" class="btn-close btn-close-white d-lg-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                    <span class="dropdown-center my-3 my-lg-0 align-self-center w-100">
-                        <button class="btn btn-sm btn-success" type="button" data-bs-toggle="dropdown" data-bs-target="#bot_collapse" aria-expanded="false" aria-controls="bot_collapse">Bots</button>
-                        <ul class="dropdown-menu" id="bot_collapse">
-                            <li class="gotoPoint dropdown-item"><a href="#bot_add">bot_add</a></li>
-                            <li class="gotoPoint dropdown-item"><a href="#bot_kick">bot_kick</a></li>
-                            <li class="gotoPoint dropdown-item"><a href="#bot_mimic">bot_mimic</a></li>
-                            <li class="gotoPoint dropdown-item"><a href="#bot_stare">bot_stare</a></li>
-                            <li class="gotoPoint dropdown-item"><a href="#bot_thinker">bot_thinker</a></li>
-                            <li class="gotoPoint dropdown-item"><a href="#bot_zombie">bot_zombie</a></li>
-                        </ul>
+                    <span class="my-3 my-lg-0 align-self-center w-100">
+                        <span class="dropdown">
+                            <button class="btn btn-sm btn-success" type="button" data-bs-toggle="dropdown" data-bs-target="#bot_collapse" aria-expanded="false" aria-controls="bot_collapse">Bots</button>
+                            <ul class="dropdown-menu text-center" id="bot_collapse">
+                                <li><a href="javascript:scrollFunc('bot_add')">bot_add</a></li>
+                                <li><a href="javascript:scrollFunc('bot_kick')">bot_kick</a></li>
+                                <li><a href="javascript:scrollFunc('bot_mimic')">bot_mimic</a></li>
+                                <li><a href="javascript:scrollFunc('bot_stare')">bot_stare</a></li>
+                                <li><a href="javascript:scrollFunc('bot_zombie')">bot_zombie</a></li>
+                                <li><a href="javascript:scrollFunc('bot_thinker')">bot_thinker</a></li>
+                            </ul>
+                        </span>
+                    </span>
+                    <span class="my-3 my-lg-0 align-self-center w-100">
+                        <span class="dropdown">
+                            <button class="btn btn-sm btn-success" type="button" data-bs-toggle="dropdown" data-bs-target="#crosshair_collapse" aria-expanded="false" aria-controls="crosshair_collapse">Crosshair</button>
+                            <ul class="dropdown-menu text-center" id="crosshair_collapse">
+                                <li><a href="javascript:scrollFunc('crosshair_alpha')">crosshair_alpha</a></li>
+                                <li><a href="javascript:scrollFunc('crosshair_color')">crosshair_color</a></li>
+                                <li><a href="javascript:scrollFunc('crosshair_gap')">crosshair_gap</a></li>
+                                <li><a href="javascript:scrollFunc('crosshair_size')">crosshair_size</a></li>
+                                <li><a href="javascript:scrollFunc('crosshair_t')">crosshair_t</a></li>
+                                <li><a href="javascript:scrollFunc('crosshair_thickness')">crosshair_thickness</a></li>
+                                <li><a href="javascript:scrollFunc('crosshair_dot')">crosshair_dot</a></li>
+                                <li><a href="javascript:scrollFunc('crosshair_dot_alpha')">crosshair_dot_alpha</a></li>
+                                <li><a href="javascript:scrollFunc('crosshair_dot_size')">crosshair_dot_size</a></li>
+                                <li><a href="javascript:scrollFunc('crosshair_outline')">crosshair_outline</a></li>
+                                <li><a href="javascript:scrollFunc('crosshair_outline_alpha')">crosshair_outline_alpha</a></li>
+                                <li><a href="javascript:scrollFunc('crosshair_outline_color')">crosshair_outline_color</a></li>
+                                <li><a href="javascript:scrollFunc('crosshair_outline_thickness')">crosshair_outline_thickness</a></li>
+                                <li><a href="javascript:scrollFunc('crosshair_recoil_scale')">crosshair_recoil_scale</a></li>
+                            </ul>
+                        </span>
                     </span>
                     <span class="dropdown-center my-3 my-lg-0 align-self-center w-100">
-                        <button class="btn btn-sm btn-success" type="button" data-bs-toggle="dropdown" data-bs-target="#crosshair_collapse" aria-expanded="false" aria-controls="crosshair_collapse">Crosshair</button>
-                        <ul class="dropdown-menu" id="crosshair_collapse">
-                            <li class="gotoPoint"><a href="#crosshair_alpha">crosshair_alpha</a></li>
-                            <li class="gotoPoint"><a href="#crosshair_color">crosshair_color</a></li>
-                            <li class="gotoPoint"><a href="#crosshair_gap">crosshair_gap</a></li>
-                            <li class="gotoPoint"><a href="#crosshair_size">crosshair_size</a></li>
-                            <li class="gotoPoint"><a href="#crosshair_t">crosshair_t</a></li>
-                            <li class="gotoPoint"><a href="#crosshair_thickness">crosshair_thickness</a></li>
-                            <li class="gotoPoint"><a href="#crosshair_dot">crosshair_dot</a></li>
-                            <li class="gotoPoint"><a href="#crosshair_dot_alpha">crosshair_dot_alpha</a></li>
-                            <li class="gotoPoint"><a href="#crosshair_dot_size">crosshair_dot_size</a></li>
-                            <li class="gotoPoint"><a href="#crosshair_outline">crosshair_outline</a></li>
-                            <li class="gotoPoint"><a href="#crosshair_outline_alpha">crosshair_outline_alpha</a></li>
-                            <li class="gotoPoint"><a href="#crosshair_outline_color">crosshair_outline_color</a></li>
-                            <li class="gotoPoint"><a href="#crosshair_outline_thickness">crosshair_outline_thickness</a></li>
-                            <li class="gotoPoint"><a href="#crosshair_recoil_scale">crosshair_recoil_scale</a></li>
-                        </ul>
+                        <span class="dropdown">
+                            <button class="btn btn-sm btn-success" type="button" data-bs-toggle="dropdown" data-bs-target="#player_collapse" aria-expanded="false" aria-controls="player_collapse">Player</button>
+                            <ul class="dropdown-menu text-center" id="player_collapse">
+                                <li><a href="javascript:scrollFunc('pl_autobhop')">pl_autobhop</a></li>
+                                <li><a href="javascript:scrollFunc('pl_accelerate')">pl_accelerate</a></li>
+                                <li><a href="javascript:scrollFunc('pl_air_accelerate')">pl_air_accelerate</a></li>
+                                <li><a href="javascript:scrollFunc('pl_air_friction')">pl_air_friction</a></li>
+                                <li><a href="javascript:scrollFunc('pl_air_max_gain')">pl_air_max_gain</a></li>
+                                <li><a href="javascript:scrollFunc('pl_air_max_speed')">pl_air_max_speed</a></li>
+                                <li><a href="javascript:scrollFunc('pl_crouch_accelerate')">pl_crouch_accelerate</a></li>
+                                <li><a href="javascript:scrollFunc('pl_crouch_max_speed')">pl_crouch_max_speed</a></li>
+                                <li><a href="javascript:scrollFunc('pl_friction')">pl_friction</a></li>
+                                <li><a href="javascript:scrollFunc('pl_gravity')">pl_gravity</a></li>
+                                <li><a href="javascript:scrollFunc('pl_jump_impulse')">pl_jump_impulse</a></li>
+                                <li><a href="javascript:scrollFunc('pl_ladder_max_speed')">pl_ladder_max_speed</a></li>
+                                <li><a href="javascript:scrollFunc('pl_max_speed')">pl_max_speed</a></li>
+                                <li><a href="javascript:scrollFunc('pl_walk_max_speed')">pl_walk_max_speed</a></li>
+                            </ul>
+                        </span>
                     </span>
                     <span class="dropdown-center my-3 my-lg-0 align-self-center w-100">
-                        <button class="btn btn-sm btn-success" type="button" data-bs-toggle="dropdown" data-bs-target="#player_collapse" aria-expanded="false" aria-controls="player_collapse">Player</button>
-                        <ul class="dropdown-menu" id="player_collapse">
-                            <li class="gotoPoint"><a href="#pl_autobhop">pl_autobhop</a></li>
-                            <li class="gotoPoint"><a href="#pl_accelerate">pl_accelerate</a></li>
-                            <li class="gotoPoint"><a href="#pl_air_accelerate">pl_air_accelerate</a></li>
-                            <li class="gotoPoint"><a href="#pl_air_friction">pl_air_friction</a></li>
-                            <li class="gotoPoint"><a href="#pl_air_max_gain">pl_air_max_gain</a></li>
-                            <li class="gotoPoint"><a href="#pl_air_max_speed">pl_air_max_speed</a></li>
-                            <li class="gotoPoint"><a href="#pl_crouch_accelerate">pl_crouch_accelerate</a></li>
-                            <li class="gotoPoint"><a href="#pl_crouch_max_speed">pl_crouch_max_speed</a></li>
-                            <li class="gotoPoint"><a href="#pl_friction">pl_friction</a></li>
-                            <li class="gotoPoint"><a href="#pl_gravity">pl_gravity</a></li>
-                            <li class="gotoPoint"><a href="#pl_jump_impulse">pl_jump_impulse</a></li>
-                            <li class="gotoPoint"><a href="#pl_ladder_max_speed">pl_ladder_max_speed</a></li>
-                            <li class="gotoPoint"><a href="#pl_max_speed">pl_max_speed</a></li>
-                            <li class="gotoPoint"><a href="#pl_walk_max_speed">pl_walk_max_speed</a></li>
-                        </ul>
-                    </span>
-                    <span class="dropdown-center my-3 my-lg-0 align-self-center w-100">
-                        <button class="btn btn-sm btn-success" type="button" data-bs-toggle="dropdown" data-bs-target="#misc_collapse" aria-expanded="false" aria-controls="misc_collapse">Misc</button>
-                        <ul class="dropdown-menu" id="misc_collapse">
-                            <li class="gotoPoint"><a href="#help">help</a></li>
-                            <li class="gotoPoint"><a href="#sv_cheats">sv_cheats</a></li>
-                            <li class="gotoPoint"><a href="#sv_add_owner">sv_add_owner</a></li>
-                            <li class="gotoPoint"><a href="#sv_remove_owner">sv_remove_owner</a></li>
-                            <li class="gotoPoint"><a href="#default_fov">default_fov</a></li>
-                            <li class="gotoPoint"><a href="#gamemode">gamemode</a></li>
-                            <li class="gotoPoint"><a href="#gamemodes">gamemodes</a></li>
-                            <li class="gotoPoint"><a href="#mp_restartgame">mp_restartgame</a></li>
-                            <li class="gotoPoint"><a href="#map">map</a></li>
-                            <li class="gotoPoint"><a href="#maps">maps</a></li>
-                            <li class="gotoPoint"><a href="#mp_disable_shooting">mp_disable_shooting</a></li>
-                            <li class="gotoPoint"><a href="#thinkers">thinkers</a></li>
-                            <li class="gotoPoint"><a href="#viewmodel_arms">viewmodel_arms</a></li>
-                            <li class="gotoPoint"><a href="#viewmodel_offset">viewmodel_offset</a></li>
-                        </ul>
+                        <span class="dropdown">
+                            <button class="btn btn-sm btn-success" type="button" data-bs-toggle="dropdown" data-bs-target="#misc_collapse" aria-expanded="false" aria-controls="misc_collapse">Misc</button>
+                            <ul class="dropdown-menu text-center" id="misc_collapse">
+                                <li><a href="javascript:scrollFunc('help')">help</a></li>
+                                <li><a href="javascript:scrollFunc('sv_cheats')">sv_cheats</a></li>
+                                <li><a href="javascript:scrollFunc('sv_add_owner')">sv_add_owner</a></li>
+                                <li><a href="javascript:scrollFunc('sv_remove_owner')">sv_remove_owner</a></li>
+                                <li><a href="javascript:scrollFunc('default_fov')">default_fov</a></li>
+                                <li><a href="javascript:scrollFunc('gamemode')">gamemode</a></li>
+                                <li><a href="javascript:scrollFunc('gamemodes')">gamemodes</a></li>
+                                <li><a href="javascript:scrollFunc('mp_restartgame')">mp_restartgame</a></li>
+                                <li><a href="javascript:scrollFunc('map')">map</a></li>
+                                <li><a href="javascript:scrollFunc('maps')">maps</a></li>
+                                <li><a href="javascript:scrollFunc('mp_disable_shooting')">mp_disable_shooting</a></li>
+                                <li><a href="javascript:scrollFunc('thinkers')">thinkers</a></li>
+                                <li><a href="javascript:scrollFunc('viewmodel_arms')">viewmodel_arms</a></li>
+                                <li><a href="javascript:scrollFunc('viewmodel_offset')">viewmodel_offset</a></li>
+                            </ul>
+                        </span>
                     </span>
                 </nav>
             </nav>
         </header>
 
-        <main class="ms-0 ms-lg-5">
+        <main>
             <h1 class="m-0">Commands</h1>
             <h2 class="mb-4 text-muted">Warning: Not all commands may work yet</h2>
             <div class="container">
@@ -357,7 +363,7 @@
                 </div>
             </div>
         </main>
-
     </body>
-
+    
+    <script src="js/scroller"></script>
 </html>

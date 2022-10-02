@@ -3,7 +3,7 @@ h1{font-size: 3.5em}
 h2{font-size:1.5em}
 
 #navScroller{
-    background-color:#192125;
+    background-color:#1d2529;
     width: 100%;
     margin-top: 3.6em;
 }
@@ -18,11 +18,11 @@ h4~p {
     color: #cacaca;
 }
 
-.gotoPoint{text-align: center;}
-.gotoPoint a{text-decoration: none; color: #4bf5a3;}
+li>a{text-decoration: none; color: #4bf5a3;}
+li>a:hover{color: #46aa7a;}
 
 main{
-    margin-top: 10em;
+    padding-top: 10em;
 }
 
 .btn-success{
@@ -34,6 +34,25 @@ main{
     --bs-btn-active-color: #4bf5a3;
     --bs-btn-border-color: #45bd83;
     --bs-btn-hover-border-color: #46aa7a;
+}
+
+.playOut{animation: 1s cubic-bezier(0.61, 1, 0.88, 1) .1s expandOut}
+.playIn{animation: 1s cubic-bezier(0.61, 1, 0.88, 1) .1s expandIn}
+@keyframes expandOut {
+    from {
+        letter-spacing: 0em;
+    }
+    to {
+        letter-spacing: 0.3em;
+    }
+}
+@keyframes expandIn {
+    from {
+        letter-spacing: 0.3em;
+    }
+    to {
+        letter-spacing: 0em;
+    }
 }
 
 @media only screen and (min-width: 992px) {
