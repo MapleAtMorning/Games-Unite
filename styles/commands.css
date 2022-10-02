@@ -36,6 +36,10 @@ main{
     --bs-btn-hover-border-color: #46aa7a;
 }
 
+.dropdown-menu{
+    position: relative;
+}
+
 .playOut{animation: 1s cubic-bezier(0.61, 1, 0.88, 1) .1s expandOut}
 .playIn{animation: 1s cubic-bezier(0.61, 1, 0.88, 1) .1s expandIn}
 @keyframes expandOut {
