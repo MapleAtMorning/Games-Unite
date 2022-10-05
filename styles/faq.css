@@ -1,0 +1,32 @@
+:root{
+    --secondaryColor: #4bf5a3;
+    --secondaryColorDark: #46aa7a;
+}
+
+h1{
+    padding-bottom: 1em;
+}
+
+main{
+    padding-top: 7em;
+}
+
+main a{
+    color: white;
+}
+
+main a:hover{
+    color: #dcdcdc;
+}
+
+div>a{
+
+    text-decoration: none;
+    font-size: 1.4em;
+}
+
+.col {text-align: center;}
+
+h1,h2{text-align: center;}
+h1{font-size: 3.5em}
+h2{font-size:1.5em}

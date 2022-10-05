@@ -1,387 +1,387 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <title>Commands</title>
-        
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <meta name="description" content="The Unofficial Games Unite Website. Features, Commands, FAQ.">
-        <meta name="keywords" content="roblox, roblox shooter, shooter, guns, game, roblox game, games unite">
-
-        <meta content="Games Unite Commands" property="og:title">
-        <meta content="A list of all the in-game commands for Games Unite" property="og:description">
-        <meta content="https://mapleatmorning.github.io/Games-Unite/commands.html" property="og:url">
-        <meta content="https://mapleatmorning.github.io/Games-Unite/img/screenshots/2.png" property="og:image">
-        <meta content="#4bf5a3" data-react-helmet="true" name="theme-color">
-        <meta name="twitter:card" content="summary_large_image">
-
-        <link href="https://fonts.googleapis.com/css2?family=Ropa+Sans" rel="stylesheet">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
-        <link rel="stylesheet" href="styles/normalize.css">
-        <link rel="stylesheet" href="styles/multiPage.css">
-        <link rel="stylesheet" href="styles/commands.css">
-        <link rel="shortcut icon" href="img/placeLogoTransparent.png">
-    </head>
-    <body>
-        <header class="px-lg-5 py-2 navbar navbar-dark gu-bg navbar-expand-lg fixed-top">
-            <div class="container-fluid">
-                <div class="navbar-brand">
-                    <img class="headerLogo" src="img/placeLogoTransparent.png" alt="Games Unite Logo">
-                    <p class="d-none d-sm-inline">Games Unite</p>
-                </div>
-
-                <div>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarContent" aria-controls="sidebarContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="btn-dark">Locate</span>
-                    </button>
+<head>
+    <title>Commands</title>
     
-                    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                </div>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <meta name="description" content="The Unofficial Games Unite Website. Features, Commands, FAQ.">
+    <meta name="keywords" content="roblox, roblox shooter, shooter, guns, game, roblox game, games unite">
 
-                <div class="offcanvas offcanvas-end text-bg-dark" id="navbarSupportedContent" aria-labelledby="navbarSupportedContent">
-                    <div class="offcanvas-header">
-                        <h3 id="offcanvasNavbarDarklabel" class="mt-3">Games Unite</h3>
-                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                    </div>
-                    <ul class="navbar-nav offcanvas-body justify-content-lg-end">
-                        <li class="nav-item"><a class="nav-link" aria-current="page" href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="commands.html">Commands</a></li>
-                        <li class="nav-item"><a class="nav-link" aria-current="page" href="faq.html">FAQ</a></li>
-                    </ul>
-                </div>
+    <meta content="Games Unite Commands" property="og:title">
+    <meta content="A list of all the in-game commands for Games Unite" property="og:description">
+    <meta content="https://mapleatmorning.github.io/Games-Unite/commands.html" property="og:url">
+    <meta content="https://mapleatmorning.github.io/Games-Unite/img/screenshots/2.png" property="og:image">
+    <meta content="#4bf5a3" data-react-helmet="true" name="theme-color">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link href="https://fonts.googleapis.com/css2?family=Ropa+Sans" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/multiPage.css">
+    <link rel="stylesheet" href="styles/commands.css">
+    <link rel="shortcut icon" href="img/placeLogoTransparent.png">
+</head>
+<body>
+    <header class="px-lg-5 py-2 navbar navbar-dark gu-bg navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-brand">
+                <img class="headerLogo" src="img/placeLogoTransparent.png" alt="Games Unite Logo">
+                <p class="d-none d-sm-inline">Games Unite</p>
             </div>
-            <nav id="navScroller" class="navbar-expand-lg p-0 fixed-top">
-                <nav class="nav container offcanvas offcanvas-start text-bg-dark p-2 pe-5 d-inline d-lg-block text-center" id="sidebarContent" aria-labelledby="sidebarContent">
-                    <div class="row row-cols-lg-4 row-cols-1">
-                        <button type="button" class="btn-close btn-close-white d-lg-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                        <div class="col my-3 my-lg-0">
-                            <div class="dropdown-center">
-                                <button class="btn btn-sm btn-success" type="button" data-bs-toggle="dropdown" data-bs-target="#bot_collapse" aria-expanded="false" aria-controls="bot_collapse">Bots</button>
-                                <ul class="dropdown-menu text-center" id="bot_collapse">
-                                    <li><a href="javascript:scrollFunc('bot_add')">bot_add</a></li>
-                                    <li><a href="javascript:scrollFunc('bot_kick')">bot_kick</a></li>
-                                    <li><a href="javascript:scrollFunc('bot_mimic')">bot_mimic</a></li>
-                                    <li><a href="javascript:scrollFunc('bot_stare')">bot_stare</a></li>
-                                    <li><a href="javascript:scrollFunc('bot_zombie')">bot_zombie</a></li>
-                                    <li><a href="javascript:scrollFunc('bot_thinker')">bot_thinker</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col my-3 my-lg-0">
-                            <div class="dropdown">
-                                <button class="btn btn-sm btn-success" type="button" data-bs-toggle="dropdown" data-bs-target="#crosshair_collapse" aria-expanded="false" aria-controls="crosshair_collapse">Crosshair</button>
-                                <ul class="dropdown-menu text-center" id="crosshair_collapse">
-                                    <li><a href="javascript:scrollFunc('crosshair_alpha')">crosshair_alpha</a></li>
-                                    <li><a href="javascript:scrollFunc('crosshair_color')">crosshair_color</a></li>
-                                    <li><a href="javascript:scrollFunc('crosshair_gap')">crosshair_gap</a></li>
-                                    <li><a href="javascript:scrollFunc('crosshair_size')">crosshair_size</a></li>
-                                    <li><a href="javascript:scrollFunc('crosshair_t')">crosshair_t</a></li>
-                                    <li><a href="javascript:scrollFunc('crosshair_thickness')">crosshair_thickness</a></li>
-                                    <li><a href="javascript:scrollFunc('crosshair_dot')">crosshair_dot</a></li>
-                                    <li><a href="javascript:scrollFunc('crosshair_dot_alpha')">crosshair_dot_alpha</a></li>
-                                    <li><a href="javascript:scrollFunc('crosshair_dot_size')">crosshair_dot_size</a></li>
-                                    <li><a href="javascript:scrollFunc('crosshair_outline')">crosshair_outline</a></li>
-                                    <li><a href="javascript:scrollFunc('crosshair_outline_alpha')">crosshair_outline_alpha</a></li>
-                                    <li><a href="javascript:scrollFunc('crosshair_outline_color')">crosshair_outline_color</a></li>
-                                    <li><a href="javascript:scrollFunc('crosshair_outline_thickness')">crosshair_outline_thickness</a></li>
-                                    <li><a href="javascript:scrollFunc('crosshair_recoil_scale')">crosshair_recoil_scale</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col dropdown-center my-3 my-lg-0">
-                            <div class="dropdown">
-                                <button class="btn btn-sm btn-success" type="button" data-bs-toggle="dropdown" data-bs-target="#player_collapse" aria-expanded="false" aria-controls="player_collapse">Player</button>
-                                <ul class="dropdown-menu text-center" id="player_collapse">
-                                    <li><a href="javascript:scrollFunc('pl_autobhop')">pl_autobhop</a></li>
-                                    <li><a href="javascript:scrollFunc('pl_accelerate')">pl_accelerate</a></li>
-                                    <li><a href="javascript:scrollFunc('pl_air_accelerate')">pl_air_accelerate</a></li>
-                                    <li><a href="javascript:scrollFunc('pl_air_friction')">pl_air_friction</a></li>
-                                    <li><a href="javascript:scrollFunc('pl_air_max_gain')">pl_air_max_gain</a></li>
-                                    <li><a href="javascript:scrollFunc('pl_air_max_speed')">pl_air_max_speed</a></li>
-                                    <li><a href="javascript:scrollFunc('pl_crouch_accelerate')">pl_crouch_accelerate</a></li>
-                                    <li><a href="javascript:scrollFunc('pl_crouch_max_speed')">pl_crouch_max_speed</a></li>
-                                    <li><a href="javascript:scrollFunc('pl_friction')">pl_friction</a></li>
-                                    <li><a href="javascript:scrollFunc('pl_gravity')">pl_gravity</a></li>
-                                    <li><a href="javascript:scrollFunc('pl_jump_impulse')">pl_jump_impulse</a></li>
-                                    <li><a href="javascript:scrollFunc('pl_ladder_max_speed')">pl_ladder_max_speed</a></li>
-                                    <li><a href="javascript:scrollFunc('pl_max_speed')">pl_max_speed</a></li>
-                                    <li><a href="javascript:scrollFunc('pl_walk_max_speed')">pl_walk_max_speed</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col dropdown-center my-3 my-lg-0">
-                            <div class="dropdown">
-                                <button class="btn btn-sm btn-success" type="button" data-bs-toggle="dropdown" data-bs-target="#misc_collapse" aria-expanded="false" aria-controls="misc_collapse">Misc</button>
-                                <ul class="dropdown-menu text-center" id="misc_collapse">
-                                    <li><a href="javascript:scrollFunc('help')">help</a></li>
-                                    <li><a href="javascript:scrollFunc('sv_cheats')">sv_cheats</a></li>
-                                    <li><a href="javascript:scrollFunc('sv_add_owner')">sv_add_owner</a></li>
-                                    <li><a href="javascript:scrollFunc('sv_remove_owner')">sv_remove_owner</a></li>
-                                    <li><a href="javascript:scrollFunc('default_fov')">default_fov</a></li>
-                                    <li><a href="javascript:scrollFunc('gamemode')">gamemode</a></li>
-                                    <li><a href="javascript:scrollFunc('gamemodes')">gamemodes</a></li>
-                                    <li><a href="javascript:scrollFunc('mp_restartgame')">mp_restartgame</a></li>
-                                    <li><a href="javascript:scrollFunc('map')">map</a></li>
-                                    <li><a href="javascript:scrollFunc('maps')">maps</a></li>
-                                    <li><a href="javascript:scrollFunc('mp_disable_shooting')">mp_disable_shooting</a></li>
-                                    <li><a href="javascript:scrollFunc('thinkers')">thinkers</a></li>
-                                    <li><a href="javascript:scrollFunc('viewmodel_arms')">viewmodel_arms</a></li>
-                                    <li><a href="javascript:scrollFunc('viewmodel_offset')">viewmodel_offset</a></li>
-                                </ul>
-                            </div>
+
+            <div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarContent" aria-controls="sidebarContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="btn-dark">Locate</span>
+                </button>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+
+
+            <div class="offcanvas offcanvas-end text-bg-dark" id="navbarSupportedContent" aria-labelledby="navbarSupportedContent">
+                <div class="offcanvas-header">
+                    <h3 id="offcanvasNavbarDarklabel" class="mt-3">Games Unite</h3>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <ul class="navbar-nav offcanvas-body justify-content-lg-end">
+                    <li class="nav-item"><a class="nav-link" aria-current="page" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="commands.html">Commands</a></li>
+                    <li class="nav-item"><a class="nav-link" aria-current="page" href="faq.html">FAQ</a></li>
+                </ul>
+            </div>
+        </div>
+        <nav id="navScroller" class="navbar-expand-lg px-50 fixed-top">
+            <nav class="nav container offcanvas offcanvas-start text-bg-dark p-2 d-inline d-lg-block text-center" id="sidebarContent" aria-labelledby="sidebarContent">
+                <div class="row row-cols-lg-4 row-cols-1">
+                    <button type="button" class="btn-close btn-close-white d-lg-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    <div class="col my-3 my-lg-0">
+                        <div class="dropdown-center">
+                            <button class="btn btn-sm btn-success" type="button" data-bs-toggle="dropdown" data-bs-target="#bot_collapse" aria-expanded="false" aria-controls="bot_collapse">Bots</button>
+                            <ul class="dropdown-menu text-center bg-none" id="bot_collapse">
+                                <li><a href="javascript:scrollFunc('bot_add')">bot_add</a></li>
+                                <li><a href="javascript:scrollFunc('bot_kick')">bot_kick</a></li>
+                                <li><a href="javascript:scrollFunc('bot_mimic')">bot_mimic</a></li>
+                                <li><a href="javascript:scrollFunc('bot_stare')">bot_stare</a></li>
+                                <li><a href="javascript:scrollFunc('bot_zombie')">bot_zombie</a></li>
+                                <li><a href="javascript:scrollFunc('bot_thinker')">bot_thinker</a></li>
+                            </ul>
                         </div>
                     </div>
-                </nav>
+                    <div class="col my-3 my-lg-0">
+                        <div class="dropdown">
+                            <button class="btn btn-sm btn-success" type="button" data-bs-toggle="dropdown" data-bs-target="#crosshair_collapse" aria-expanded="false" aria-controls="crosshair_collapse">Crosshair</button>
+                            <ul class="dropdown-menu text-center bg-none" id="crosshair_collapse">
+                                <li><a href="javascript:scrollFunc('crosshair_alpha')">crosshair_alpha</a></li>
+                                <li><a href="javascript:scrollFunc('crosshair_color')">crosshair_color</a></li>
+                                <li><a href="javascript:scrollFunc('crosshair_gap')">crosshair_gap</a></li>
+                                <li><a href="javascript:scrollFunc('crosshair_size')">crosshair_size</a></li>
+                                <li><a href="javascript:scrollFunc('crosshair_t')">crosshair_t</a></li>
+                                <li><a href="javascript:scrollFunc('crosshair_thickness')">crosshair_thickness</a></li>
+                                <li><a href="javascript:scrollFunc('crosshair_dot')">crosshair_dot</a></li>
+                                <li><a href="javascript:scrollFunc('crosshair_dot_alpha')">crosshair_dot_alpha</a></li>
+                                <li><a href="javascript:scrollFunc('crosshair_dot_size')">crosshair_dot_size</a></li>
+                                <li><a href="javascript:scrollFunc('crosshair_outline')">crosshair_outline</a></li>
+                                <li><a href="javascript:scrollFunc('crosshair_outline_alpha')">crosshair_outline_alpha</a></li>
+                                <li><a href="javascript:scrollFunc('crosshair_outline_color')">crosshair_outline_color</a></li>
+                                <li><a href="javascript:scrollFunc('crosshair_outline_thickness')">crosshair_outline_thickness</a></li>
+                                <li><a href="javascript:scrollFunc('crosshair_recoil_scale')">crosshair_recoil_scale</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col dropdown-center my-3 my-lg-0">
+                        <div class="dropdown">
+                            <button class="btn btn-sm btn-success" type="button" data-bs-toggle="dropdown" data-bs-target="#player_collapse" aria-expanded="false" aria-controls="player_collapse">Player</button>
+                            <ul class="dropdown-menu text-center bg-none" id="player_collapse">
+                                <li><a href="javascript:scrollFunc('pl_autobhop')">pl_autobhop</a></li>
+                                <li><a href="javascript:scrollFunc('pl_accelerate')">pl_accelerate</a></li>
+                                <li><a href="javascript:scrollFunc('pl_air_accelerate')">pl_air_accelerate</a></li>
+                                <li><a href="javascript:scrollFunc('pl_air_friction')">pl_air_friction</a></li>
+                                <li><a href="javascript:scrollFunc('pl_air_max_gain')">pl_air_max_gain</a></li>
+                                <li><a href="javascript:scrollFunc('pl_air_max_speed')">pl_air_max_speed</a></li>
+                                <li><a href="javascript:scrollFunc('pl_crouch_accelerate')">pl_crouch_accelerate</a></li>
+                                <li><a href="javascript:scrollFunc('pl_crouch_max_speed')">pl_crouch_max_speed</a></li>
+                                <li><a href="javascript:scrollFunc('pl_friction')">pl_friction</a></li>
+                                <li><a href="javascript:scrollFunc('pl_gravity')">pl_gravity</a></li>
+                                <li><a href="javascript:scrollFunc('pl_jump_impulse')">pl_jump_impulse</a></li>
+                                <li><a href="javascript:scrollFunc('pl_ladder_max_speed')">pl_ladder_max_speed</a></li>
+                                <li><a href="javascript:scrollFunc('pl_max_speed')">pl_max_speed</a></li>
+                                <li><a href="javascript:scrollFunc('pl_walk_max_speed')">pl_walk_max_speed</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col dropdown-center my-3 my-lg-0">
+                        <div class="dropdown">
+                            <button class="btn btn-sm btn-success" type="button" data-bs-toggle="dropdown" data-bs-target="#misc_collapse" aria-expanded="false" aria-controls="misc_collapse">Misc</button>
+                            <ul class="dropdown-menu text-center bg-none" id="misc_collapse">
+                                <li><a href="javascript:scrollFunc('help')">help</a></li>
+                                <li><a href="javascript:scrollFunc('sv_cheats')">sv_cheats</a></li>
+                                <li><a href="javascript:scrollFunc('sv_add_owner')">sv_add_owner</a></li>
+                                <li><a href="javascript:scrollFunc('sv_remove_owner')">sv_remove_owner</a></li>
+                                <li><a href="javascript:scrollFunc('default_fov')">default_fov</a></li>
+                                <li><a href="javascript:scrollFunc('gamemode')">gamemode</a></li>
+                                <li><a href="javascript:scrollFunc('gamemodes')">gamemodes</a></li>
+                                <li><a href="javascript:scrollFunc('mp_restartgame')">mp_restartgame</a></li>
+                                <li><a href="javascript:scrollFunc('map')">map</a></li>
+                                <li><a href="javascript:scrollFunc('maps')">maps</a></li>
+                                <li><a href="javascript:scrollFunc('mp_disable_shooting')">mp_disable_shooting</a></li>
+                                <li><a href="javascript:scrollFunc('thinkers')">thinkers</a></li>
+                                <li><a href="javascript:scrollFunc('viewmodel_arms')">viewmodel_arms</a></li>
+                                <li><a href="javascript:scrollFunc('viewmodel_offset')">viewmodel_offset</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </nav>
-        </header>
+        </nav>
+    </header>
 
-        <main>
-            <h1 class="m-0">Commands</h1>
-            <h2 class="mb-4 text-muted">Warning: Not all commands may work yet</h2>
-            <div class="container">
-                <div class="row row-cols-1 row-cols-lg-2 text-center text-lg-start">
-                    <div class="col"> <!--Left Col-->
-                        <div class="row"> <!-- Bots Row-->
-                            <div id="bot_cmds" class="mb-3">
-                                <h3>Bots</h3>
+    <main>
+        <h1 class="m-0">Commands</h1>
+        <h2 class="mb-4 text-muted">Warning: Not all commands may work yet</h2>
+        <div class="container">
+            <div class="row row-cols-1 row-cols-lg-2 text-center text-lg-start">
+                <div class="col"> <!--Left Col-->
+                    <div class="row"> <!-- Bots Row-->
+                        <div id="bot_cmds" class="mb-3">
+                            <h3>Bots</h3>
+                        </div>
+                        <div class="px-0 px-lg-4 mb-5">
+                            <div id="bot_add">
+                                <h4>bot_add - (optional) &lt;amount&gt;</h4>
+                                <p>Adds bot(s) to your game.</p>
                             </div>
-                            <div class="px-0 px-lg-4 mb-5">
-                                <div id="bot_add">
-                                    <h4>bot_add - (optional) &lt;amount&gt;</h4>
-                                    <p>Adds bot(s) to your game.</p>
-                                </div>
-                                <div id="bot_kick">
-                                    <h4>bot_kick - (optional) &lt;bot_name&gt;</h4>
-                                    <p>Kicks all bots or kicks the bot with the specified name.</p>
-                                </div>
-                                <div id="bot_mimic">
-                                    <h4>bot_mimic - (0/1) &lt;value&gt;</h4>
-                                    <p>Makes bots mimic the closest player.</p>
-                                </div>
-                                <div id="bot_stare">
-                                    <h4>bot_stare - (0/1) &lt;value&gt;</h4>
-                                    <p>Makes bots stare at the closest player.</p>
-                                </div>
-                                <div id="bot_zombie">
-                                    <h4>bot_zombie - (0/1) &lt;value&gt;</h4>
-                                    <p>Makes bots follow the closest player.</p>
-                                </div>
-                                <div id="bot_thinker">
-                                    <h4>bot_thinker - &lt;thinker_name&gt;</h4>
-                                    <p>Sets the default thinker. Thinkers are bot profiles that describe how a bot behaves. <br> (A list of all thinkers will eventually be made)</p>
-                                </div>
+                            <div id="bot_kick">
+                                <h4>bot_kick - (optional) &lt;bot_name&gt;</h4>
+                                <p>Kicks all bots or kicks the bot with the specified name.</p>
+                            </div>
+                            <div id="bot_mimic">
+                                <h4>bot_mimic - (0/1) &lt;value&gt;</h4>
+                                <p>Makes bots mimic the closest player.</p>
+                            </div>
+                            <div id="bot_stare">
+                                <h4>bot_stare - (0/1) &lt;value&gt;</h4>
+                                <p>Makes bots stare at the closest player.</p>
+                            </div>
+                            <div id="bot_zombie">
+                                <h4>bot_zombie - (0/1) &lt;value&gt;</h4>
+                                <p>Makes bots follow the closest player.</p>
+                            </div>
+                            <div id="bot_thinker">
+                                <h4>bot_thinker - &lt;thinker_name&gt;</h4>
+                                <p>Sets the default thinker. Thinkers are bot profiles that describe how a bot behaves. <br> (A list of all thinkers will eventually be made)</p>
                             </div>
                         </div>
-                        <div class="row"><!--Player Movement Row-->
-                            <div id="pl_cmds" class="mb-3">
-                                <h3>Player / Movement</h3>
-                            </div>
-                            <div class="px-0 px-lg-4 mb-5">
-                                <div id="pl_autobhop">
-                                    <h4>pl_autobhop - (0/1) &lt;value&gt;</h4>
-                                    <p>Sets whether players can bunny hop without having to manually press space every time.</p>
-                                </div>
-                                <div id="pl_accelerate">
-                                    <h4>pl_accelerate - &lt;value&gt;</h4>
-                                    <p>Sets how fast you can accelerate.</p>
-                                </div>
-                                <div id="pl_air_accelerate">
-                                    <h4>pl_air_accelerate - &lt;value&gt;</h4>
-                                    <p>Sets how fast you can accelerate while midair.</p>
-                                </div>
-                                <div id="pl_air_friction">
-                                    <h4>pl_air_friction - &lt;value&gt;</h4>
-                                    <p>Sets how fast you slow down while midair.</p>
-                                </div>
-                                <div id="pl_air_max_gain">
-                                    <h4>pl_air_max_gain - &lt;value&gt;</h4>
-                                    <p>Sets the maximum amount of speed you can gain while accelerating while midair.</p>
-                                </div>
-                                <div id="pl_air_max_speed">
-                                    <h4>pl_air_max_speed - &lt;value&gt;</h4>
-                                    <p>Sets how fast you can go while midair.</p>
-                                </div>
-                                <div id="pl_crouch_accelerate">
-                                    <h4>pl_crouch_accelerate - &lt;value&gt;</h4>
-                                    <p>Sets how fast you can accelerate while crouched.</p>
-                                </div>
-                                <div id="pl_crouch_max_speed">
-                                    <h4>pl_crouch_max_speed - &lt;value&gt;</h4>
-                                    <p>Sets how fast you can go while crouched.</p>
-                                </div>
-                                <div id="pl_friction">
-                                    <h4>pl_friction - &lt;value&gt;</h4>
-                                    <p>Sets how fast you slow down.</p>
-                                </div>
-                                <div id="pl_gravity">
-                                    <h4>pl_gravity - &lt;value&gt;</h4>
-                                    <p>Sets how fast gravity acts upon you.</p>
-                                </div>
-                                <div id="pl_jump_impulse">
-                                    <h4>pl_jump_impulse - &lt;value&gt;</h4>
-                                    <p>Sets how much speed you gain when you jump.</p>
-                                </div>
-                                <div id="pl_ladder_max_speed">
-                                    <h4>pl_ladder_max_speed - &lt;value&gt;</h4>
-                                    <p>Sets how fast you can go while climbing.</p>
-                                </div>
-                                <div id="pl_max_speed">
-                                    <h4>pl_max_speed - &lt;value&gt;</h4>
-                                    <p>Sets how fast you can go.</p>
-                                </div>
-                                <div id="pl_walk_max_speed">
-                                    <h4>pl_walk_max_speed - &lt;value&gt;</h4>
-                                    <p>Sets how fast you can go while walking.</p>
-                                </div>
-                            </div>
-                        </div>
- 
                     </div>
-                    <div class="col"> <!--Right Col-->
-                        <div class="row"> <!--Crosshair Row-->
-                            <div id="crosshair_cmds" class="mb-3">
-                                <h3>Crosshair</h3>
+                    <div class="row"><!--Player Movement Row-->
+                        <div id="pl_cmds" class="mb-3">
+                            <h3>Player / Movement</h3>
+                        </div>
+                        <div class="px-0 px-lg-4 mb-5">
+                            <div id="pl_autobhop">
+                                <h4>pl_autobhop - (0/1) &lt;value&gt;</h4>
+                                <p>Sets whether players can bunny hop without having to manually press space every time.</p>
                             </div>
-                            <div class="px-0 px-lg-4 mb-5">
-                                <div id="crosshair_alpha">
-                                    <h4>crosshair_alpha - &lt;value&gt;</h4>
-                                    <p>Sets the transparency of the threads on your crosshair.</p>
-                                </div>
-                                <div id="crosshair_color">
-                                    <h4>crosshair_color - (0-255) &lt;red&gt; (0-255) &lt;green&gt; (0-255) &lt;blue&gt;</h4>
-                                    <p>Sets the color of your crosshair.</p>
-                                </div>
-                                <div id="crosshair_gap">
-                                    <h4>crosshair_gap - &lt;value&gt;</h4>
-                                    <p>Sets the gap between the threads on your crosshair.</p>
-                                </div>
-                                <div id="crosshair_size">
-                                    <h4>crosshair_recoil_scale - &lt;value&gt;</h4>
-                                    <p>Sets the size of the threads on your crosshair.</p>
-                                </div>
-                                <div id="crosshair_t">
-                                    <h4>crosshair_t - (0-1) &lt;value&gt;</h4>
-                                    <p>Disables the topmost thread on your crosshair.</p>
-                                </div>
-                                <div id="crosshair_thickness">
-                                    <h4>crosshair_thickness - &lt;value&gt;</h4>
-                                    <p>Sets the thickness of the threads on your crosshair.</p>
-                                </div>
-                                <div id="crosshair_dot">
-                                    <h4>crosshair_dot - (0-1) &lt;value&gt;</h4>
-                                    <p>Sets whether your crosshair has a dot or not.</p>
-                                </div>
-                                <div id="crosshair_dot_alpha">
-                                    <h4>crosshair_dot_alpha - (0-1) &lt;value&gt;</h4>
-                                    <p>Sets the transparency of the dot on your crosshair.</p>
-                                </div>
-                                <div id="crosshair_dot_size">
-                                    <h4>crosshair_dot_size - &lt;value&gt;</h4>
-                                    <p>Sets the size of the dot on your crosshair.</p>
-                                </div>
-                                <div id="crosshair_outline">
-                                    <h4>crosshair_outline - (0-1) &lt;value&gt;</h4>
-                                    <p>Sets whether your crosshair has outlines or not.</p>
-                                </div>
-                                <div id="crosshair_outline_alpha">
-                                    <h4>crosshair_outline_alpha - (0-1) &lt;value&gt;</h4>
-                                    <p>Sets the transparency of the outlines on your crosshair.</p>
-                                </div>
-                                <div id="crosshair_outline_color">
-                                    <h4>crosshair_outline_color - &lt;value&gt;</h4>
-                                    <p>Sets the color of the outlines on your crosshair.</p>
-                                </div>
-                                <div id="crosshair_outline_thickness">
-                                    <h4>crosshair_outline_thickness - &lt;value&gt;</h4>
-                                    <p>Sets the thickness of the outlines on your crosshair.</p>
-                                </div>
-                                <div id="crosshair_recoil_scale">
-                                    <h4>crosshair_recoil_scale - &lt;value&gt;</h4>
-                                    <p>Sets how fast your crosshair grows once recoil kicks in.</p>
-                                </div>
+                            <div id="pl_accelerate">
+                                <h4>pl_accelerate - &lt;value&gt;</h4>
+                                <p>Sets how fast you can accelerate.</p>
+                            </div>
+                            <div id="pl_air_accelerate">
+                                <h4>pl_air_accelerate - &lt;value&gt;</h4>
+                                <p>Sets how fast you can accelerate while midair.</p>
+                            </div>
+                            <div id="pl_air_friction">
+                                <h4>pl_air_friction - &lt;value&gt;</h4>
+                                <p>Sets how fast you slow down while midair.</p>
+                            </div>
+                            <div id="pl_air_max_gain">
+                                <h4>pl_air_max_gain - &lt;value&gt;</h4>
+                                <p>Sets the maximum amount of speed you can gain while accelerating while midair.</p>
+                            </div>
+                            <div id="pl_air_max_speed">
+                                <h4>pl_air_max_speed - &lt;value&gt;</h4>
+                                <p>Sets how fast you can go while midair.</p>
+                            </div>
+                            <div id="pl_crouch_accelerate">
+                                <h4>pl_crouch_accelerate - &lt;value&gt;</h4>
+                                <p>Sets how fast you can accelerate while crouched.</p>
+                            </div>
+                            <div id="pl_crouch_max_speed">
+                                <h4>pl_crouch_max_speed - &lt;value&gt;</h4>
+                                <p>Sets how fast you can go while crouched.</p>
+                            </div>
+                            <div id="pl_friction">
+                                <h4>pl_friction - &lt;value&gt;</h4>
+                                <p>Sets how fast you slow down.</p>
+                            </div>
+                            <div id="pl_gravity">
+                                <h4>pl_gravity - &lt;value&gt;</h4>
+                                <p>Sets how fast gravity acts upon you.</p>
+                            </div>
+                            <div id="pl_jump_impulse">
+                                <h4>pl_jump_impulse - &lt;value&gt;</h4>
+                                <p>Sets how much speed you gain when you jump.</p>
+                            </div>
+                            <div id="pl_ladder_max_speed">
+                                <h4>pl_ladder_max_speed - &lt;value&gt;</h4>
+                                <p>Sets how fast you can go while climbing.</p>
+                            </div>
+                            <div id="pl_max_speed">
+                                <h4>pl_max_speed - &lt;value&gt;</h4>
+                                <p>Sets how fast you can go.</p>
+                            </div>
+                            <div id="pl_walk_max_speed">
+                                <h4>pl_walk_max_speed - &lt;value&gt;</h4>
+                                <p>Sets how fast you can go while walking.</p>
                             </div>
                         </div>
-                        <div class="row"><!--Misc Row-->
-                            <div id="misc_cmds" class="mb-3">
-                                <h3>Miscellaneous</h3>
-                            </div>
-                            <div class="px-0 px-lg-4 mb-5">
-                                <div id="help">
-                                    <h4>help</h4>
-                                    <p>Prints out all commands to the console.</p>
-                                </div>
-                                <div id="sv_cheats">
-                                    <h4>sv_cheats - (0/1) &lt;value&gt;</h4>
-                                    <p>Allows <b>ANYONE</b> in the server to use console commands. <br><i>Use at your own risk.</i></p>
-                                </div>
-                                <div id="sv_add_owner">
-                                    <h4>sv_add_owner - &lt;player_name&gt;</h4>
-                                    <p>Makes the identified player a server owner. This gives them access to console commands.</p>
-                                </div>
-                                <div id="sv_remove_owner">
-                                    <h4>sv_remove_owner - &lt;player_name&gt;</h4>
-                                    <p>Removes the identified player from being a server owner.</p>
-                                </div>
-                                <div id="default_fov">
-                                    <h4>default_fov - (1-120) &lt;value&gt;</h4>
-                                    <p>Sets the field of view.</p>
-                                </div>
-                                <div id="gamemode">
-                                    <h4>gamemode - &lt;gamemode_name&gt;</h4>
-                                    <p>Sets the current gamemode. Some gamemodes may not be compatible with some maps.</p>
-                                </div>
-                                <div id="gamemodes">
-                                    <h4>gamemodes - (optional) &lt;filter&gt;</h4>
-                                    <p>Prints out all gamemodes.</p>
-                                </div>
-                                <div id="mp_restartgame">
-                                    <h4>mp_restartgame</h4>
-                                    <p>Restarts the gamemode.</p>
-                                </div>
-                                <div id="map">
-                                    <h4>map - &lt;map_name&gt;</h4>
-                                    <p>Sets the current map. Some maps may not be compatible with some gamemodes.</p>
-                                </div>
-                                <div id="maps">
-                                    <h4>maps - (optional) &lt;filter&gt;</h4>
-                                    <p>Prints out all maps.</p>
-                                </div>
-                                <div id="mp_disable_shooting">
-                                    <h4>mp_disable_shooting - (0/1) &lt;value&gt;</h4>
-                                    <p>Disables Shooting.</p>
-                                </div>
-                                <div id="thinkers">
-                                    <h4>thinkers - (optional) &lt;filter&gt;</h4>
-                                    <p>Prints out all thinkers.</p>
-                                </div>
-                                <div id="viewmodel_arms">
-                                    <h4>viewmodel_arms - (0/1) &lt;value&gt;</h4>
-                                    <p>Sets the visibility of arms in your viewmodel.</p>
-                                </div>
-                                <div id="viewmodel_offset">
-                                    <h4>viewmodel_offset - &lt;x&gt;&lt;y&gt;&lt;z&gt;</h4>
-                                    <p>Sets the offset of your viewmodel.</p>
-                                </div>
+                    </div>
 
+                </div>
+                <div class="col"> <!--Right Col-->
+                    <div class="row"> <!--Crosshair Row-->
+                        <div id="crosshair_cmds" class="mb-3">
+                            <h3>Crosshair</h3>
+                        </div>
+                        <div class="px-0 px-lg-4 mb-5">
+                            <div id="crosshair_alpha">
+                                <h4>crosshair_alpha - &lt;value&gt;</h4>
+                                <p>Sets the transparency of the threads on your crosshair.</p>
                             </div>
+                            <div id="crosshair_color">
+                                <h4>crosshair_color - (0-255) &lt;red&gt; (0-255) &lt;green&gt; (0-255) &lt;blue&gt;</h4>
+                                <p>Sets the color of your crosshair.</p>
+                            </div>
+                            <div id="crosshair_gap">
+                                <h4>crosshair_gap - &lt;value&gt;</h4>
+                                <p>Sets the gap between the threads on your crosshair.</p>
+                            </div>
+                            <div id="crosshair_size">
+                                <h4>crosshair_recoil_scale - &lt;value&gt;</h4>
+                                <p>Sets the size of the threads on your crosshair.</p>
+                            </div>
+                            <div id="crosshair_t">
+                                <h4>crosshair_t - (0-1) &lt;value&gt;</h4>
+                                <p>Disables the topmost thread on your crosshair.</p>
+                            </div>
+                            <div id="crosshair_thickness">
+                                <h4>crosshair_thickness - &lt;value&gt;</h4>
+                                <p>Sets the thickness of the threads on your crosshair.</p>
+                            </div>
+                            <div id="crosshair_dot">
+                                <h4>crosshair_dot - (0-1) &lt;value&gt;</h4>
+                                <p>Sets whether your crosshair has a dot or not.</p>
+                            </div>
+                            <div id="crosshair_dot_alpha">
+                                <h4>crosshair_dot_alpha - (0-1) &lt;value&gt;</h4>
+                                <p>Sets the transparency of the dot on your crosshair.</p>
+                            </div>
+                            <div id="crosshair_dot_size">
+                                <h4>crosshair_dot_size - &lt;value&gt;</h4>
+                                <p>Sets the size of the dot on your crosshair.</p>
+                            </div>
+                            <div id="crosshair_outline">
+                                <h4>crosshair_outline - (0-1) &lt;value&gt;</h4>
+                                <p>Sets whether your crosshair has outlines or not.</p>
+                            </div>
+                            <div id="crosshair_outline_alpha">
+                                <h4>crosshair_outline_alpha - (0-1) &lt;value&gt;</h4>
+                                <p>Sets the transparency of the outlines on your crosshair.</p>
+                            </div>
+                            <div id="crosshair_outline_color">
+                                <h4>crosshair_outline_color - &lt;value&gt;</h4>
+                                <p>Sets the color of the outlines on your crosshair.</p>
+                            </div>
+                            <div id="crosshair_outline_thickness">
+                                <h4>crosshair_outline_thickness - &lt;value&gt;</h4>
+                                <p>Sets the thickness of the outlines on your crosshair.</p>
+                            </div>
+                            <div id="crosshair_recoil_scale">
+                                <h4>crosshair_recoil_scale - &lt;value&gt;</h4>
+                                <p>Sets how fast your crosshair grows once recoil kicks in.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row"><!--Misc Row-->
+                        <div id="misc_cmds" class="mb-3">
+                            <h3>Miscellaneous</h3>
+                        </div>
+                        <div class="px-0 px-lg-4 mb-5">
+                            <div id="help">
+                                <h4>help</h4>
+                                <p>Prints out all commands to the console.</p>
+                            </div>
+                            <div id="sv_cheats">
+                                <h4>sv_cheats - (0/1) &lt;value&gt;</h4>
+                                <p>Allows <b>ANYONE</b> in the server to use console commands. <br><i>Use at your own risk.</i></p>
+                            </div>
+                            <div id="sv_add_owner">
+                                <h4>sv_add_owner - &lt;player_name&gt;</h4>
+                                <p>Makes the identified player a server owner. This gives them access to console commands.</p>
+                            </div>
+                            <div id="sv_remove_owner">
+                                <h4>sv_remove_owner - &lt;player_name&gt;</h4>
+                                <p>Removes the identified player from being a server owner.</p>
+                            </div>
+                            <div id="default_fov">
+                                <h4>default_fov - (1-120) &lt;value&gt;</h4>
+                                <p>Sets the field of view.</p>
+                            </div>
+                            <div id="gamemode">
+                                <h4>gamemode - &lt;gamemode_name&gt;</h4>
+                                <p>Sets the current gamemode. Some gamemodes may not be compatible with some maps.</p>
+                            </div>
+                            <div id="gamemodes">
+                                <h4>gamemodes - (optional) &lt;filter&gt;</h4>
+                                <p>Prints out all gamemodes.</p>
+                            </div>
+                            <div id="mp_restartgame">
+                                <h4>mp_restartgame</h4>
+                                <p>Restarts the gamemode.</p>
+                            </div>
+                            <div id="map">
+                                <h4>map - &lt;map_name&gt;</h4>
+                                <p>Sets the current map. Some maps may not be compatible with some gamemodes.</p>
+                            </div>
+                            <div id="maps">
+                                <h4>maps - (optional) &lt;filter&gt;</h4>
+                                <p>Prints out all maps.</p>
+                            </div>
+                            <div id="mp_disable_shooting">
+                                <h4>mp_disable_shooting - (0/1) &lt;value&gt;</h4>
+                                <p>Disables Shooting.</p>
+                            </div>
+                            <div id="thinkers">
+                                <h4>thinkers - (optional) &lt;filter&gt;</h4>
+                                <p>Prints out all thinkers.</p>
+                            </div>
+                            <div id="viewmodel_arms">
+                                <h4>viewmodel_arms - (0/1) &lt;value&gt;</h4>
+                                <p>Sets the visibility of arms in your viewmodel.</p>
+                            </div>
+                            <div id="viewmodel_offset">
+                                <h4>viewmodel_offset - &lt;x&gt;&lt;y&gt;&lt;z&gt;</h4>
+                                <p>Sets the offset of your viewmodel.</p>
+                            </div>
+
                         </div>
                     </div>
                 </div>
             </div>
-        </main>
-        
-        <footer class="mx-5">
-            <hr>
-            <p class="text-muted p-0 m-0">Please keep in mind this website is unofficial and community ran, although approved by kennyjeopardy</p>
-            <p class="text-muted">Games Unite is still in testing and you may find bugs. Please feel free to report them in the <a href="https://discord.gg/zMmANqqFB5" target="_blank">Discord <img src="img/externallink.svg" alt="Opens in new tab"></a></p>
-        </footer>
+        </div>
+    </main>
+    
+    <footer class="mx-5">
+        <hr>
+        <p class="text-muted p-0 m-0">Please keep in mind this website is unofficial and community ran, although approved by kennyjeopardy</p>
+        <p class="text-muted">Games Unite is still in testing and you may find bugs. Please feel free to report them in the <a href="https://discord.gg/zMmANqqFB5" target="_blank">Discord <img src="img/externallink.svg" alt="Opens in new tab"></a></p>
+    </footer>
 
-        <script src="js/scroller"></script>
-    </body>
+    <script src="js/scroller"></script>
+</body>
 
 </html>
