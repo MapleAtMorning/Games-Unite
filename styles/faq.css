@@ -7,26 +7,30 @@ h1{
     padding-bottom: 1em;
 }
 
+h3{font-weight: 700;}
+
 main{
     padding-top: 7em;
 }
 
 main a{
-    color: white;
+    color: var(--secondaryColor);
 }
 
 main a:hover{
-    color: #dcdcdc;
+    color: var(--secondaryColorDark);
 }
 
 div>a{
-
     text-decoration: none;
     font-size: 1.4em;
 }
 
-.col {text-align: center;}
+.row{
+    margin:1em 0;
+}
 
+.col{text-align: center;}
 h1,h2{text-align: center;}
 h1{font-size: 3.5em}
 h2{font-size:1.5em}
