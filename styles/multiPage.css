@@ -41,3 +41,12 @@ footer img{
     filter: invert();
     vertical-align: baseline;
 }
+
+footer{
+    text-align: center;
+}
+
+footer a{
+    color:#b4b4b4;
+    text-decoration: none;
+}
