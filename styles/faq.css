@@ -3,14 +3,9 @@
     --secondaryColorDark: #46aa7a;
 }
 
-h1{
-    padding-bottom: 1em;
-}
-
-h3{font-weight: 700;}
-
 main{
     padding-top: 7em;
+    min-height: 90vh;
 }
 
 main a{
@@ -32,5 +27,5 @@ div>a{
 
 .col{text-align: center;}
 h1,h2{text-align: center;}
-h1{font-size: 3.5em}
-h2{font-size:1.5em}
+h1{font-size: 3.5em; padding-bottom: 0.75em;}
+h2{font-size:2.5em; padding-bottom: 0.5em;}
