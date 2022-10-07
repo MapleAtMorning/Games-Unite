@@ -54,3 +54,11 @@ h1{
 main{
 	padding-top: 4.7em;
 }
+
+.stateLarge{
+	font-size: 2.5em;
+}
+
+.stateDescription{
+	font-size: 1.5em;
+}
