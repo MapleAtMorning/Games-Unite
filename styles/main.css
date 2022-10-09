@@ -62,3 +62,8 @@ main{
 .stateDescription{
 	font-size: 1.5em;
 }
+
+.imgInfo{
+	max-width: 90%;
+	border-radius: 0.5em;
+}
