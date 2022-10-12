@@ -58,7 +58,7 @@
         <nav id="navScroller" class="navbar-expand-lg px-50 fixed-top">
             <nav class="nav container offcanvas offcanvas-start text-bg-dark p-2 d-inline d-lg-block text-center" id="sidebarContent" aria-labelledby="sidebarContent">
                 <div class="row row-cols-lg-4 row-cols-1">
-                    <button type="button" class="btn-close btn-close-white d-lg-none" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    <button type="button" class="btn-close btn-close-white d-lg-none ps-5" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     <div class="col my-3 my-lg-0">
                         <div class="dropdown-center">
                             <button class="btn btn-sm btn-success" type="button" data-bs-toggle="dropdown" data-bs-target="#bot_collapse" aria-expanded="false" aria-controls="bot_collapse">Bots</button>
@@ -393,13 +393,15 @@
         </div><!--Container-->
     </main>
     
-    <footer class="mx-5">
-        <hr>
-        <p class="text-muted p-0 m-0">Please keep in mind this website is unofficial and community ran, although approved by kennyjeopardy</p>
-        <p class="text-muted">Games Unite is still in testing and you may find bugs. Please feel free to report them in the <a href="https://discord.gg/zMmANqqFB5" target="_blank">Discord <img class="external" src="img/externallink.svg" alt="Opens in new tab"></a></p>
+    <footer>
+        <div class="row row-cols-1 row-cols-md-2">
+            <div class="col"><p>Please keep in mind this website is unofficial and community ran, although approved by kennyjeopardy</p></div>
+            <div class="col"><p>Games Unite is still in testing and you may find bugs. Please feel free to report them in the <a href="https://discord.gg/zMmANqqFB5" target="_blank">Discord <img class="external" src="img/externallink.svg" alt="Opens in new tab"></a></p></div>
+        </div>
+        <p>If you want to contribute to the website, it's all being run through <a href="https://github.com/MapleAtMorning/Games-Unite" target="_blank">Github Pages!</a><img class="external" src="img/externallink.svg" alt="Opens in new tab"> Please feel free to make an issue if you think there's something you want changed, alternatively you could change it yourself and send a pull request.</p>
     </footer>
 
-    <script src="js/scroller"></script>
+    <script src="js/scroller.js"></script>
 </body>
 
 </html>
