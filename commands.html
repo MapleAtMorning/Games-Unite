@@ -12,7 +12,7 @@
     <meta content="Games Unite Commands" property="og:title">
     <meta content="A list of all the in-game commands for Games Unite" property="og:description">
     <meta content="https://mapleatmorning.github.io/Games-Unite/commands.html" property="og:url">
-    <meta content="https://mapleatmorning.github.io/Games-Unite/img/screenshots/2.png" property="og:image">
+    <meta content="https://mapleatmorning.github.io/Games-Unite/img/screenshots/2.webp" property="og:image">
     <meta content="#4bf5a3" data-react-helmet="true" name="theme-color">
     <meta name="twitter:card" content="summary_large_image">
 
@@ -22,13 +22,13 @@
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/multiPage.css">
     <link rel="stylesheet" href="styles/commands.css">
-    <link rel="shortcut icon" href="img/placeLogoTransparent.png">
+    <link rel="shortcut icon" href="img/placeholder.ico">
 </head>
 <body>
     <header class="px-lg-5 py-2 navbar navbar-dark gu-bg navbar-expand-lg fixed-top">
         <div class="container-fluid">
             <div class="navbar-brand">
-                <img class="headerLogo" src="img/placeLogoTransparent.png" alt="Games Unite Logo">
+                <img class="headerLogo" src="img/placeLogoTransparent.webp" alt="Games Unite Logo">
                 <p class="d-none d-sm-inline">Games Unite</p>
             </div>
 
@@ -57,7 +57,7 @@
         </div>
         <nav id="navScroller" class="navbar-expand-lg px-50 fixed-top">
             <nav class="nav container offcanvas offcanvas-start text-bg-dark p-2 d-inline d-lg-block text-center" id="sidebarContent" aria-labelledby="sidebarContent">
-                <div class="row row-cols-lg-4 row-cols-1">
+                <div class="row row-cols-lg-5 row-cols-1">
                     <button type="button" class="btn-close btn-close-white d-lg-none ps-5" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     <div class="col my-3 my-lg-0">
                         <div class="dropdown-center">
@@ -116,19 +116,26 @@
                     </div>
                     <div class="col dropdown-center my-3 my-lg-0">
                         <div class="dropdown">
-                            <button class="btn btn-sm btn-success" type="button" data-bs-toggle="dropdown" data-bs-target="#misc_collapse" aria-expanded="false" aria-controls="misc_collapse">Misc</button>
-                            <ul class="dropdown-menu text-center bg-none" id="misc_collapse">
-                                <li><a href="javascript:scrollFunc('help')">help</a></li>
+                            <button class="btn btn-sm btn-success" type="button" data-bs-toggle="dropdown" data-bs-target="#server_collapse" aria-expanded="false" aria-controls="server_collapse">Server</button>
+                            <ul class="dropdown-menu text-center bg-none" id="server_collapse">
                                 <li><a href="javascript:scrollFunc('sv_cheats')">sv_cheats</a></li>
                                 <li><a href="javascript:scrollFunc('sv_add_owner')">sv_add_owner</a></li>
                                 <li><a href="javascript:scrollFunc('sv_remove_owner')">sv_remove_owner</a></li>
-                                <li><a href="javascript:scrollFunc('default_fov')">default_fov</a></li>
                                 <li><a href="javascript:scrollFunc('gamemode')">gamemode</a></li>
                                 <li><a href="javascript:scrollFunc('gamemodes')">gamemodes</a></li>
                                 <li><a href="javascript:scrollFunc('mp_restartgame')">mp_restartgame</a></li>
-                                <li><a href="javascript:scrollFunc('mp_disable_shooting')">mp_disable_shooting</a></li>
                                 <li><a href="javascript:scrollFunc('map')">map</a></li>
                                 <li><a href="javascript:scrollFunc('maps')">maps</a></li>
+                                <li><a href="javascript:scrollFunc('mp_disable_shooting')">mp_disable_shooting</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col dropdown-center my-3 my-lg-0">
+                        <div class="dropdown">
+                            <button class="btn btn-sm btn-success" type="button" data-bs-toggle="dropdown" data-bs-target="#misc_collapse" aria-expanded="false" aria-controls="misc_collapse">Misc</button>
+                            <ul class="dropdown-menu text-center bg-none" id="misc_collapse">
+                                <li><a href="javascript:scrollFunc('help')">help</a></li>
+                                <li><a href="javascript:scrollFunc('default_fov')">default_fov</a></li>
                                 <li><a href="javascript:scrollFunc('thinkers')">thinkers</a></li>
                                 <li><a href="javascript:scrollFunc('viewmodel_arms')">viewmodel_arms</a></li>
                                 <li><a href="javascript:scrollFunc('viewmodel_offset')">viewmodel_offset</a></li>
@@ -243,6 +250,49 @@
                             </div>
                         </div>
                     </div>
+                    <div class="row">
+                        <div id="sv_cmds" class="mb-3">
+                            <h3>Server Management</h3>
+                        </div>
+                        <div class="px-0 px-lg-4 mb-5">
+                            <div id="sv_cheats">
+                                <h4>sv_cheats - (0/1) &lt;value&gt;</h4>
+                                <p>Allows <b>ANYONE</b> in the server to use console commands. <br><i>Use at your own risk.</i></p>
+                            </div>
+                            <div id="sv_add_owner">
+                                <h4>sv_add_owner - &lt;player_name&gt;</h4>
+                                <p>Makes the identified player a server owner. This gives them access to console commands.</p>
+                            </div>
+                            <div id="sv_remove_owner">
+                                <h4>sv_remove_owner - &lt;player_name&gt;</h4>
+                                <p>Removes the identified player from being a server owner.</p>
+                            </div>
+                            <div id="gamemode">
+                                <h4>gamemode - &lt;gamemode_name&gt;</h4>
+                                <p>Sets the current gamemode. Some gamemodes may not be compatible with some maps.</p>
+                            </div>
+                            <div id="gamemodes">
+                                <h4>gamemodes - (optional) &lt;filter&gt;</h4>
+                                <p>Prints out all gamemodes.</p>
+                            </div>
+                            <div id="mp_restartgame">
+                                <h4>mp_restartgame</h4>
+                                <p>Restarts the gamemode.</p>
+                            </div>
+                            <div id="map">
+                                <h4>map - &lt;map_name&gt;</h4>
+                                <p>Sets the current map. Some maps may not be compatible with some gamemodes.</p>
+                            </div>
+                            <div id="maps">
+                                <h4>maps - (optional) &lt;filter&gt;</h4>
+                                <p>Prints out all maps.</p>
+                            </div>
+                            <div id="mp_disable_shooting">
+                                <h4>mp_disable_shooting - (0/1) &lt;value&gt;</h4>
+                                <p>Disables Shooting.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div><!--Left Col-->
 
                 <div class="col"> <!--Right Col-->
@@ -318,45 +368,9 @@
                                 <h4>help</h4>
                                 <p>Prints out all commands to the console.</p>
                             </div>
-                            <div id="sv_cheats">
-                                <h4>sv_cheats - (0/1) &lt;value&gt;</h4>
-                                <p>Allows <b>ANYONE</b> in the server to use console commands. <br><i>Use at your own risk.</i></p>
-                            </div>
-                            <div id="sv_add_owner">
-                                <h4>sv_add_owner - &lt;player_name&gt;</h4>
-                                <p>Makes the identified player a server owner. This gives them access to console commands.</p>
-                            </div>
-                            <div id="sv_remove_owner">
-                                <h4>sv_remove_owner - &lt;player_name&gt;</h4>
-                                <p>Removes the identified player from being a server owner.</p>
-                            </div>
                             <div id="default_fov">
                                 <h4>default_fov - (1-120) &lt;value&gt;</h4>
                                 <p>Sets the field of view.</p>
-                            </div>
-                            <div id="gamemode">
-                                <h4>gamemode - &lt;gamemode_name&gt;</h4>
-                                <p>Sets the current gamemode. Some gamemodes may not be compatible with some maps.</p>
-                            </div>
-                            <div id="gamemodes">
-                                <h4>gamemodes - (optional) &lt;filter&gt;</h4>
-                                <p>Prints out all gamemodes.</p>
-                            </div>
-                            <div id="mp_restartgame">
-                                <h4>mp_restartgame</h4>
-                                <p>Restarts the gamemode.</p>
-                            </div>
-                            <div id="map">
-                                <h4>map - &lt;map_name&gt;</h4>
-                                <p>Sets the current map. Some maps may not be compatible with some gamemodes.</p>
-                            </div>
-                            <div id="maps">
-                                <h4>maps - (optional) &lt;filter&gt;</h4>
-                                <p>Prints out all maps.</p>
-                            </div>
-                            <div id="mp_disable_shooting">
-                                <h4>mp_disable_shooting - (0/1) &lt;value&gt;</h4>
-                                <p>Disables Shooting.</p>
                             </div>
                             <div id="thinkers">
                                 <h4>thinkers - (optional) &lt;filter&gt;</h4>
