@@ -3,6 +3,10 @@
     --secondaryColorDark: #46aa7a;
 }
 
+*{
+    font-family:"Titillium Web", Arial, Helvetica, sans-serif;
+}
+
 header{
     padding-left: 15em;
     font-size: 1.3rem;
@@ -28,9 +32,6 @@ header img{
     padding: 0;
 }
 
-*{
-    font-family:"Ropa Sans", Arial, Helvetica, sans-serif;
-}
 
 body{
     background-color: #181d1f;
