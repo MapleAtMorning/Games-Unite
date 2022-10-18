@@ -21,6 +21,10 @@ div>a{
     margin:1em 0;
 }
 
+footer .row{
+    margin: 0;
+}
+
 .col{text-align: center;}
 h1,h2{text-align: center;}
 h1{font-size: 3.5em;}

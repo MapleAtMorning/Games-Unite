@@ -39,7 +39,7 @@ body{
 }
 
 .external{
-    filter: invert();
+    filter: invert(1);
     vertical-align: baseline;
 }
 
@@ -48,10 +48,10 @@ footer{
     border-top: solid 2px #283035;
     text-align: center;
     background-color: #1d2529;
-    padding: 0.5em 5em;
+    padding: 1em 5em;
 }
 
-footer p{padding: 0.5em 1em 0.5em; color: #6c757d; margin:0;}
+footer p{color: #6c757d; margin:0;}
 
 footer a{
     color:#b4b4b4;
