@@ -1,11 +1,16 @@
 :root{
     --secondaryColor: #4bf5a3;
     --secondaryColorDark: #46aa7a;
+    --muteText: #6c757d;
 }
 
 *{
     font-family:"Titillium Web", Arial, Helvetica, sans-serif;
 }
+
+/* Header
+----------------------------------------
+ */
 
 header{
     padding-left: 15em;
@@ -32,16 +37,24 @@ header img{
     padding: 0;
 }
 
+/* Main
+----------------------------------------
+ */
 
 body{
     background-color: #181d1f;
     color:white;
 }
 
-.external{
+.external{ /* External link image */
     filter: invert(1);
     vertical-align: baseline;
 }
+
+
+/* Footer
+----------------------------------------
+ */
 
 footer{
     margin-top: 1em;
@@ -51,7 +64,7 @@ footer{
     padding: 1em 5em;
 }
 
-footer p{color: #6c757d; margin:0;}
+footer p{color: var(--muteText); margin:0;}
 
 footer a{
     color:#b4b4b4;
@@ -61,3 +74,11 @@ footer a{
 footer a:hover{
     color: var(--secondaryColor)
 }
+
+/* Misc
+----------------------------------------
+ */
+
+ .clear{
+    clear: both;
+ }

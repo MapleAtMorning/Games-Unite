@@ -5,16 +5,30 @@ main{
 
 .weaponTitle{
     width: auto;
-    padding-right: 0.3em;
+    margin: 0;
+    padding: 0;
+    padding-right: 0.2em;
+    font-size: 2em;
 }
 .weaponSubtitle{
     width: auto;
     padding: 0;
-    margin: 0;
-    display: inline;
-    vertical-align: bottom;
+    color: var(--muteText);
+}
+.weaponIMG{
+    max-width: 100%;
+}
+
+.row ul{clear: both;}
+.row ul li{
+    list-style-type: "- ";
 }
 
 h1,h2{text-align: center;}
 h1{font-size: 3.5em}
 h2{font-size:1.5em}
+
+@media only screen and (min-width:768px) {
+    .weaponTitle{float: left;}
+    .weaponSubtitle{padding: 1.2em 0 0 0;}
+}
