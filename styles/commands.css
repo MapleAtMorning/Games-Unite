@@ -24,16 +24,24 @@
 }
 
 .dropdown-menu{
-    width: 100%;
+    position: relative;
     border-width: 0;
-    transform: translateX(-15%);
-    background-color: var(--primaryColor);
-    font-size: 1vw;
 }
 
+@media only screen and (min-width:992px) {
 
-.dropdown .bg-none{
-    min-width: 15vw;
+    
+    .dropdown-menu{
+        width: 100%;
+        position: absolute;
+        transform: translateX(-15%);
+        background-color: var(--primaryColor);
+        font-size: 1vw;
+    }
+    
+    .dropdown .bg-none{
+        min-width: 15vw;
+    }
 }
 
 /* Main
