@@ -1,28 +1,11 @@
-h1,h2{text-align: center;}
-h1{font-size: 3.5em}
-h2{font-size:1.5em}
+/* Navigation
+----------------------------------------
+*/
 
 #navScroller{
-    background-color:#1d2529;
+    background-color: var(--primaryColor);
     width: 100%;
     margin-top: 3.6em;
-}
-
-.dropdown-menu{
-    background-color:#192125;
-    margin-top: 1em;
-}
-
-h4~p {
-    margin-left: 0;
-    color: #cacaca;
-}
-
-li>a{text-decoration: none; color: var(--secondaryColor);}
-li>a:hover{color: var(--secondaryColorDark);}
-
-main{
-    padding-top: 10em;
 }
 
 .btn-success{
@@ -36,17 +19,51 @@ main{
     --bs-btn-hover-border-color: var(--secondaryColorDark);
 }
 
-.bg-none{background-color: rgba(0,0,0,0); border-width: 0;}
+.bg-none{
+    background-color: rgba(0,0,0,0); 
+}
+
+.dropdown-menu{
+    width: 100%;
+    border-width: 0;
+    transform: translateX(-15%);
+    background-color: var(--primaryColor);
+    font-size: 1vw;
+}
+
+
+.dropdown .bg-none{
+    min-width: 15vw;
+}
+
+/* Main
+----------------------------------------
+*/
+
+h4 + p {
+    margin-left: 0;
+    color: #cacaca;
+}
+
+li>a{text-decoration: none; color: var(--secondaryColor);}
+li>a:hover{color: var(--secondaryColorDark);}
+
+main{
+    padding-top: 10em;
+}
 
 .px-50{
     padding-left: 20%;
     padding-right: 20%;
 }
 
-.dropdown-menu{
-    position: relative;
-}
+h1,h2{text-align: center;}
+h1{font-size: 3.5em}
+h2{font-size:1.5em}
 
+/* Animations for search
+----------------------------------------
+*/
 .playOut{animation: 1s cubic-bezier(0.61, 1, 0.88, 1) .1s expandOut}
 .playIn{animation: 1s cubic-bezier(0.61, 1, 0.88, 1) .1s expandIn}
 @keyframes expandOut {

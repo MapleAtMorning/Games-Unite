@@ -1,4 +1,5 @@
 :root{
+    --primaryColor: #1d2529;
     --secondaryColor: #4bf5a3;
     --secondaryColorDark: #46aa7a;
     --muteText: #6c757d;
@@ -22,7 +23,7 @@ header img{
 }
 
 .gu-bg {
-    background-color: #1d2529;
+    background-color: var(--primaryColor);
     color: white;
 }
 
@@ -64,7 +65,11 @@ footer{
     padding: 1em 5em;
 }
 
-footer p{color: var(--muteText); margin:0;}
+footer p{
+    color: var(--muteText); 
+    margin:0;
+    font-size: clamp(0.5rem, 5vw, 1em)
+}
 
 footer a{
     color:#b4b4b4;
