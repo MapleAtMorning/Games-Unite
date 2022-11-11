@@ -61,7 +61,7 @@ footer{
     margin-top: 1em;
     border-top: solid 2px #283035;
     text-align: center;
-    background-color: #1d2529;
+    background-color: var(--primaryColor);
     padding: 1em 5em;
 }
 
