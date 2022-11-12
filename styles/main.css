@@ -23,22 +23,22 @@
 #carouselContent h2 {filter: drop-shadow(0.2em 0.2em 0.1em #191d1f);}
 
 
-/* Main Hero 
+/* Carousel Content
 ----------------------------------------
 */
 h1{
-    font-size: clamp(2.5rem, 10vw, 5rem);
+    font-size: clamp(3.5rem, 10vw, 5rem);
     font-weight: 700;
-	filter: drop-shadow(0.05em 0.05em 0.1em #191d1f);
+	filter: drop-shadow(0.05rem 0.05rem 0.1rem #191d1f);
 }
 
 #tagLine{
-	font-size: clamp(1rem, 3vw, 2rem);
+	font-size: 2rem;
 }
 
 #heroLogo{
 	max-height: 25rem;
-	filter: drop-shadow(0.3em 0.3em 0.25em #191d1f);
+	filter: drop-shadow(0.3rem 0.3rem 0.25rem #191d1f);
 }
 
 #playNow{
