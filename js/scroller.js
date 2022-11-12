@@ -22,6 +22,7 @@ function scrollFunc(id) {
     
             setTimeout(() => {
                 element.classList.add('playIn');
+                
                 setTimeout(() => {
                     element.classList.remove('playIn');
                     element.style.letterSpacing = "0em";
@@ -31,6 +32,6 @@ function scrollFunc(id) {
         });
     }, timeDelay);
 
-    //! this is hell and unreadable I do not know javascript well, this was self taught and very very rough
+    //! this is hell and unreadable I do not know javascript well, this was entierly self taught and thrown together 
 
 }
