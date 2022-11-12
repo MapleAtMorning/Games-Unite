@@ -3,7 +3,7 @@ function scrollFunc(id) {
     let openedCanvas = bootstrap.Offcanvas.getInstance(sidebar);
     let element = document.getElementById(id);
 
-    openedCanvas.toggle(); 
+    openedCanvas.hide(); 
 
     setTimeout(() => {
         element.scrollIntoView({behavior:"smooth", block:"center"});
@@ -22,7 +22,7 @@ function scrollFunc(id) {
                 
             }, 1000);       
         });
-    }, 350);
+    }, 325);
 
     //! this is hell and unreadable I do not know javascript well, this was self taught and very very rough
 

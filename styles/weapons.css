@@ -3,18 +3,25 @@ main{
     min-height: 90vh;
 }
 
+h1,h2{text-align: center;}
+
+h1{font-size: clamp(2.5rem, 8vw, 3.5rem)}
+h2{font-size: clamp(1rem, 4vw, 1.5rem)}
+
 .weaponTitle{
     width: auto;
     margin: 0;
     padding: 0;
     padding-right: 0.2em;
-    font-size: 2em;
+    font-size: clamp(1.5rem, 3vw, 2rem);
 }
+
 .weaponSubtitle{
     width: auto;
     padding: 0;
     color: var(--muteText);
 }
+
 .weaponIMG{
     max-width: 100%;
 }
@@ -22,11 +29,8 @@ main{
 .row ul{clear: both;}
 .row ul li{
     list-style-type: "- ";
+    font-size: clamp(0.75rem, 3vw, 1rem);
 }
-
-h1,h2{text-align: center;}
-h1{font-size: 3.5em}
-h2{font-size:1.5em}
 
 @media only screen and (min-width:768px) {
     .weaponTitle{float: left;}

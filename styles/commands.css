@@ -58,17 +58,14 @@ li>a:hover{color: var(--secondaryColorDark);}
 */
 
 main{
-    padding-top: 10em;
+    padding-top: 7em;
 }
 
 h1,h2{text-align: center;}
 
 h1{font-size: clamp(2.5rem, 8vw, 3.5rem)}
 h2{font-size: clamp(1rem, 4vw, 1.5rem)}
-
-h4{
-    font-size: clamp(1.2rem, 3vw, 1.5rem);
-}
+h4{font-size: clamp(1.2rem, 3vw, 1.5rem);}
 
 h4 + p {
     margin-left: 0;
@@ -76,6 +73,10 @@ h4 + p {
 }
 
 @media only screen and (min-width: 992px) { /* Indents descriptions for each comment on desktop devices*/
+    main{
+        padding-top: 10em;
+    }
+
     h4 + p {
         margin-left: 1.5em;
     }
