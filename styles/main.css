@@ -1,3 +1,8 @@
+/* Header
+----------------------------------------
+*/
+#navTop{background-color: #1d252900; transition: ease-in-out background-color 200ms }
+
 /* Carousel Handler
 ----------------------------------------
 */
@@ -5,13 +10,15 @@
 	background-color: #2f2e31;
 	overflow: hidden;
 	position: relative;
+	transform: translate(0, -76px);
+	padding-top: 76px;
     z-index: 1;
 }
 
 #mainCarousel {
 	opacity: 0.6;
     width: 100%;
-    transform: translate(0, -15em);
+    transform: translate(0, -15vh);
 	position: absolute;
 }
 

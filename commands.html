@@ -190,8 +190,8 @@
                                 <p>Sets the default thinker. Thinkers are bot profiles that describe how a bot behaves. <br> (A list of all thinkers will eventually be made)</p>
                             </div>
                         </div>
-                    </div>
-                    <div class="row"><!--Player Movement Row-->
+                    </div> <!--End Bots Row-->
+                    <div class="row"> <!--Player Movement Row-->
                         <div id="pl_cmds" class="mb-3">
                             <h3>Player / Movement</h3>
                         </div>
@@ -253,8 +253,8 @@
                                 <p>Sets how fast you can go while walking.</p>
                             </div>
                         </div>
-                    </div>
-                    <div class="row">
+                    </div><!--End Player Movement Row-->
+                    <div class="row"> <!--Server Management Row-->
                         <div id="sv_cmds" class="mb-3">
                             <h3>Server Management</h3>
                         </div>
@@ -296,8 +296,8 @@
                                 <p>Disables Shooting.</p>
                             </div>
                         </div>
-                    </div>
-                </div><!--Left Col-->
+                    </div><!--End Server Management Row-->
+                </div><!--End Left Col-->
 
                 <div class="col"> <!--Right Col-->
                     <div class="row"> <!--Crosshair Row-->
@@ -362,7 +362,7 @@
                                 <p>Sets how fast your crosshair grows once recoil kicks in.</p>
                             </div>
                         </div>
-                    </div>
+                    </div> <!--End Crosshair Row-->
                     <div class="row"><!--Misc Row-->
                         <div id="misc_cmds" class="mb-3">
                             <h3>Miscellaneous</h3>
@@ -388,6 +388,14 @@
                                 <h4>viewmodel_offset - &lt;x&gt;&lt;y&gt;&lt;z&gt;</h4>
                                 <p>Sets the offset of your viewmodel.</p>
                             </div>
+                            <div id="viewmodel_flip">
+                                <h4>viewmodel_flip - (0/1)</h4>
+                                <p>Flips the viewmodel so weapons are on the left side.</p>
+                            </div>
+                            <div id="camera_aspect_ratio">
+                                <h4>camera_aspect_ratio - (0-1)</h4>
+                                <p>Replicates a stretched resolution using decimals converted to percentages</p>
+                            </div>
                             <div id="kill">
                                 <h4>kill*</h4>
                                 <p>Die. You die. That's it.</p>
@@ -402,13 +410,13 @@
                                 <p>Completely fills the reserve and current magazine of the gun the player is currently holding, and gives you full health.</p>
                             </div>
                         </div>
-                    </div><!--Misc Row-->
-                </div> <!-- Right Col-->
+                    </div><!--End Misc Row-->
+                </div> <!--End Right Col-->
             </div>
             <div class="text-center">
                 <p class="">*May be bugged, sv_cheats may need to be on.</p>
             </div>
-        </div><!--Container-->
+        </div><!--End Container-->
     </main>
     
     <footer>

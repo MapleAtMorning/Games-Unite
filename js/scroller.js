@@ -3,7 +3,14 @@ function scrollFunc(id) {
     let openedCanvas = bootstrap.Offcanvas.getInstance(sidebar);
     let element = document.getElementById(id);
     let vw = window.innerWidth;
-    let timeDelay = vw < 992 ? 350 : 0;
+    let timeDelay
+
+    if(vw < 992) {	
+        openedCanvas.hide(); 	
+        timeDelay = 350;	
+    } else{	
+        timeDelay = 0;	
+    }
 
     setTimeout(() => {
         element.scrollIntoView({behavior:"smooth", block:"center"});
