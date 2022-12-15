@@ -36,7 +36,6 @@
 	text-align: center;
 	color: white;
 }
-#carouselContent h2 {filter: drop-shadow(0.2em 0.2em 0.1em #191d1f);}
 
 
 /* Carousel Content
@@ -45,7 +44,7 @@
 h1{
     font-size: clamp(3.5rem, 10vw, 5rem);
     font-weight: 700;
-	filter: drop-shadow(0.05rem 0.05rem 0.1rem #191d1f);
+	filter: drop-shadow(0.3rem 0.3rem 0.25rem #191d1f);
 }
 
 #tagLine{
@@ -56,6 +55,8 @@ h1{
 	max-height: 25rem;
 	filter: drop-shadow(0.3rem 0.3rem 0.25rem #191d1f);
 }
+
+#carouselContent h2 {filter: drop-shadow(0.2em 0.2em 0.1em #191d1f);}
 
 #playNow{
 	background-color: #4bf5a3;

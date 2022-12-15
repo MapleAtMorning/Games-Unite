@@ -2,6 +2,7 @@ function setCookie(name, value) {
     const d = new Date();
     d.setTime(d.getTime() + (365 * 24 * 60 * 60 * 1000));
     let expires = "expires=" + d.toUTCString();
+    // Simple string that makes the cookies expire after 1 year instead of on browser close.
 
     document.cookie = name + "=" + value + ";" + expires + "; SameSite=Strict";
 }
@@ -23,8 +24,7 @@ function getCookie(cname) {
 }
 // HEAVILY HEAVILY LEARNT AND COPIED FROM https://www.w3schools.com/js/js_cookies.asp
 
-
-document.addEventListener("DOMContentLoaded", function() {
+function cookieChecker(){
     if(getCookie("cookiesApproved")){
         return;
     }
@@ -34,12 +34,39 @@ document.addEventListener("DOMContentLoaded", function() {
     modal.show();
     // Simply bring up the cookies modal popup.
 
-    const modalQuery = document.querySelector('#cookiesModal')
+    const modalQuery = document.querySelector('#cookiesModal');
     modalQuery.addEventListener('hidden.bs.modal', event => {
-        setCookie('cookiesApproved', "Told you we didn't have trackers.");
-        setCookie('theme', "default");
+        setCookie("cookiesApproved", "Told you we didn't have trackers.");
+        setCookie("theme", "default");
     })
     // Check for the modal to be closed, only possible through the accept button, and add the cookiesApproved cookie.
-      
-      
+}
+
+function themeColorUpdater(primary, primarylight, background, secondary, secondarydark, mute){
+    const root = document.querySelector(':root');
+    root.style.setProperty("--primaryColor", primary)
+    root.style.setProperty("--primaryLight", primarylight)
+    root.style.setProperty("--primaryBackground", background)
+    root.style.setProperty("--secondaryColor", secondary)
+    root.style.setProperty("--secondaryColorDark", secondarydark)
+    root.style.setProperty("--muteText", mute)
+}
+
+document.addEventListener("DOMContentLoaded", function() {
+    if(getCookie("theme")){
+        let theme = getCookie("theme");
+
+        if(theme == "contrast"){
+            themeColorUpdater(
+                "#000000", //primary
+                "#000000", //primaryLight
+                "#000000", //primaryBackground
+                "#4bf5a3", //secondary
+                "#46aa7a", //secondaryDark
+                "#fff" //mute
+            )
+        } 
+    }      
+    
+    cookieChecker();
 });
