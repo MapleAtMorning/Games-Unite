@@ -92,3 +92,24 @@ main{
 h4{
 	font-size: clamp(1.5rem, 3vw, 2rem);
 }
+
+/*
+Modal 
+----------------------------------------
+*/
+
+.modal-content{
+	background-color: var(--primaryColor);
+}
+
+.modal-footer{
+	border-color: var(--primaryLight);
+}
+
+.modal-header{
+	border-width: 0;
+}
+
+.modal .btn-close{
+	display: none;
+}

@@ -23,13 +23,13 @@ header img{
     max-width: 3rem;
 }
 
+#headerLogo{
+    float: left;
+}
+
 .gu-bg {
     background-color: var(--primaryColor);
     color: white;
-}
-
-#headerLogo{
-    float: left;
 }
 
 .navbar-brand p {
@@ -37,6 +37,10 @@ header img{
     font-size: 1.3em;
     margin: 0;
     padding: 0;
+}
+
+#navTop .container-fluid{
+    max-width: 1250px;
 }
 
 /* Main

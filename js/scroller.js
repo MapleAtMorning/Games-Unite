@@ -1,6 +1,6 @@
 function scrollFunc(id) {
-    let sidebar = document.getElementById('sidebarContent');
-    let openedCanvas = bootstrap.Offcanvas.getInstance(sidebar);
+    const sidebar = document.getElementById('sidebarContent');
+    const openedCanvas = bootstrap.Offcanvas.getInstance(sidebar);
     let element = document.getElementById(id);
     let vw = window.innerWidth;
     let timeDelay
