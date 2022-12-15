@@ -39,7 +39,7 @@ header img{
     padding: 0;
 }
 
-#navTop .container-fluid{
+.navbar .container-fluid{
     max-width: 1250px;
 }
 
