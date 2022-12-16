@@ -69,7 +69,7 @@ h4{font-size: clamp(1.2rem, 3vw, 1.5rem);}
 
 h4 + p {
     margin-left: 0;
-    color: #cacaca;
+    color: var(--muteText);
 }
 
 @media only screen and (min-width: 992px) { /* Indents descriptions for each comment on desktop devices*/

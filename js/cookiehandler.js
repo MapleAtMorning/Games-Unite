@@ -42,13 +42,14 @@ function cookieChecker(){
     // Check for the modal to be closed, only possible through the accept button, and add the cookiesApproved cookie.
 }
 
-function themeColorUpdater(primary, primarylight, background, secondary, secondarydark, mute){
+function themeColorUpdater(primary, primarylight, background, secondary, secondarydark, text, mute){
     const root = document.querySelector(':root');
     root.style.setProperty("--primaryColor", primary)
     root.style.setProperty("--primaryLight", primarylight)
     root.style.setProperty("--primaryBackground", background)
     root.style.setProperty("--secondaryColor", secondary)
     root.style.setProperty("--secondaryColorDark", secondarydark)
+    root.style.setProperty("--textColor", text)
     root.style.setProperty("--muteText", mute)
 }
 
@@ -59,14 +60,26 @@ document.addEventListener("DOMContentLoaded", function() {
         if(theme == "contrast"){
             themeColorUpdater(
                 "#000000", //primary
-                "#000000", //primaryLight
+                "#ffffff", //primaryLight
                 "#000000", //primaryBackground
                 "#4bf5a3", //secondary
                 "#46aa7a", //secondaryDark
-                "#fff" //mute
+                "#ffffff", //text
+                "#ffffff" //mute
             )
-        } 
-    }      
+        }
+        else if(theme == "light"){
+            themeColorUpdater(
+                "#ECEEF4", //primary
+                "#000000", //primaryLight
+                "#ffffff", //primaryBackground
+                "#4bf5a3", //secondary
+                "#46aa7a", //secondaryDark
+                "#000000", //text
+                "#6c757d" //mute
+            )
+        }
+    }
     
     cookieChecker();
 });

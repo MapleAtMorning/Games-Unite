@@ -4,6 +4,8 @@
     --primaryBackground: #181d1f;
     --secondaryColor: #4bf5a3;
     --secondaryColorDark: #46aa7a;
+    
+    --textColor: #ffffff;
     --muteText: #6c757d;
 }
 
@@ -28,20 +30,31 @@ header img{
     float: left;
 }
 
-.gu-bg {
-    background-color: var(--primaryColor);
-    color: white;
-}
-
 .navbar-brand p {
     line-height: 50px;
     font-size: 1.3em;
     margin: 0;
     padding: 0;
+    color: var(--textColor);
 }
 
 .navbar .container-fluid{
     max-width: 1250px;
+}
+
+.nav-link{
+    color: var(--textColor);
+    opacity: 65%;
+    transition: opacity 150ms;
+}
+
+.nav-link a:hover{
+    opacity: 100%;
+}
+
+.navbar .active{
+    color: var(--textColor) !important;
+    opacity: 100%;
 }
 
 /* Main
@@ -50,7 +63,7 @@ header img{
 
 body{
     background-color: var(--primaryBackground);
-    color:white;
+    color: var(--textColor);
 }
 
 .external{ /* External link image */
@@ -65,7 +78,7 @@ body{
 
 footer{
     margin-top: 1em;
-    border-top: solid 2px #283035;
+    border-top: solid 2px var(--primaryLight);
     text-align: center;
     background-color: var(--primaryColor);
     padding: 1em 5em;
@@ -78,13 +91,39 @@ footer p{
 }
 
 footer a{
-    color:#b4b4b4;
+    color: var(--muteText);
     text-decoration: none;
 }
 
 footer a:hover{
     color: var(--secondaryColor)
 }
+
+footer .row{
+    padding: 0 20px;
+}
+
+/* Theme color changer */
+
+footer input[type="radio"]{
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    outline: 3px #fff solid;
+    outline-offset: 2px;
+    border-radius: 100%;
+    margin: 0 10px;
+}
+
+footer input[type="radio"]#contrast{outline: 3px #ffffff solid; mix-blend-mode: difference;}
+footer input[type="radio"]#contrast:checked{background-color: #fff;}
+
+footer input[type="radio"]#default{outline: 3px #3b454b solid;}
+footer input[type="radio"]#default:checked{background-color: #3b454b;}
+
+footer input[type="radio"]#light{outline: 3px #fff solid;}
+footer input[type="radio"]#light:checked{background-color: #fff;}
+
 
 /* Misc
 ----------------------------------------

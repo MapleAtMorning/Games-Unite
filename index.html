@@ -35,7 +35,7 @@
     <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
-    <header class="px-lg-5 py-2 navbar navbar-dark gu-bg navbar-expand-lg fixed-top" id="navTop">
+    <header class="px-lg-5 py-2 navbar navbar-expand-lg fixed-top" id="navTop">
         <div class="container-fluid">
             
             <div class="navbar-brand">
@@ -46,16 +46,16 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             
-            <div class="offcanvas offcanvas-end text-bg-dark" id="navbarSupportedContent" aria-labelledby="navbarSupportedContent">
+            <div class="offcanvas offcanvas-end" id="navbarSupportedContent" aria-labelledby="navbarSupportedContent">
                 <div class="offcanvas-header">
                     <h3 id="offcanvasNavbarDarklabel" class="mt-3">Games Unite</h3>
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <ul class="navbar-nav offcanvas-body justify-content-lg-end">
-                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="/">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" aria-current="page" href="commands">Commands</a></li>
-                    <li class="nav-item"><a class="nav-link" aria-current="page" href="faq">FAQ</a></li>
-                    <li class="nav-item"><a class="nav-link" aria-current="page" href="weapons">Weapons</a></li>
+                    <li class="nav-item"><a id="navone" class="nav-link active" aria-current="page" href="/">Home</a></li>
+                    <li class="nav-item"><a id="navtwo" class="nav-link" aria-current="page" href="commands">Commands</a></li>
+                    <li class="nav-item"><a id="navthree" class="nav-link" aria-current="page" href="faq">FAQ</a></li>
+                    <li class="nav-item"><a id="navfour" class="nav-link" aria-current="page" href="weapons">Weapons</a></li>
                 </ul>
             </div>
             
@@ -171,13 +171,34 @@
     </main>
     
     <footer>
-        <div class="row row-cols-1 row-cols-md-2">
-            <div class="col">
-                <div class="row"><p class="p-0">Please keep in mind this website is unofficial and community ran, although approved by kennyjeopardy</p></div>
-                <div class="row"><p class="p-0">Games Unite is still in testing and you may find bugs. Please feel free to report them in the <a href="https://discord.gg/zMmANqqFB5" target="_blank" aria-label="Opens in new tab">Discord <img class="external" src="img/externallink.svg" alt="Opens in new tab" width="16" loading="lazy"></a></p></div>
-            </div>
-            <div class="col">
-                <div class="row"><p class="d-none d-md-inline p-0">If you want to contribute to the website, it's all being run through <a href="https://github.com/MapleAtMorning/Games-Unite" target="_blank" aria-label="Opens in new tab">Github Pages!&nbsp;</a><img class="external" src="img/externallink.svg" alt="Opens in new tab" width="16" loading="lazy"> Please feel free to make an issue if you think there's something you want changed, alternatively you could change it yourself and send a pull request.</p></div>
+        <div class="container-fluid">
+            <form class="theme-picker" action="">
+                <legend class="visually-hidden">Pick a theme</legend>
+                <fieldset>
+                    <input type="radio" name="theme" id="default" checked>
+                    <label class="visually-hidden" for="default">
+                        Default theme
+                    </label>
+                    
+                    <input type="radio" name="theme" id="contrast">
+                    <label class="visually-hidden" for="contrast">
+                        High contrast theme
+                    </label>
+
+                    <input type="radio" name="theme" id="light">
+                    <label class="visually-hidden" for="light">
+                        Light theme
+                    </label>
+                </fieldset>
+            </form>
+            <div class="row row-cols-1 row-cols-md-2">
+                <div class="col">
+                    <div class="row"><p class="p-0">Please keep in mind this website is unofficial and community ran, although approved by kennyjeopardy</p></div>
+                    <div class="row"><p class="p-0">Games Unite is still in testing and you may find bugs. Please feel free to report them in the <a href="https://discord.gg/zMmANqqFB5" target="_blank" aria-label="Opens in new tab">Discord <img class="external" src="img/externallink.svg" alt="Opens in new tab" width="16" loading="lazy"></a></p></div>
+                </div>
+                <div class="col">
+                    <div class="row"><p class="d-none d-md-inline p-0">If you want to contribute to the website, it's all being run through <a href="https://github.com/MapleAtMorning/Games-Unite" target="_blank" aria-label="Opens in new tab">Github Pages!&nbsp;</a><img class="external" src="img/externallink.svg" alt="Opens in new tab" width="16" loading="lazy"> Please feel free to make an issue if you think there's something you want changed, alternatively you could change it yourself and send a pull request.</p></div>
+                </div>
             </div>
         </div>
     </footer>
