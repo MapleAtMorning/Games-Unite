@@ -114,3 +114,12 @@ Modal
 .modal .btn-close{
 	display: none;
 }
+
+/* 
+Footer
+----------------------------------------
+*/
+
+footer{
+	margin-top: .75rem;
+}

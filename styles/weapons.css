@@ -32,7 +32,12 @@ h2{font-size: clamp(1rem, 4vw, 1.5rem)}
     font-size: clamp(0.75rem, 3vw, 1rem);
 }
 
-@media only screen and (min-width:768px) {
+@media only screen and (min-width:1400px) {
     .weaponTitle{float: left;}
     .weaponSubtitle{padding: 1.2em 0 0 0;}
+}
+
+@media only screen and (min-width: 576px) and (max-width: 992px){
+    .weaponTitle{float: left;}
+    .weaponSubtitle{padding: 3.5% 0 0 0;}
 }

@@ -107,7 +107,7 @@ body{
  */
 
 footer{
-    border-top: solid 2px var(--primaryLight);
+    border-top: solid 5px var(--primaryLight);
     text-align: center;
     background-color: var(--primaryColor);
     padding: 0 5em 1em;
@@ -136,8 +136,8 @@ footer .row{
 
 footer input[type="radio"]{
     appearance: none;
-    width: 25px;
-    height: 25px;
+    width: clamp(15px, 3vw, 25px);
+    height: clamp(15px, 3vw, 25px);
     outline: 3px #fff solid;
     outline-offset: 2px;
     border-radius: 100%;
@@ -158,6 +158,13 @@ footer input[type="radio"]#light:checked{background-color: #fff;}
     border-radius: 0 0 2em 2em;
     margin: auto;
     background-color: var(--primaryLight);
+}
+
+@media only screen and (max-width:992px) {
+    #theme-picker{
+        width: 100%;
+        margin: 0;
+    }
 }
 
 

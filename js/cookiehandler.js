@@ -67,7 +67,7 @@ function themeChanger(){
         if(theme == "contrast"){
             themeColorUpdater(
                 "#000000", //primary
-                "#585858", //primaryLight
+                "#111111", //primaryLight
                 "#000000", //primaryBackground
                 "#4bf5a3", //secondary
                 "#46aa7a", //secondaryDark
