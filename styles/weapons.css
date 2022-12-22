@@ -3,10 +3,34 @@ main{
     min-height: 90vh;
 }
 
-h1,h2{text-align: center;}
+main h1,h2,h3{text-align: center;}
 
-h1{font-size: clamp(2.5rem, 8vw, 3.5rem)}
-h2{font-size: clamp(1rem, 4vw, 1.5rem)}
+main h1{font-size: clamp(2.5rem, 8vw, 3.5rem);}
+main h2{font-size: clamp(1rem, 4vw, 1.5rem); padding-bottom: 0.5rem;}
+main h3{font-size: clamp(2rem, 4vw, 2.5rem); padding-top: 2rem}
+
+/* 
+Rows & Cols
+----------------------------------------
+ */
+.row ul{clear: both;}
+.row ul li{
+    list-style-type: "- ";
+    font-size: clamp(0.75rem, 3vw, 1rem);
+}
+
+.col{
+    margin-bottom: min(1em);
+}
+
+.col-p{
+    min-height: 195.5px;
+}
+
+/* 
+Weapon Info
+----------------------------------------
+*/
 
 .weapon-title{
     width: auto;
@@ -26,20 +50,6 @@ h2{font-size: clamp(1rem, 4vw, 1.5rem)}
     max-width: 100%;
 }
 
-.row ul{clear: both;}
-.row ul li{
-    list-style-type: "- ";
-    font-size: clamp(0.75rem, 3vw, 1rem);
-}
-
-.col{
-    margin-bottom: min(1em);
-}
-
-.col-p{
-    min-height: 195.5px;
-}
-
 @media only screen and (min-width:1400px) {
     .weapon-title{float: left;}
     .weapon-subtitle{padding: 1.2em 0 0 0;}
@@ -48,4 +58,13 @@ h2{font-size: clamp(1rem, 4vw, 1.5rem)}
 @media only screen and (min-width: 576px) and (max-width: 992px){
     .weapon-title{float: left;}
     .weapon-subtitle{padding: 3.5% 0 0 0;}
+}
+
+/* 
+Extras
+----------------------------------------
+*/
+
+.text-center{
+    visibility: hidden;
 }
