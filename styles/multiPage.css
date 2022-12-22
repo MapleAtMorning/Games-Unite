@@ -27,7 +27,7 @@ header img{
     max-width: 3rem;
 }
 
-#headerLogo{
+#header-logo{
     float: left;
 }
 
@@ -37,7 +37,7 @@ header img{
 
 .navbar-brand p {
     line-height: 50px;
-    font-size: 1.3em;
+    font-size: 1.3rem;
     margin: 0;
     padding: 0;
     transition: color 500ms;
@@ -116,7 +116,7 @@ footer{
 footer p{
     color: var(--muteText); 
     margin:0;
-    font-size: 1em
+    font-size: 1rem
 }
 
 footer a{

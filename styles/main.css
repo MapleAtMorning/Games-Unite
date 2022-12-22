@@ -1,13 +1,13 @@
 /* Header
 ----------------------------------------
 */
-#navTop{
+#nav-top{
 	background-color: #1d252900;
 	text-shadow: 0.2rem 0.2rem 0.2rem #000;
 	transition: ease-in background-color 300ms, text-shadow 500ms;
 }
 
-#headerLogo{
+#header-logo{
 	filter: drop-shadow(0.2rem 0.2rem 0.2rem #000);
 	transition: ease-in filter 500ms;
 }
@@ -15,7 +15,7 @@
 /* Carousel Handler
 ----------------------------------------
 */
-#carouselHolder {
+#carousel-holder {
 	background-color: #2f2e31;
 	overflow: hidden;
 	position: relative;
@@ -24,14 +24,14 @@
     z-index: 1;
 }
 
-#mainCarousel {
+#main-carousel {
 	opacity: 0.6;
     width: 100%;
     transform: translate(0, -15vh);
 	position: absolute;
 }
 
-#carouselContent {
+#carousel-content {
 	position: relative;
 	text-align: center;
 	color: white;
@@ -47,37 +47,37 @@ h1{
 	filter: drop-shadow(0.3rem 0.3rem 0.25rem #191d1f);
 }
 
-#tagLine{
+#tag-line{
 	font-size: 2rem;
 }
 
-#heroLogo{
+#hero-logo{
 	max-height: 25rem;
 	filter: drop-shadow(0.3rem 0.3rem 0.25rem #191d1f);
 }
 
-#carouselContent h2 {filter: drop-shadow(0.2em 0.2em 0.1em #191d1f);}
+#carousel-content h2 {filter: drop-shadow(0.2em 0.2em 0.1em #191d1f);}
 
-#playNow{
+#play-now{
 	background-color: #4bf5a3;
 	color: black;
 }
 
-#playNow:hover{background-color: #50ce91;}
+#play-now:hover{background-color: #50ce91;}
 
 /* Features / Body 
 ----------------------------------------
 */
 
-.infoTitle{
+.info-title{
 	font-size: clamp(2rem, 3vw, 3rem);
 }
 
-.featuresTitle{
+.features-title{
 	font-size: clamp(2rem, 3vw, 3rem);
 }
 
-.featuresParagraph, .infoParagraph{
+.features-paragraph, .info-paragraph{
 	font-size: clamp(1rem, 3vw, 1.5rem);
 }
 
@@ -85,7 +85,7 @@ main{
 	padding-top: 4.7rem;
 }
 
-.imgInfo{
+.img-info{
 	max-width: 90%;
 	border-radius: 0.5rem;
 }

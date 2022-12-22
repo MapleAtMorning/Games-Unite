@@ -1,8 +1,7 @@
 import {getCookie, mobileLight} from "./cookiehandler.js";
 
-const nav = document.getElementById('navTop');
-const logo = document.getElementById('headerLogo');
-const header = document.getElementById('navTop');
+const nav = document.getElementById('nav-top');
+const logo = document.getElementById('header-logo');
 const itemHolder = document.getElementById('nav-item-holder');
 const root = document.querySelector(':root');
 const rootstyle = getComputedStyle(root);
@@ -20,8 +19,8 @@ function scrollFade(){
 
         if(theme == "light"){
             mobileLight()
-            header.classList.remove('light-theming');
-            header.classList.add('default-theming');
+            nav.classList.remove('light-theming');
+            nav.classList.add('default-theming');
             if(window.innerWidth < 992){
                 shadow("0 ");
                 return;

@@ -8,7 +8,7 @@ h1,h2{text-align: center;}
 h1{font-size: clamp(2.5rem, 8vw, 3.5rem)}
 h2{font-size: clamp(1rem, 4vw, 1.5rem)}
 
-.weaponTitle{
+.weapon-title{
     width: auto;
     margin: 0;
     padding: 0;
@@ -16,13 +16,13 @@ h2{font-size: clamp(1rem, 4vw, 1.5rem)}
     font-size: clamp(1.5rem, 3vw, 2rem);
 }
 
-.weaponSubtitle{
+.weapon-subtitle{
     width: auto;
     padding: 0;
     color: var(--muteText);
 }
 
-.weaponIMG{
+.weapon-img{
     max-width: 100%;
 }
 
@@ -32,12 +32,20 @@ h2{font-size: clamp(1rem, 4vw, 1.5rem)}
     font-size: clamp(0.75rem, 3vw, 1rem);
 }
 
+.col{
+    margin-bottom: min(1em);
+}
+
+.col-p{
+    min-height: 195.5px;
+}
+
 @media only screen and (min-width:1400px) {
-    .weaponTitle{float: left;}
-    .weaponSubtitle{padding: 1.2em 0 0 0;}
+    .weapon-title{float: left;}
+    .weapon-subtitle{padding: 1.2em 0 0 0;}
 }
 
 @media only screen and (min-width: 576px) and (max-width: 992px){
-    .weaponTitle{float: left;}
-    .weaponSubtitle{padding: 3.5% 0 0 0;}
+    .weapon-title{float: left;}
+    .weapon-subtitle{padding: 3.5% 0 0 0;}
 }

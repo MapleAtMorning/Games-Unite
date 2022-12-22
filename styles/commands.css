@@ -2,7 +2,7 @@
 ----------------------------------------
 */
 
-#navScroller{
+#nav-scroller{
     background-color: var(--primaryColor);
     width: 100%;
     margin-top: 3.6em;
@@ -85,9 +85,9 @@ h4 + p {
 /* Animations for search
 ----------------------------------------
 */
-.playOut{animation: 1s cubic-bezier(0.61, 1, 0.88, 1) .1s expandOut}
-.playIn{animation: 1s cubic-bezier(0.61, 1, 0.88, 1) .1s expandIn}
-@keyframes expandOut {
+.play-out{animation: 1s cubic-bezier(0.61, 1, 0.88, 1) .1s expand-out}
+.play-in{animation: 1s cubic-bezier(0.61, 1, 0.88, 1) .1s expand-in}
+@keyframes expand-out {
     from {
         letter-spacing: 0em;
     }
@@ -95,7 +95,7 @@ h4 + p {
         letter-spacing: 0.3em;
     }
 }
-@keyframes expandIn {
+@keyframes expand-in {
     from {
         letter-spacing: 0.3em;
     }

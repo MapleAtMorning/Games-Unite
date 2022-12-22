@@ -1,5 +1,5 @@
 const itemHolder = document.getElementById('nav-item-holder');
-const header = document.getElementById('navTop');
+const header = document.getElementById('nav-top');
 let theme = getCookie("theme");
 const root = document.querySelector(':root');
 const rootstyle = getComputedStyle(root);

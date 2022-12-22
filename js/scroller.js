@@ -14,17 +14,17 @@ function scrollFunc(id) {
 
     setTimeout(() => {
         element.scrollIntoView({behavior:"smooth", block:"center"});
-        element.classList.add('playOut');
+        element.classList.add('play-out');
         element.addEventListener("animationend", () => {
     
             element.style.letterSpacing = "0.3em";
-            element.classList.remove('playOut');
+            element.classList.remove('play-out');
     
             setTimeout(() => {
-                element.classList.add('playIn');
+                element.classList.add('play-in');
                 
                 setTimeout(() => {
-                    element.classList.remove('playIn');
+                    element.classList.remove('play-in');
                     element.style.letterSpacing = "0em";
                 }, 1001); 
                 
