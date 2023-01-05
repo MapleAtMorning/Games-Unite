@@ -54,6 +54,7 @@ h1{
 #hero-logo{
 	max-height: 25rem;
 	filter: drop-shadow(0.3rem 0.3rem 0.25rem #191d1f);
+	padding: 2.5rem;
 }
 
 #carousel-content h2 {filter: drop-shadow(0.2em 0.2em 0.1em #191d1f);}
@@ -92,27 +93,6 @@ main{
 
 h4{
 	font-size: clamp(1.5rem, 3vw, 2rem);
-}
-
-/*
-Modal 
-----------------------------------------
-*/
-
-.modal-content{
-	background-color: var(--primaryColor);
-}
-
-.modal-footer{
-	border-color: var(--primaryLight);
-}
-
-.modal-header{
-	border-width: 0;
-}
-
-.modal .btn-close{
-	display: none;
 }
 
 /* 

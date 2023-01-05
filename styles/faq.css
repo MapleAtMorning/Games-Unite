@@ -12,12 +12,8 @@ main h2{font-size: clamp(1rem, 4vw, 1.5rem); padding-bottom: 0.5rem;}
 main h3{font-size: clamp(1.5rem, 4vw, 2.5rem); padding-top: 2rem}
 main h4{font-size: clamp(1.2rem, 3vw, 1.5rem);}
 
-.row{margin:1rem 0;}
-.col{text-align: center;}
-
-footer .row{
-    margin: 0;
-}
+main .row{margin:1rem 0;}
+main .col{text-align: center;}
 
 @media only screen and (min-width: 992px) {
     hr{

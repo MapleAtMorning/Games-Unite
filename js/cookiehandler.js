@@ -27,8 +27,8 @@ export function getCookie(cname) {
         }
     }
     return "";
+    // HEAVILY HEAVILY LEARNT AND COPIED FROM https://www.w3schools.com/js/js_cookies.asp
 }
-// HEAVILY HEAVILY LEARNT AND COPIED FROM https://www.w3schools.com/js/js_cookies.asp
 
 function cookieChecker(){
     const modal = new bootstrap.Modal(document.getElementById('cookiesModal'));
@@ -42,7 +42,7 @@ function cookieChecker(){
 
     const modalQuery = document.querySelector('#cookiesModal');
     modalQuery.addEventListener('hidden.bs.modal', event => {
-        setCookie("cookiesApproved", "Told you we didn't have trackers.");
+        setCookie("cookiesApproved", "Told you we dont have trackers.");
         setCookie("theme", "default");
     })
     // Check for the modal to be closed, only possible through the accept button, and add the cookiesApproved cookie.
@@ -159,8 +159,6 @@ const setTheme = function () {
 window.onresize = mobileLight;
 themeChanger();
 mobileLight();
-if(window.location.pathname == "/"){
-    cookieChecker();
-}
-console.log(window.location.pathname)
+cookieChecker();
+console.log(window.location.pathname);
 document.onload = setTheme();

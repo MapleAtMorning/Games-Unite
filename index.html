@@ -17,8 +17,9 @@
     <meta content="#4bf5a3" data-react-helmet="true" name="theme-color">
     <meta name="twitter:card" content="summary_large_image">
 
-    <link rel="apple-touch-icon" href="img/placeLogoTransparent.webp">
-    <link rel="shortcut icon" href="img/logo.ico">
+    <link rel="apple-touch-icon" href="img/GULogo.ico">
+    <link rel="icon" href="img/GULogoBlack.ico" media="(prefers-color-scheme: light)">
+    <link rel="icon" href="img/GULogo.ico" media="(prefers-color-scheme: dark)">
 
     <!-- Light YT https://github.com/paulirish/lite-youtube-embed -->
     <link rel="stylesheet" href="node_modules/lite-youtube-embed/src/lite-yt-embed.css">
@@ -39,7 +40,7 @@
         <div class="container-fluid">
             
             <div class="navbar-brand">
-                <img id="header-logo" src="img/placeLogoTransparent.webp" alt="Games Unite Logo" width="48">
+                <img id="header-logo" src="img/GULogo.webp" alt="Games Unite Logo" width="48">
                 <p class="d-none d-sm-inline">Games Unite</p>
             </div>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -61,7 +62,6 @@
             
         </div>
     </header>
-
    
     <!-- Modal Body -->
     <aside class="modal fade" id="cookiesModal" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" aria-labelledby="cookiesModal" aria-hidden="true">
@@ -69,10 +69,10 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h4 class="modal-title" id="cookiesModalTitle">Cookies</h4>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
                 </div>
                 <div class="modal-body">
-                    <p>First off, thanks for visiting the Games Unite website.<br>We have cookies to save theme preferences for those who need high contrast, and one to track that you've seen this message.<br> That's it, no hidden trackers, nothing. Please enjoy your stay! &lt;3</p>
+                    <p>First off, thanks for visiting the Games Unite website.<br>We have cookies to save theme preferences for those who need high contrast, and one to track that you've seen this message.<br> That's it, no hidden trackers, and these cookies will never leave this site. <br> Please enjoy your stay! &lt;3</p>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-success" data-bs-dismiss="modal">Accept</button>
@@ -107,7 +107,7 @@
                         </div>
                     </div>
                     <div class="col-lg-4 d-none d-lg-inline m-0 p-0">
-                        <img src="img/placeLogoTransparent.webp" alt="Games Unite Logo" id="hero-logo">
+                        <img src="img/GULogo.webp" alt="Games Unite Logo" id="hero-logo">
                     </div>
                 </div>
             </div>
@@ -193,8 +193,7 @@
             </form>
             <div class="row row-cols-1 row-cols-md-2">
                 <div class="col">
-                    <div class="row"><p class="p-0">Please keep in mind this website is unofficial and community ran, although approved by kennyjeopardy</p></div>
-                    <div class="row"><p class="p-0">Games Unite is still in testing and you may find bugs. Please feel free to report them in the <a href="https://discord.gg/zMmANqqFB5" target="_blank" aria-label="Opens in new tab">Discord <img class="external" src="img/externallink.svg" alt="Opens in new tab" width="16" loading="lazy"></a></p></div>
+                    <div class="row"><p class="p-0">Please keep in mind this website is unofficial and community ran, although approved by kennyjeopardy. Games Unite is still in testing and you may find bugs. Please feel free to report them in the <a href="https://discord.gg/zMmANqqFB5" target="_blank" aria-label="Opens in new tab">Discord <img class="external" src="img/externallink.svg" alt="Opens in new tab" width="16" loading="lazy"></a></p></div>
                 </div>
                 <div class="col">
                     <div class="row"><p class="d-none d-md-inline p-0">If you want to contribute to the website, it's all being run through <a href="https://github.com/MapleAtMorning/Games-Unite" target="_blank" aria-label="Opens in new tab">Github Pages!&nbsp;</a><img class="external" src="img/externallink.svg" alt="Opens in new tab" width="16" loading="lazy"> Please feel free to make an issue if you think there's something you want changed, alternatively you could change it yourself and send a pull request.</p></div>
@@ -205,6 +204,5 @@
 
     <script type="module" src="js/navfade.js"></script>
     <script type="module" src="js/cookiehandler.js"></script>
-    <script>const myModal = new bootstrap.Modal(document.getElementById('cookiesModal'), options);</script>
 </body>
 </html>

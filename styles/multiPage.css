@@ -25,6 +25,7 @@ header{
 
 header img{
     max-width: 3rem;
+    padding: 0.5rem;
 }
 
 #header-logo{
@@ -167,6 +168,29 @@ footer input[type="radio"]#light:checked{background-color: #fff;}
     }
 }
 
+/*
+Modal 
+----------------------------------------
+*/
+
+.modal{
+    text-align: center;
+}
+
+.modal-content{
+	background-color: var(--primaryColor);
+}
+
+.modal-footer{
+	border-color: var(--primaryLight);
+    justify-content: center;
+}
+
+.modal-header{
+	border-width: 0;
+    justify-content: center;
+}
+
 
 /* Misc
 ----------------------------------------
@@ -196,3 +220,4 @@ clear: both;
     border-top: 2px solid rgba(80, 80, 80, 0.349);
     border-bottom: 2px solid rgba(80, 80, 80, 0.349);
 }
+  
