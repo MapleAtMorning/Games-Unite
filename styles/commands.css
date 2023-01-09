@@ -1,33 +1,11 @@
-:root{
-    --secondaryColor: #4bf5a3;
-    --secondaryColorDark: #46aa7a;
-}
+/* Navigation
+----------------------------------------
+*/
 
-h1,h2{text-align: center;}
-h1{font-size: 3.5em}
-h2{font-size:1.5em}
-
-#navScroller{
-    background-color:#1d2529;
+#nav-scroller{
+    background-color: var(--primaryColor);
     width: 100%;
     margin-top: 3.6em;
-}
-
-.dropdown-menu{
-    background-color:#192125;
-    margin-top: 1em;
-}
-
-h4~p {
-    margin-left: 0;
-    color: #cacaca;
-}
-
-li>a{text-decoration: none; color: var(--secondaryColor);}
-li>a:hover{color: var(--secondaryColorDark);}
-
-main{
-    padding-top: 10em;
 }
 
 .btn-success{
@@ -41,20 +19,75 @@ main{
     --bs-btn-hover-border-color: var(--secondaryColorDark);
 }
 
-.bg-none{background-color: rgba(0,0,0,0); border-width: 0;}
-
-.px-50{
-    padding-left: 20%;
-    padding-right: 20%;
+.bg-none{
+    background-color: rgba(0,0,0,0); 
 }
 
 .dropdown-menu{
     position: relative;
+    border-width: 0;
 }
 
-.playOut{animation: 1s cubic-bezier(0.61, 1, 0.88, 1) .1s expandOut}
-.playIn{animation: 1s cubic-bezier(0.61, 1, 0.88, 1) .1s expandIn}
-@keyframes expandOut {
+li>a{text-decoration: none; color: var(--secondaryColor);}
+li>a:hover{color: var(--secondaryColorDark);}
+
+.px-20{
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+
+@media only screen and (min-width:992px) {
+
+    
+    .dropdown-menu{
+        width: 100%;
+        position: absolute;
+        transform: translateX(-15%);
+        background-color: var(--primaryColor);
+        font-size: 1vw;
+    }
+    
+    .dropdown .bg-none{
+        min-width: 15vw;
+    }
+}
+
+/* Main
+----------------------------------------
+*/
+
+main{
+    padding-top: 7em;
+}
+
+h1,h2{text-align: center;}
+
+h1{font-size: clamp(2.5rem, 8vw, 3.5rem)}
+h2{font-size: clamp(1rem, 4vw, 1.5rem)}
+h4{font-size: clamp(1.2rem, 3vw, 1.5rem);}
+
+h4 + p {
+    margin-left: 0;
+    color: var(--muteText);
+}
+
+@media only screen and (min-width: 992px) { /* Indents descriptions for each comment on desktop devices*/
+    main{
+        padding-top: 10em;
+    }
+
+    h4 + p {
+        margin-left: 1.5em;
+    }
+}
+
+/* Animations for search
+----------------------------------------
+*/
+.play-out{animation: 1s cubic-bezier(0.61, 1, 0.88, 1) .1s expand-out}
+.play-in{animation: 1s cubic-bezier(0.61, 1, 0.88, 1) .1s expand-in}
+@keyframes expand-out {
     from {
         letter-spacing: 0em;
     }
@@ -62,7 +95,7 @@ main{
         letter-spacing: 0.3em;
     }
 }
-@keyframes expandIn {
+@keyframes expand-in {
     from {
         letter-spacing: 0.3em;
     }
@@ -71,6 +104,3 @@ main{
     }
 }
 
-@media only screen and (min-width: 992px) {
-    h4~p {margin-left: 1.5em;}
-}

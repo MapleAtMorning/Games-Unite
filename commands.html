@@ -1,34 +1,41 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Commands</title>
+    <title>Games Unite | Commands</title>
     
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta name="description" content="The Unofficial Games Unite Website. Features, Commands, FAQ.">
-    <meta name="keywords" content="roblox, roblox shooter, shooter, guns, game, roblox game, games unite">
+    <meta name="description" content="The Unofficial Games Unite Website. Features, Commands, FAQ, Weapons.">
+    <meta name="keywords" content="roblox, roblox shooter, shooter, guns, game, roblox game, games unite, games, unite">
 
-    <meta content="Games Unite Commands" property="og:title">
+    <meta content="Games Unite | Commands" property="og:title">
     <meta content="A list of all the in-game commands for Games Unite" property="og:description">
+    <meta content="website" property="og:type">
     <meta content="https://mapleatmorning.github.io/Games-Unite/commands" property="og:url">
     <meta content="https://mapleatmorning.github.io/Games-Unite/img/screenshots/KnifeInspect.webp" property="og:image">
     <meta content="#4bf5a3" data-react-helmet="true" name="theme-color">
     <meta name="twitter:card" content="summary_large_image">
 
-    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web" rel="stylesheet">
+    <link rel="apple-touch-icon" href="img/GULogo.webp">
+    <link rel="icon" href="img/GULogoBlack.ico" media="(prefers-color-scheme: light)">
+    <link rel="icon" href="img/GULogo.ico" media="(prefers-color-scheme: dark)">
+    
+    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web" rel="stylesheet">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/multiPage.css">
     <link rel="stylesheet" href="styles/commands.css">
-    <link rel="shortcut icon" href="img/logo.ico">
 </head>
 <body>
-    <header class="px-lg-5 py-2 navbar navbar-dark gu-bg navbar-expand-lg fixed-top">
+    <header class="px-lg-5 py-2 navbar navbar-dark navbar-expand-lg fixed-top default-theming" id="nav-top">
         <div class="container-fluid">
             <div class="navbar-brand">
-                <a href="index"><img class="headerLogo" src="img/placeLogoTransparent.webp" alt="Games Unite Logo"></a>
+                <a href="/"><img id="header-logo" src="img/GULogo.webp" alt="Games Unite Logo" width="48"></a>
                 <p class="d-none d-sm-inline">Games Unite</p>
             </div>
 
@@ -43,24 +50,24 @@
             </div>
 
 
-            <div class="offcanvas offcanvas-end text-bg-dark" id="navbarSupportedContent" aria-labelledby="navbarSupportedContent">
+            <div class="offcanvas offcanvas-end" id="navbarSupportedContent" aria-labelledby="navbarSupportedContent">
                 <div class="offcanvas-header">
-                    <h3 id="offcanvasNavbarDarklabel" class="mt-3">Games Unite</h3>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    <h3 id="offcanvaslabel" class="mt-3">Games Unite</h3>
+                    <button type="button" class="btn-close btn-close-white offcanvas-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
-                <ul class="navbar-nav offcanvas-body justify-content-lg-end">
+                <ul class="navbar-nav offcanvas-body justify-content-lg-end" id="nav-item-holder">
                     <li class="nav-item"><a class="nav-link" aria-current="page" href="/">Home</a></li>
                     <li class="nav-item"><a class="nav-link active" aria-current="page" href="commands">Commands</a></li>
                     <li class="nav-item"><a class="nav-link" aria-current="page" href="faq">FAQ</a></li>
                 </ul>
             </div>
         </div>
-        <nav id="navScroller" class="navbar-expand-lg px-50 fixed-top">
-            <nav class="nav container offcanvas offcanvas-start text-bg-dark p-2 d-inline d-lg-block text-center" id="sidebarContent" aria-labelledby="sidebarContent">
+        <nav id="nav-scroller" class="navbar-expand-lg px-20 fixed-top">
+            <nav class="nav container offcanvas offcanvas-start p-2 d-inline d-lg-block text-center" id="sidebarContent" aria-labelledby="sidebarContent">
                 <div class="row row-cols-lg-5 row-cols-1">
-                    <button type="button" class="btn-close btn-close-white d-lg-none ps-5" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    <button type="button" class="btn-close btn-close-white d-lg-none ps-5 offcanvas-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     <div class="col my-3 my-lg-0">
-                        <div class="dropdown-center">
+                        <div class="dropdown">
                             <button class="btn btn-sm btn-success" type="button" data-bs-toggle="dropdown" data-bs-target="#bot_collapse" aria-expanded="false" aria-controls="bot_collapse">Bots</button>
                             <ul class="dropdown-menu text-center bg-none" id="bot_collapse">
                                 <li><a href="javascript:scrollFunc('bot_add')">bot_add</a></li>
@@ -139,9 +146,11 @@
                                 <li><a href="javascript:scrollFunc('thinkers')">thinkers</a></li>
                                 <li><a href="javascript:scrollFunc('viewmodel_arms')">viewmodel_arms</a></li>
                                 <li><a href="javascript:scrollFunc('viewmodel_offset')">viewmodel_offset</a></li>
+                                <li><a href="javascript:scrollFunc('net_graph')">net_graph</a></li>
                                 <li><a href="javascript:scrollFunc('kill')">kill</a></li>
                                 <li><a href="javascript:scrollFunc('explode')">explode</a></li>
                                 <li><a href="javascript:scrollFunc('impulse101')">impulse101</a></li>
+                                <li><a href="javascript:scrollFunc('clear')">clear</a></li>
                             </ul>
                         </div>
                     </div>
@@ -149,6 +158,24 @@
             </nav>
         </nav>
     </header>
+
+    <!-- Modal Body -->
+    <aside class="modal fade" id="cookiesModal" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" aria-labelledby="cookiesModal" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="cookiesModalTitle">Cookies</h4>
+
+                </div>
+                <div class="modal-body">
+                    <p>First off, thanks for visiting the Games Unite website.<br>We have cookies to save theme preferences for those who need high contrast, and one to track that you've seen this message.<br> That's it, no hidden trackers, and these cookies will never leave this site. <br> Please enjoy your stay! &lt;3</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">Accept</button>
+                </div>
+            </div>
+        </div>
+    </aside>
 
     <main>
         <h1 class="m-0">Commands</h1>
@@ -186,8 +213,8 @@
                                 <p>Sets the default thinker. Thinkers are bot profiles that describe how a bot behaves. <br> (A list of all thinkers will eventually be made)</p>
                             </div>
                         </div>
-                    </div>
-                    <div class="row"><!--Player Movement Row-->
+                    </div> <!--End Bots Row-->
+                    <div class="row"> <!--Player Movement Row-->
                         <div id="pl_cmds" class="mb-3">
                             <h3>Player / Movement</h3>
                         </div>
@@ -249,8 +276,8 @@
                                 <p>Sets how fast you can go while walking.</p>
                             </div>
                         </div>
-                    </div>
-                    <div class="row">
+                    </div><!--End Player Movement Row-->
+                    <div class="row"> <!--Server Management Row-->
                         <div id="sv_cmds" class="mb-3">
                             <h3>Server Management</h3>
                         </div>
@@ -292,8 +319,8 @@
                                 <p>Disables Shooting.</p>
                             </div>
                         </div>
-                    </div>
-                </div><!--Left Col-->
+                    </div><!--End Server Management Row-->
+                </div><!--End Left Col-->
 
                 <div class="col"> <!--Right Col-->
                     <div class="row"> <!--Crosshair Row-->
@@ -358,7 +385,7 @@
                                 <p>Sets how fast your crosshair grows once recoil kicks in.</p>
                             </div>
                         </div>
-                    </div>
+                    </div> <!--End Crosshair Row-->
                     <div class="row"><!--Misc Row-->
                         <div id="misc_cmds" class="mb-3">
                             <h3>Miscellaneous</h3>
@@ -384,6 +411,18 @@
                                 <h4>viewmodel_offset - &lt;x&gt;&lt;y&gt;&lt;z&gt;</h4>
                                 <p>Sets the offset of your viewmodel.</p>
                             </div>
+                            <div id="viewmodel_flip">
+                                <h4>viewmodel_flip - (0/1)</h4>
+                                <p>Flips the viewmodel so weapons are on the left side.</p>
+                            </div>
+                            <div id="camera_aspect_ratio">
+                                <h4>camera_aspect_ratio - (0-1)</h4>
+                                <p>Replicates a stretched resolution using decimals converted to percentages</p>
+                            </div>
+                            <div id="net_graph">
+                                <h4>net_graph - (0/1/2)</h4>
+                                <p>Show in depth information about the client and the server.</p>
+                            </div>
                             <div id="kill">
                                 <h4>kill*</h4>
                                 <p>Die. You die. That's it.</p>
@@ -397,29 +436,54 @@
                                 <h4>impulse101</h4>
                                 <p>Completely fills the reserve and current magazine of the gun the player is currently holding, and gives you full health.</p>
                             </div>
+                            <div id="clear">
+                                <h4>clear</h4>
+                                <p>Clears the console.</p>
+                            </div>
                         </div>
-                    </div><!--Misc Row-->
-                </div> <!-- Right Col-->
+                    </div><!--End Misc Row-->
+                </div> <!--End Right Col-->
             </div>
             <div class="text-center">
                 <p class="">*May be bugged, sv_cheats may need to be on.</p>
             </div>
-        </div><!--Container-->
+        </div><!--End Container-->
     </main>
     
     <footer>
-        <div class="row row-cols-1 row-cols-md-2">
-            <div class="col">
-                <div class="row"><p class="p-0">Please keep in mind this website is unofficial and community ran, although approved by kennyjeopardy</p></div>
-                <div class="row"><p class="p-0">Games Unite is still in testing and you may find bugs. Please feel free to report them in the <a href="https://discord.gg/zMmANqqFB5" target="_blank" aria-label="Opens in new tab">Discord <img class="external" src="img/externallink.svg" alt="Opens in new tab"></a></p></div>
-            </div>
-            <div class="col">
-                <div class="row"><p class="d-none d-md-inline p-0">If you want to contribute to the website, it's all being run through <a href="https://github.com/MapleAtMorning/Games-Unite" target="_blank" aria-label="Opens in new tab">Github Pages!&nbsp;</a><img class="external" src="img/externallink.svg" alt="Opens in new tab"> Please feel free to make an issue if you think there's something you want changed, alternatively you could change it yourself and send a pull request.</p></div>
+        <div class="container-fluid">
+            <form id="theme-picker" action="">
+                <legend class="visually-hidden">Pick a theme</legend>
+                <fieldset>
+                    <input type="radio" name="theme" id="default" checked>
+                    <label class="visually-hidden" for="default">
+                        Default theme
+                    </label>
+                    
+                    <input type="radio" name="theme" id="contrast">
+                    <label class="visually-hidden" for="contrast">
+                        High contrast theme
+                    </label>
+
+                    <input type="radio" name="theme" id="light">
+                    <label class="visually-hidden" for="light">
+                        Light theme
+                    </label>
+                </fieldset>
+            </form>
+            <div class="row row-cols-1 row-cols-md-2">
+                <div class="col">
+                    <div class="row"><p class="p-0">Please keep in mind this website is unofficial and community ran, although approved by kennyjeopardy. Games Unite is still in testing and you may find bugs. Please feel free to report them in the <a href="https://discord.gg/zMmANqqFB5" target="_blank" aria-label="Opens in new tab">Discord <img class="external" src="img/externallink.svg" alt="Opens in new tab" width="16" loading="lazy"></a></p></div>
+                </div>
+                <div class="col">
+                    <div class="row"><p class="d-none d-md-inline p-0">If you want to contribute to the website, it's all being run through <a href="https://github.com/MapleAtMorning/Games-Unite" target="_blank" aria-label="Opens in new tab">Github Pages!&nbsp;</a><img class="external" src="img/externallink.svg" alt="Opens in new tab" width="16" loading="lazy"> Please feel free to make an issue if you think there's something you want changed, alternatively you could change it yourself and send a pull request.</p></div>
+                </div>
             </div>
         </div>
     </footer>
 
     <script src="js/scroller.js"></script>
+    <script type="module" src="js/cookiehandler.js"></script>
 </body>
 
 </html>

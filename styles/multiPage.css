@@ -1,63 +1,227 @@
 :root{
+    --primaryColor: #1d2529;
+    --primaryLight: #283035;
+    --primaryBackground: #181d1f;
     --secondaryColor: #4bf5a3;
     --secondaryColorDark: #46aa7a;
+    
+    --textColor: #ffffff;
+    --muteText: #6c757d;
 }
 
 *{
     font-family:"Titillium Web", Arial, Helvetica, sans-serif;
 }
 
+/* Header
+----------------------------------------
+ */
+
 header{
     padding-left: 15em;
     font-size: 1.3rem;
+    background-color: var(--primaryColor);
 }
 
 header img{
     max-width: 3rem;
+    padding: 0.5rem;
 }
 
-.gu-bg {
-    background-color: #1d2529;
-    color: white;
-}
-
-.headerLogo{
+#header-logo{
     float: left;
 }
 
+.offcanvas-close{mix-blend-mode: difference;}
+.offcanvas h3{color: var(--textColor);}
+.offcanvas{text-shadow: 0 0 0 #000;}
+
 .navbar-brand p {
     line-height: 50px;
-    font-size: 1.3em;
+    font-size: 1.3rem;
     margin: 0;
     padding: 0;
+    transition: color 500ms;
 }
 
+.offcanvas{
+    background-color: var(--primaryColor);
+}
+
+.navbar .container-fluid{
+    max-width: 1250px;
+}
+
+.navbar .nav-link{
+    opacity: 65%;
+    transition: opacity 150ms;
+    transition: color 500ms;
+}
+
+.navbar .nav-link:hover{opacity: 90%;}
+
+.navbar .active{opacity: 100%;}
+
+/* Default Theme */
+.default-theming .nav-link{
+    color: #ffffff;
+}
+
+.default-theming .active{
+    color: #ffffff !important;
+}
+
+.default-theming p{
+    color: #ffffff;
+}
+
+/* Light Theme (Dark Text)*/
+.light-theming .nav-link{
+    color: #000000;
+}
+
+.light-theming .active{
+    color: #000000 !important;
+}
+
+.light-theming p{
+    color: #000000;
+}
+
+/* Main
+----------------------------------------
+ */
 
 body{
-    background-color: #181d1f;
-    color:white;
+    background-color: var(--primaryBackground);
+    color: var(--textColor);
 }
 
-.external{
+.external{ /* External link image */
     filter: invert(1);
     vertical-align: baseline;
 }
 
+
+/* Footer
+----------------------------------------
+ */
+
 footer{
-    margin-top: 1em;
-    border-top: solid 2px #283035;
+    border-top: solid 5px var(--primaryLight);
     text-align: center;
-    background-color: #1d2529;
-    padding: 1em 5em;
+    background-color: var(--primaryColor);
+    padding: 0 5em 1em;
 }
 
-footer p{color: #6c757d; margin:0;}
+footer p{
+    color: var(--muteText); 
+    margin:0;
+    font-size: 1rem
+}
 
 footer a{
-    color:#b4b4b4;
+    color: var(--muteText);
     text-decoration: none;
 }
 
 footer a:hover{
     color: var(--secondaryColor)
 }
+
+footer .row{
+    padding: 0 20px;
+}
+
+/* Theme color changer */
+
+footer input[type="radio"]{
+    appearance: none;
+    width: clamp(15px, 3vw, 25px);
+    height: clamp(15px, 3vw, 25px);
+    outline: 3px #fff solid;
+    outline-offset: 2px;
+    border-radius: 100%;
+    margin: 1em 10px 0.5em;
+}
+
+footer input[type="radio"]#contrast{outline: 3px #ffffff solid; mix-blend-mode: difference;}
+footer input[type="radio"]#contrast:checked{background-color: #fff;}
+
+footer input[type="radio"]#default{outline: 3px #3b454b solid;}
+footer input[type="radio"]#default:checked{background-color: #3b454b;}
+
+footer input[type="radio"]#light{outline: 3px #fff  solid;}
+footer input[type="radio"]#light:checked{background-color: #fff;}
+
+#theme-picker{
+    width: 35%;
+    border-radius: 0 0 2em 2em;
+    margin: auto;
+    background-color: var(--primaryLight);
+}
+
+footer .row-cols-1{
+    margin-top: 1rem;
+}
+
+@media only screen and (max-width:992px) {
+    #theme-picker{
+        width: 100%;
+        margin: 0;
+    }
+}
+
+/*
+Modal 
+----------------------------------------
+*/
+
+.modal{
+    text-align: center;
+}
+
+.modal-content{
+	background-color: var(--primaryColor);
+}
+
+.modal-footer{
+	border-color: var(--primaryLight);
+    justify-content: center;
+}
+
+.modal-header{
+	border-width: 0;
+    justify-content: center;
+}
+
+
+/* Misc
+----------------------------------------
+*/
+
+.clear{
+clear: both;
+}
+
+.text-muted{
+    color: var(--muteText) !important;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color:  var(--primaryColor);
+    border-radius: 2px;
+
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primaryLight);
+    border-radius: 10px;
+    border-top: 2px solid rgba(80, 80, 80, 0.349);
+    border-bottom: 2px solid rgba(80, 80, 80, 0.349);
+}
+  

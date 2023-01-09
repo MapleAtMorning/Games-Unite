@@ -1,69 +1,105 @@
-/* Carousel Handler */
-#carouselHolder {
+/* Header
+----------------------------------------
+*/
+#nav-top{
+	background-color: #1d252900;
+	text-shadow: 0.2rem 0.2rem 0.2rem #000;
+	transition: ease-in background-color 300ms, text-shadow 500ms;
+}
+
+#header-logo{
+	filter: drop-shadow(0.2rem 0.2rem 0.2rem #000);
+	transition: ease-in filter 500ms;
+}
+
+/* Carousel Handler
+----------------------------------------
+*/
+#carousel-holder {
 	background-color: #2f2e31;
 	overflow: hidden;
 	position: relative;
+	transform: translate(0, -76px);
+	padding-top: 76px;
     z-index: 1;
 }
 
-#mainCarousel {
+#main-carousel {
 	opacity: 0.6;
     width: 100%;
-    transform: translate(0, -15em);
+    transform: translate(0, -15vh);
 	position: absolute;
 }
 
-#carouselContent {
+#carousel-content {
 	position: relative;
 	text-align: center;
 	color: white;
 }
-#carouselContent h2 {filter: drop-shadow(0.2em 0.2em 0.1em #191d1f);}
 
 
-/* Main Hero */
+/* Carousel Content
+----------------------------------------
+*/
 h1{
-    font-size: 5em;
+    font-size: clamp(3.5rem, 10vw, 5rem);
     font-weight: 700;
-	filter: drop-shadow(0.05em 0.05em 0.1em #191d1f);
+	filter: drop-shadow(0.3rem 0.3rem 0.25rem #191d1f);
 }
 
-#heroLogo{
-	max-height: 25em;
-	filter: drop-shadow(0.3em 0.3em 0.25em #191d1f);
+#tag-line{
+	font-size: 2rem;
 }
 
-
-/* Features / Body */
-
-.featuresTitle{
-	font-size: 3em;
+#hero-logo{
+	max-height: 25rem;
+	filter: drop-shadow(0.3rem 0.3rem 0.25rem #191d1f);
+	padding: 2.5rem;
 }
 
-.featuresParagraph{
-	font-size:1.5em;
-}
+#carousel-content h2 {filter: drop-shadow(0.2em 0.2em 0.1em #191d1f);}
 
-#playNow{
+#play-now{
 	background-color: #4bf5a3;
 	color: black;
 }
 
-#playNow:hover{background-color: #50ce91;}
+#play-now:hover{background-color: #50ce91;}
+
+/* Features / Body 
+----------------------------------------
+*/
+
+.info-title{
+	font-size: clamp(2rem, 3vw, 3rem);
+}
+
+.features-title{
+	font-size: clamp(2rem, 3vw, 3rem);
+}
+
+.features-paragraph, .info-paragraph{
+	font-size: clamp(1rem, 3vw, 1.5rem);
+}
 
 main{
-	padding-top: 4.7em;
+	padding-top: 4.7rem;
 }
 
-.stateLarge{
-	font-size: 2.5em;
-}
-
-.stateDescription{
-	font-size: 1.5em;
-}
-
-.imgInfo{
+.img-info{
 	max-width: 90%;
-	border-radius: 0.5em;
+	border-radius: 0.5rem;
+}
+
+h4{
+	font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+/* 
+Footer
+----------------------------------------
+*/
+
+footer{
+	margin-top: .75rem;
 }
