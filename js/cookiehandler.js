@@ -166,5 +166,4 @@ window.onresize = mobileLight;
 themeChanger();
 mobileLight();
 cookieChecker();
-console.log(window.location.pathname);
 document.onload = setTheme();
