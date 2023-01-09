@@ -2,9 +2,11 @@ import {getCookie, mobileLight} from "./cookiehandler.js";
 
 const nav = document.getElementById('nav-top');
 const logo = document.getElementById('header-logo');
-const itemHolder = document.getElementById('nav-item-holder');
 const root = document.querySelector(':root');
 const rootstyle = getComputedStyle(root);
+const headerLogo = document.getElementById("header-logo");
+
+
 
 window.onscroll = function(){scrollFade()};
 window.onresize = scrollFade;
@@ -21,6 +23,7 @@ function scrollFade(){
             mobileLight()
             nav.classList.remove('light-theming');
             nav.classList.add('default-theming');
+            headerLogo.src = "img/GULogo.webp";
             if(window.innerWidth < 992){
                 shadow("0 ");
                 return;
@@ -31,6 +34,7 @@ function scrollFade(){
     } else { // When NOT at top of page
         nav.style.backgroundColor = primary+'ff'; 
         if(theme == "light"){
+            headerLogo.src = "img/GULogoBlack.webp";
             mobileLight()
             if(window.innerWidth < 992){
                 shadow("0 ");

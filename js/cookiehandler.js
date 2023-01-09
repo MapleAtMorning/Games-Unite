@@ -3,6 +3,7 @@ const header = document.getElementById('nav-top');
 let theme = getCookie("theme");
 const root = document.querySelector(':root');
 const rootstyle = getComputedStyle(root);
+const headerLogo = document.getElementById("header-logo");
 
 export function setCookie(name, value) {
     const d = new Date();
@@ -62,7 +63,10 @@ function themeChanger(){
     theme = getCookie("theme");
     if(getCookie("theme")){   
         
-        if(theme != "light"){header.classList.remove("light-theming");}
+        if(theme != "light"){
+            header.classList.remove("light-theming");
+            headerLogo.src = "img/GULogo.webp";
+        }
         
         if(theme == "contrast"){
             themeColorUpdater(
@@ -106,18 +110,20 @@ function themeChanger(){
                 "#4bf5a3", //secondary
                 "#46aa7a", //secondaryDark
                 "#000000", //text
-                "#6c757d" //mute
+                "#4a4c4f" //mute
             )
+
             header.classList.remove("navbar-dark");
             header.classList.add("navbar-light");
             header.classList.add('light-theming');
             header.classList.remove('default-theming');
+            headerLogo.src = "img/GULogoBlack.webp";
         }
         header.style.backgroundColor = rootstyle.getPropertyValue('--primaryColor');
     }
 }
 
-// Wizardry with the light theme to make it always have proper light navigation on mobile
+// When the window is less than 992 it forces the style to have black text. This makes it readable in the sidebar for mobile
 export function mobileLight(){
     let theme = getCookie("theme");
     if(theme == "light"){

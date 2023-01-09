@@ -161,6 +161,10 @@ footer input[type="radio"]#light:checked{background-color: #fff;}
     background-color: var(--primaryLight);
 }
 
+footer .row-cols-1{
+    margin-top: 1rem;
+}
+
 @media only screen and (max-width:992px) {
     #theme-picker{
         width: 100%;
