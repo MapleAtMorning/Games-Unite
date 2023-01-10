@@ -1,10 +1,15 @@
 /* Header
 ----------------------------------------
 */
-#nav-top{
+header{
 	background-color: #1d252900;
 	text-shadow: 0.2rem 0.2rem 0.2rem #000;
 	transition: ease-in background-color 300ms, text-shadow 500ms;
+}
+
+#nav-item-holder{
+	text-shadow: 0.2rem 0.2rem 0.2rem #000;
+	transition: ease-in text-shadow 500ms;
 }
 
 #header-logo{

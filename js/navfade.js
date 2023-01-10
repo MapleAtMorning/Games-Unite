@@ -2,6 +2,7 @@ import {getCookie, mobileLight} from "./cookiehandler.js";
 
 const nav = document.getElementById('nav-top');
 const logo = document.getElementById('header-logo');
+const navItems = document.getElementById('nav-item-holder');
 const root = document.querySelector(':root');
 const rootstyle = getComputedStyle(root);
 const headerLogo = document.getElementById("header-logo");
@@ -29,8 +30,8 @@ function scrollFade(){
                 return;
             }
         }
-
         shadow("0.2rem ");
+
     } else { // When NOT at top of page
         nav.style.backgroundColor = primary+'ff'; 
         if(theme == "light"){
@@ -47,5 +48,6 @@ function scrollFade(){
 
 function shadow(distance){
     nav.style.textShadow = distance + distance + distance + '#000';
-    logo.style.filter = 'drop-shadow(' + distance + distance + distance + '#000)';
+    navItems.style.textShadow = distance + distance + distance + '#000';
+    logo.style.filter = 'drop-shadow(' + distance + distance + distance + '#000)';   
 }
