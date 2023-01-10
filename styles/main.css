@@ -1,7 +1,7 @@
 /* Header
 ----------------------------------------
 */
-#nav-top{
+header{
 	background-color: #1d252900;
 	text-shadow: 0.2rem 0.2rem 0.2rem #000;
 	transition: ease-in background-color 300ms, text-shadow 500ms;
@@ -10,6 +10,13 @@
 #header-logo{
 	filter: drop-shadow(0.2rem 0.2rem 0.2rem #000);
 	transition: ease-in filter 500ms;
+}
+
+@media only screen and (min-width:992px){
+	#nav-item-holder{
+		text-shadow: 0.2rem 0.2rem 0.2rem #000;
+		transition: ease-in text-shadow 500ms;
+	}
 }
 
 /* Carousel Handler
@@ -101,5 +108,5 @@ Footer
 */
 
 footer{
-	margin-top: .75rem;
+	margin-top: 1.75rem;
 }

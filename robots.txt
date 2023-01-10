@@ -1,0 +1,4 @@
+User-Agent: *
+Disallow: /node_modules/
+
+Sitemap: https://gamesunite.dev/sitemap.xml

@@ -1,4 +1,4 @@
-# [Games Unite](https://mapleatmorning.github.io/Games-Unite/)
+# [Games Unite](https://gamesunite.dev/)
 
 ## Join the Discord!
 The Games Unite community is a friendly and (somewhat) active group of players who love the game. Join us on <a href="https://discord.gg/zMmANqqFB5" target="_blank" title="Open in new tab">Discord</a> to chat with other players, share tips and clips, and participate in very rare community events.
