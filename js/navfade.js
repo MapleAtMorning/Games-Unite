@@ -25,29 +25,23 @@ function scrollFade(){
             nav.classList.remove('light-theming');
             nav.classList.add('default-theming');
             headerLogo.src = "img/GULogo.webp";
-            if(window.innerWidth < 992){
-                shadow("0 ");
-                return;
-            }
         }
-        shadow("0.2rem ");
+            shadow("0.2rem ");
 
     } else { // When NOT at top of page
         nav.style.backgroundColor = primary+'ff'; 
         if(theme == "light"){
             headerLogo.src = "img/GULogoBlack.webp";
             mobileLight()
-            if(window.innerWidth < 992){
-                shadow("0 ");
-                return;
-            }
         }
         shadow("0 ");
     }
 };
 
 function shadow(distance){
-    nav.style.textShadow = distance + distance + distance + '#000';
-    navItems.style.textShadow = distance + distance + distance + '#000';
     logo.style.filter = 'drop-shadow(' + distance + distance + distance + '#000)';   
+    nav.style.textShadow = distance + distance + distance + '#000';
+    if(window.innerWidth > 992){
+        navItems.style.textShadow = distance + distance + distance + '#000';
+    }
 }

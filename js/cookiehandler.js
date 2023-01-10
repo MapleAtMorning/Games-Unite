@@ -12,7 +12,7 @@ export function setCookie(name, value) {
     // Simple string that makes the cookies expire after 1 year instead of on browser close.
 
     document.cookie = name + "=" + value + ";" + expires + "; SameSite=Strict";
-}
+};
 
 export function getCookie(cname) {
     let name = cname + "=";
@@ -22,11 +22,11 @@ export function getCookie(cname) {
         let c = cookieList[i];
         while (c.charAt(0) == ' ') {
             c = c.substring(1);
-        }
+        };
         if (c.indexOf(name) == 0) {
             return c.substring(name.length, c.length);
-        }
-    }
+        };
+    };
     return "";
     // HEAVILY HEAVILY LEARNT AND COPIED FROM https://www.w3schools.com/js/js_cookies.asp
 }
@@ -35,7 +35,7 @@ function cookieChecker(){
     const modal = new bootstrap.Modal(document.getElementById('cookiesModal'));
     if(getCookie("cookiesApproved")){
         return;
-    }
+    };
     // Check if cookies have already been approved, if so return so code below DOESN'T RUN.
 
     modal.show();
@@ -45,19 +45,19 @@ function cookieChecker(){
     modalQuery.addEventListener('hidden.bs.modal', event => {
         setCookie("cookiesApproved", "Told you we dont have trackers.");
         setCookie("theme", "default");
-    })
+    });
     // Check for the modal to be closed, only possible through the accept button, and add the cookiesApproved cookie.
-}
+};
 
 function themeColorUpdater(primary, primarylight, background, secondary, secondarydark, text, mute){
-    root.style.setProperty("--primaryColor", primary)
-    root.style.setProperty("--primaryLight", primarylight)
-    root.style.setProperty("--primaryBackground", background)
-    root.style.setProperty("--secondaryColor", secondary)
-    root.style.setProperty("--secondaryColorDark", secondarydark)
-    root.style.setProperty("--textColor", text)
-    root.style.setProperty("--muteText", mute)
-}
+    root.style.setProperty("--primaryColor", primary);
+    root.style.setProperty("--primaryLight", primarylight);
+    root.style.setProperty("--primaryBackground", background);
+    root.style.setProperty("--secondaryColor", secondary);
+    root.style.setProperty("--secondaryColorDark", secondarydark);
+    root.style.setProperty("--textColor", text);
+    root.style.setProperty("--muteText", mute);
+};
 
 function themeChanger(){
     theme = getCookie("theme");
@@ -66,8 +66,8 @@ function themeChanger(){
         if(theme != "light"){
             header.classList.remove("light-theming");
             headerLogo.src = "img/GULogo.webp";
-        }
-        
+        };
+
         if(theme == "contrast"){
             themeColorUpdater(
                 "#000000", //primary
@@ -77,7 +77,7 @@ function themeChanger(){
                 "#46aa7a", //secondaryDark
                 "#ffffff", //text
                 "#ffffff" //mute
-            )
+            );
             header.classList.remove("navbar-light");
             header.classList.add("navbar-dark");
             header.classList.remove('light-theming');
@@ -94,7 +94,7 @@ function themeChanger(){
                 "#46aa7a", //secondaryDark
                 "#ffffff", //text
                 "#6c757d" //mute
-            )
+            );
             header.classList.remove("navbar-light");
             header.classList.add("navbar-dark");
             header.classList.remove('light-theming');
@@ -111,17 +111,17 @@ function themeChanger(){
                 "#46aa7a", //secondaryDark
                 "#000000", //text
                 "#4a4c4f" //mute
-            )
+            );
 
             header.classList.remove("navbar-dark");
             header.classList.add("navbar-light");
             header.classList.add('light-theming');
             header.classList.remove('default-theming');
             headerLogo.src = "img/GULogoBlack.webp";
-        }
+        };
         header.style.backgroundColor = rootstyle.getPropertyValue('--primaryColor');
-    }
-}
+    };
+};
 
 // When the window is less than 992 it forces the style to have black text. This makes it readable in the sidebar for mobile
 export function mobileLight(){
@@ -134,11 +134,11 @@ export function mobileLight(){
             itemHolder.classList.remove('default-theming');
             itemHolder.classList.add('light-theming');
             return;
-        }
+        };
         itemHolder.classList.remove('light-theming');
         itemHolder.classList.add('default-theming');
-    }
-}
+    };
+};
 
 // Check when radio buttons are clicked to change theme
 const colorThemes = document.querySelectorAll('[name="theme"]');
@@ -154,7 +154,7 @@ const setTheme = function () {
     colorThemes.forEach((themeOption) => {
         if (themeOption.id === activeTheme) {
             themeOption.checked = true;
-        }
+        };
     });
     // fallback for no :has() support
     document.documentElement.className = activeTheme;
