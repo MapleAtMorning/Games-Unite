@@ -65,11 +65,16 @@ h1,h2{text-align: center;}
 
 h1{font-size: clamp(2.5rem, 8vw, 3.5rem)}
 h2{font-size: clamp(1rem, 4vw, 1.5rem)}
-h4{font-size: clamp(1.2rem, 3vw, 1.5rem); transition: padding-left ease-out 100ms;}
-
-h4:hover{
-    padding-left: 1em;
+h4{
+    font-size: clamp(1.2rem, 3vw, 1.5rem); 
+    transition: padding-left cubic-bezier(0.445, 0.05, 0.55, 0.95) 100ms, background-position-x cubic-bezier(0.445, 0.05, 0.55, 0.95) 100ms;
+    background-image: url(/img/icons/clipboard.svg);
+    background-position-y: center;
+    background-position-x: -1em;
+    background-repeat: no-repeat;
 }
+
+
 
 h4 + p {
     margin-left: 0;
@@ -84,6 +89,11 @@ h4 + p {
     h4 + p {
         margin-left: 1.5em;
     }
+
+    div > h4:hover{
+        padding-left: 1em;
+        background-position-x: 0;
+    } /* I put the hover and everything down here so that on mobile it doesn't accidentally appear! */
 }
 
 /* Animations for search
@@ -108,3 +118,21 @@ h4 + p {
     }
 }
 
+/* Clipboard Alert
+----------------------------------------
+*/
+
+aside{
+    background-color: var(--muteText);
+    border-radius: 0.5em;
+    opacity: 1;
+    position: fixed;
+    text-align: center;
+    left: calc(50% - 5em);
+    bottom: 7.5%;
+}
+
+aside p{
+    margin: 0;
+    padding: 1em
+}

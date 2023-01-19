@@ -1,8 +1,8 @@
 function scrollFunc(id) {
     const sidebar = document.getElementById('sidebarContent');
     const openedCanvas = bootstrap.Offcanvas.getInstance(sidebar);
+    const vw = window.innerWidth;
     let element = document.getElementById(id);
-    let vw = window.innerWidth;
     let timeDelay
 
     if(vw < 992) {	
@@ -10,7 +10,7 @@ function scrollFunc(id) {
         timeDelay = 350;	
     } else{	
         timeDelay = 0;	
-    }
+    };
 
     setTimeout(() => {
         element.scrollIntoView({behavior:"smooth", block:"center"});
