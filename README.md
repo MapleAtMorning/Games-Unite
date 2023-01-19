@@ -8,3 +8,10 @@ The Games Unite community is a friendly and (somewhat) active group of players w
 ## This site is open source, and ran by the community.
 We welcome contributions to the Unofficial Games Unite Website! <br>
 If you have an idea for a new feature or improvement to the website, or if you have found a bug, please open an issue on our <a href="https://github.com/MapleAtMorning/Games-Unite" target="_blank" title="Open in new tab">Github Repository</a>. You can also submit a pull request with your changes, and it'll be merged if it fixes the problem.
+
+## Notes
+
+###Version Numbering
+First number: Rewrite number. Will probably always stay 1.
+Second number: Major update number. Updates with each 'major' update.
+Third number: Minor update / patch update.
