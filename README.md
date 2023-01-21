@@ -17,3 +17,8 @@ If you have an idea for a new feature or improvement to the website, or if you h
 First number: Rewrite number. Will probably always stay 1. <br>
 Second number: Major update number. Updates with each 'major' update. <br>
 Third number: Minor update / patch update.<br>
+
+### Issues
+I'll create issue reports just so I remember what to actually fix + also to get used to the workflow. <br>
+Feel free to make any issue reports if you find any bugs / inconsistencies. <br>
+There's no real template just try to be as detailed as possible if you can.
