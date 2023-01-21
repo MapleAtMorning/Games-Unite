@@ -1,5 +1,5 @@
 const sidebar = document.getElementById('sidebarContent');
-const openedCanvas = bootstrap.Offcanvas.getInstance(sidebar);
+const openedCanvas = new bootstrap.Offcanvas(sidebar);
 let timeDelay
 
 function scrollFunc(id) {

@@ -2,7 +2,6 @@ const commandHTML = document.getElementsByTagName("h4");
 const commandArray = Array.prototype.slice.call(commandHTML);
 const copiedPopup = document.getElementById("clipboard-alert");
 let vw = window.innerWidth;
-console.log(commandArray);
 
 function copy(text){
     navigator.clipboard.writeText(text);
