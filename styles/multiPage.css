@@ -143,6 +143,7 @@ footer input[type="radio"]{
     outline-offset: 2px;
     border-radius: 100%;
     margin: 1em 10px 0.5em;
+    cursor: pointer;
 }
 
 footer input[type="radio"]#contrast{outline: 3px #ffffff solid; mix-blend-mode: difference;}
