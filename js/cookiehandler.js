@@ -43,7 +43,7 @@ function cookieChecker(){
 
     const modalQuery = document.querySelector('#cookiesModal');
     modalQuery.addEventListener('hidden.bs.modal', event => {
-        setCookie("cookiesApproved", "Told you we dont have trackers.");
+        setCookie("cookiesApproved", "hi :3");
         setCookie("theme", "default");
     });
     // Check for the modal to be closed, only possible through the accept button, and add the cookiesApproved cookie.
