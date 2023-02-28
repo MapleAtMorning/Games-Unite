@@ -122,7 +122,13 @@ footer p{
 
 footer a{
     color: var(--muteText);
-    text-decoration: none;
+    text-decoration: underline;
+}
+
+footer a::after{
+    padding-left: 0.25rem;
+    content: url(/img/icons/externallink.svg);
+    filter: invert(45%) sepia(22%) saturate(183%) hue-rotate(166deg) brightness(94%) contrast(87%)
 }
 
 footer a:hover{
