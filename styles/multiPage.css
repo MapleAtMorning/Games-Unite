@@ -58,7 +58,7 @@ header img{
     transition: color 500ms;
 }
 
-.navbar .nav-link:hover{opacity: 90%;}
+.navbar .nav-link:hover, .navbar .nav-link:focus-visible{opacity: 90%;}
 
 .navbar .active{opacity: 100%;}
 

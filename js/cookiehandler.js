@@ -1,169 +1,170 @@
-const itemHolder = document.getElementById('nav-item-holder');
-const header = document.getElementById('nav-top');
-let theme = getCookie("theme");
-const root = document.querySelector(':root');
-const rootstyle = getComputedStyle(root);
-const headerLogo = document.getElementById("header-logo");
+const itemHolder = document.getElementById('nav-item-holder')
+const header = document.getElementById('nav-top')
+let theme = getCookie('theme')
+const root = document.querySelector(':root')
+const rootstyle = getComputedStyle(root)
+const headerLogo = document.getElementById('header-logo')
 
-export function setCookie(name, value) {
-    const d = new Date();
-    d.setTime(d.getTime() + (365 * 24 * 60 * 60 * 1000));
-    let expires = "expires=" + d.toUTCString();
-    // Simple string that makes the cookies expire after 1 year instead of on browser close.
+export function setCookie (name, value) {
+  const d = new Date()
+  d.setTime(d.getTime() + (365 * 24 * 60 * 60 * 1000))
+  const expires = 'expires=' + d.toUTCString()
+  // Simple string that makes the cookies expire after 1 year instead of on browser close.
 
-    document.cookie = name + "=" + value + ";" + expires + "; SameSite=Strict";
+  document.cookie = name + '=' + value + ';' + expires + '; SameSite=Strict'
 };
 
-export function getCookie(cname) {
-    let name = cname + "=";
-    let decodedCookie = decodeURIComponent(document.cookie);
-    let cookieList = decodedCookie.split(';');
-    for (let i = 0; i < cookieList.length; i++) {
-        let c = cookieList[i];
-        while (c.charAt(0) == ' ') {
-            c = c.substring(1);
-        };
-        if (c.indexOf(name) == 0) {
-            return c.substring(name.length, c.length);
-        };
+export function getCookie (cname) {
+  const name = cname + '='
+  const decodedCookie = decodeURIComponent(document.cookie)
+  const cookieList = decodedCookie.split(';')
+  for (let i = 0; i < cookieList.length; i++) {
+    let c = cookieList[i]
+    while (c.charAt(0) === ' ') {
+      c = c.substring(1)
     };
-    return "";
-    // HEAVILY HEAVILY LEARNT AND COPIED FROM https://www.w3schools.com/js/js_cookies.asp
+    if (c.indexOf(name) === 0) {
+      return c.substring(name.length, c.length)
+    };
+  };
+  return ''
+  // HEAVILY HEAVILY LEARNT AND COPIED FROM https://www.w3schools.com/js/js_cookies.asp
 }
 
-function cookieChecker(){
-    const modal = new bootstrap.Modal(document.getElementById('cookiesModal'));
-    if(getCookie("cookiesApproved")){
-        return;
-    };
-    // Check if cookies have already been approved, if so return so code below DOESN'T RUN.
+function cookieChecker () {
+  const modal = new bootstrap.Modal(document.getElementById('cookiesModal'))
+  if (getCookie('cookiesApproved')) {
+    return
+  };
+  // Check if cookies have already been approved, if so return so code below DOESN'T RUN.
 
-    modal.show();
-    // Simply bring up the cookies modal popup.
+  modal.show()
+  // Simply bring up the cookies modal popup.
 
-    const modalQuery = document.querySelector('#cookiesModal');
-    modalQuery.addEventListener('hidden.bs.modal', event => {
-        setCookie("cookiesApproved", "hi :3");
-        setCookie("theme", "default");
-    });
-    // Check for the modal to be closed, only possible through the accept button, and add the cookiesApproved cookie.
+  const modalQuery = document.querySelector('#cookiesModal')
+  modalQuery.addEventListener('hidden.bs.modal', event => {
+    setCookie('cookiesApproved', 'hi :3')
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        setCookie('theme', 'default')
+    }else if(window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches){
+        setCookie('theme', 'light')
+    }
+    themeChanger()
+  })
+  // Check for the modal to be closed, only possible through the accept button, and add the cookiesApproved cookie.
 };
 
-function themeColorUpdater(primary, primarylight, background, secondary, secondarydark, text, mute){
-    root.style.setProperty("--primaryColor", primary);
-    root.style.setProperty("--primaryLight", primarylight);
-    root.style.setProperty("--primaryBackground", background);
-    root.style.setProperty("--secondaryColor", secondary);
-    root.style.setProperty("--secondaryColorDark", secondarydark);
-    root.style.setProperty("--textColor", text);
-    root.style.setProperty("--muteText", mute);
+function themeColorUpdater (primary, primarylight, background, secondary, secondarydark, text, mute) {
+  root.style.setProperty('--primaryColor', primary)
+  root.style.setProperty('--primaryLight', primarylight)
+  root.style.setProperty('--primaryBackground', background)
+  root.style.setProperty('--secondaryColor', secondary)
+  root.style.setProperty('--secondaryColorDark', secondarydark)
+  root.style.setProperty('--textColor', text)
+  root.style.setProperty('--muteText', mute)
 };
 
-function themeChanger(){
-    theme = getCookie("theme");
-    if(getCookie("theme")){   
-        
-        if(theme != "light"){
-            header.classList.remove("light-theming");
-            headerLogo.src = "img/GULogo.webp";
-        };
-
-        if(theme == "contrast"){
-            themeColorUpdater(
-                "#000000", //primary
-                "#111111", //primaryLight
-                "#000000", //primaryBackground
-                "#4bf5a3", //secondary
-                "#46aa7a", //secondaryDark
-                "#ffffff", //text
-                "#ffffff" //mute
-            );
-            header.classList.remove("navbar-light");
-            header.classList.add("navbar-dark");
-            header.classList.remove('light-theming');
-            header.classList.add('default-theming');
-            itemHolder.classList.remove('light-theming');
-            itemHolder.classList.remove('default-theming');
-        }
-        else if(theme == "default"){
-            themeColorUpdater(
-                "#1d2529", //primary
-                "#283035", //primaryLight
-                "#181d1f", //primaryBackground
-                "#4bf5a3", //secondary
-                "#46aa7a", //secondaryDark
-                "#ffffff", //text
-                "#6c757d" //mute
-            );
-            header.classList.remove("navbar-light");
-            header.classList.add("navbar-dark");
-            header.classList.remove('light-theming');
-            header.classList.add('default-theming');
-            itemHolder.classList.remove('light-theming');
-            itemHolder.classList.remove('default-theming');
-        }
-        else if(theme == "light"){
-            themeColorUpdater(
-                "#ECEEF4", //primary
-                "#ccd0db", //primaryLight
-                "#ffffff", //primaryBackground
-                "#4bf5a3", //secondary
-                "#46aa7a", //secondaryDark
-                "#000000", //text
-                "#4a4c4f" //mute
-            );
-
-            header.classList.remove("navbar-dark");
-            header.classList.add("navbar-light");
-            header.classList.add('light-theming');
-            header.classList.remove('default-theming');
-            headerLogo.src = "img/GULogoBlack.webp";
-        };
-        header.style.backgroundColor = rootstyle.getPropertyValue('--primaryColor');
+function themeChanger () {
+  theme = getCookie('theme')
+  if (getCookie('theme')) {
+    if (theme !== 'light') {
+      header.classList.remove('light-theming')
+      headerLogo.src = 'img/GULogo.webp'
     };
+
+    if (theme === 'contrast') {
+      themeColorUpdater(
+        '#000000', // primary
+        '#111111', // primaryLight
+        '#000000', // primaryBackground
+        '#4bf5a3', // secondary
+        '#46aa7a', // secondaryDark
+        '#ffffff', // text
+        '#ffffff' // mute
+      )
+      header.classList.remove('navbar-light')
+      header.classList.add('navbar-dark')
+      header.classList.remove('light-theming')
+      header.classList.add('default-theming')
+      itemHolder.classList.remove('light-theming')
+      itemHolder.classList.remove('default-theming')
+    } else if (theme === 'default') {
+      themeColorUpdater(
+        '#1d2529', // primary
+        '#283035', // primaryLight
+        '#181d1f', // primaryBackground
+        '#4bf5a3', // secondary
+        '#46aa7a', // secondaryDark
+        '#ffffff', // text
+        '#6c757d' // mute
+      )
+      header.classList.remove('navbar-light')
+      header.classList.add('navbar-dark')
+      header.classList.remove('light-theming')
+      header.classList.add('default-theming')
+      itemHolder.classList.remove('light-theming')
+      itemHolder.classList.remove('default-theming')
+    } else if (theme === 'light') {
+      themeColorUpdater(
+        '#ECEEF4', // primary
+        '#ccd0db', // primaryLight
+        '#ffffff', // primaryBackground
+        '#4bf5a3', // secondary
+        '#46aa7a', // secondaryDark
+        '#000000', // text
+        '#4a4c4f' // mute
+      )
+
+      header.classList.remove('navbar-dark')
+      header.classList.add('navbar-light')
+      header.classList.add('light-theming')
+      header.classList.remove('default-theming')
+      headerLogo.src = 'img/GULogoBlack.webp'
+    };
+    header.style.backgroundColor = rootstyle.getPropertyValue('--primaryColor')
+  };
 };
 
 // When the window is less than 992 it forces the style to have black text. This makes it readable in the sidebar for mobile
-export function mobileLight(){
-    let theme = getCookie("theme");
-    if(theme == "light"){
-        header.classList.remove('default-theming');
-        header.classList.add('light-theming');
-        if(window.innerWidth < 992){
-            
-            itemHolder.classList.remove('default-theming');
-            itemHolder.classList.add('light-theming');
-            return;
-        };
-        itemHolder.classList.remove('light-theming');
-        itemHolder.classList.add('default-theming');
+export function mobileLight () {
+  const theme = getCookie('theme')
+  if (theme === 'light') {
+    header.classList.remove('default-theming')
+    header.classList.add('light-theming')
+    if (window.innerWidth < 992) {
+      itemHolder.classList.remove('default-theming')
+      itemHolder.classList.add('light-theming')
+      return
     };
+    itemHolder.classList.remove('light-theming')
+    itemHolder.classList.add('default-theming')
+  };
 };
 
 // Check when radio buttons are clicked to change theme
-const colorThemes = document.querySelectorAll('[name="theme"]');
+const colorThemes = document.querySelectorAll('[name="theme"]')
 colorThemes.forEach((themeOption) => {
-    themeOption.addEventListener("click", () => {
-        setCookie("theme", themeOption.id);
-        themeChanger();
-    });
-});
+  themeOption.addEventListener('click', () => {
+    setCookie('theme', themeOption.id)
+    themeChanger()
+  })
+})
 
 const setTheme = function () {
-    const activeTheme = getCookie("theme");
-    colorThemes.forEach((themeOption) => {
-        if (themeOption.id === activeTheme) {
-            themeOption.checked = true;
-        };
-    });
-    // fallback for no :has() support
-    document.documentElement.className = activeTheme;
-};
+  const activeTheme = getCookie('theme')
+  colorThemes.forEach((themeOption) => {
+    if (themeOption.id === activeTheme) {
+      themeOption.checked = true
+    };
+  })
+  // fallback for no :has() support
+  document.documentElement.className = activeTheme
+}
 
-// This code has been taken from Kevin Powell's great theme selector with :has() tutorial
+// This code has been learned and edited from Kevin Powell's great theme selector with :has() tutorial
 
-window.onresize = mobileLight;
-themeChanger();
-mobileLight();
-cookieChecker();
-document.onload = setTheme();
+window.onresize = mobileLight
+themeChanger()
+mobileLight()
+cookieChecker()
+document.onload = setTheme()
