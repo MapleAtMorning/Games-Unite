@@ -1,7 +1,6 @@
 import { getCookie, mobileLight } from './cookiehandler.js'
 
 const nav = document.getElementById('nav-top')
-const logo = document.getElementById('header-logo')
 const navItems = document.getElementById('nav-item-holder')
 const root = document.querySelector(':root')
 const rootstyle = getComputedStyle(root)
@@ -36,7 +35,7 @@ function scrollFade () {
 };
 
 function shadow (distance) {
-  logo.style.filter = 'drop-shadow(' + distance + distance + distance + '#000)'
+  headerLogo.style.filter = 'drop-shadow(' + distance + distance + distance + '#000)'
   nav.style.textShadow = distance + distance + distance + '#000'
   if (window.innerWidth > 992) {
     navItems.style.textShadow = distance + distance + distance + '#000'

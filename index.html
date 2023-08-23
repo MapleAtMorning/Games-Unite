@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Games Unite | Innovative Roblox Movement Shooter</title>
+    <title>Games Unite</title>
     
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,7 +20,7 @@
     </script>
 
     <!-- Website Embed -->
-    <meta content="Games Unite | Innovative Roblox Movement Shooter" property="og:title">
+    <meta content="Games Unite" property="og:title">
     <meta content="The Unofficial Games Unite Website." property="og:description">
     <meta content="website" property="og:type">
     <meta content="https://gamesunite.dev/" property="og:url">
@@ -28,7 +28,7 @@
     <meta content="#4bf5a3" data-react-helmet="true" name="theme-color">
 
     <!-- Twitter/Social Embed -->
-    <meta name="twitter:title" content="Games Unite | Innovative Roblox Movement Shooter">
+    <meta name="twitter:title" content="Games Unite">
     <meta name="twitter:description" content="The Unofficial Games Unite Website. Features, Commands, FAQ, Weapons.">
     <meta name="twitter:image" content="https://gamesunite.dev/img/screenshots/MojaveInspect.webp">
     <meta name="twitter:site" content="@MapleAtMorning">
@@ -39,64 +39,24 @@
     <link rel="icon" href="img/GULogoBlack.ico" media="(prefers-color-scheme: light)">
     <link rel="icon" href="img/GULogo.ico" media="(prefers-color-scheme: dark)">
 
-    <!-- Light YT https://github.com/paulirish/lite-youtube-embed -->
+    <!-- Lite YT https://github.com/paulirish/lite-youtube-embed -->
     <link rel="stylesheet" href="node_modules/lite-youtube-embed/src/lite-yt-embed.css">
     <script src="node_modules/lite-youtube-embed/src/lite-yt-embed.js"></script>
 
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-
     <!-- Styles -->
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web" rel="stylesheet">
+    <script src="/js/htmlManager.js"></script>
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/multiPage.css">
     <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
-    <header class="px-lg-5 py-2 navbar navbar-dark navbar-expand-lg fixed-top default-theming" id="nav-top">
-        <div class="container-fluid">
-            
-            <div class="navbar-brand">
-                <img id="header-logo" src="img/GULogo.webp" alt="Games Unite Logo" width="48" height="48">
-                <p class="d-none d-sm-inline">Games Unite</p>
-            </div>
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            
-            <div class="offcanvas offcanvas-end" id="navbarSupportedContent" aria-labelledby="navbarSupportedContent">
-                <div class="offcanvas-header">
-                    <h3 id="offcanvaslabel" class="mt-3">Games Unite</h3>
-                    <button type="button" class="btn-close btn-close-white offcanvas-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <ul class="navbar-nav offcanvas-body justify-content-lg-end" id="nav-item-holder">
-                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="/">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="commands">Commands</a></li>
-                    <li class="nav-item"><a class="nav-link" href="faq">FAQ</a></li>
-                </ul>
-            </div>
-            
-        </div>
+    <header id="nav-top">
+        <gu-header></gu-header>
     </header>
    
-    <!-- Modal Body -->
-    <aside class="modal fade" id="cookiesModal" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" aria-labelledby="cookiesModal" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h3 class="modal-title" id="cookiesModalTitle">Cookies</h3>
+    <gu-cookies></gu-cookies>
 
-                </div>
-                <div class="modal-body">
-                    <p>First off, thanks for visiting the Games Unite website. <br> We have cookies to save theme preferences for those who need high contrast, and one to track that you've seen this message.<br> The cookies I make will never leave this site. <br> We <b>DO</b> have Google Analytics, however. If this makes you uncomfortable, please consider checking out uBlock origin. <br> Other than that, please enjoy your stay! &lt;3</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">Accept</button>
-                </div>
-            </div>
-        </div>
-    </aside>
 
     <main>
         <div id="carousel-holder">
@@ -188,7 +148,7 @@
     </main>
     
     <footer>
-        <div class="container-fluid">
+        <div class="width-clamp">
             <form id="theme-picker" action="#">
                 <fieldset>
                     <legend class="visually-hidden">Pick a theme</legend>
@@ -208,18 +168,34 @@
                     </label>
                 </fieldset>
             </form>
-            <div class="row row-cols-1 row-cols-md-2">
-                <div class="col">
-                    <div class="row"><p class="p-0">Please keep in mind this website is unofficial and community ran, although approved by kennyjeopardy. Games Unite is still in testing and you may find bugs. Please feel free to report them in the <a href="https://discord.gg/zMmANqqFB5" target="_blank" aria-label="Opens in new tab">Discord</a></p></div>
+            <div class="footer-content">
+                <div class="footer-sect1">
+                    <p>Please keep in mind this website is unofficial and community ran, although approved by kennyjeopardy. </p>
+                    <p>Games Unite is still in testing and you may find bugs. Please feel free to report them in the <a href="https://discord.gg/zMmANqqFB5" target="_blank" aria-label="Opens in new tab">Discord</a></p>
                 </div>
-                <div class="col">
-                    <div class="row"><p class="d-none d-md-inline p-0">If you want to contribute to the website, it's all being run through <a href="https://github.com/MapleAtMorning/Games-Unite" target="_blank" aria-label="Opens in new tab">Github Pages!</a> Please feel free to make an issue if you think there's something you want changed, alternatively you could change it yourself and send a pull request.</p></div>
+                
+                <img src="img/GULogo.webp" alt="Games Unite Logo" width="42px">
+                <div class="footer-sect2">
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li>|</li>
+                        <li><a href="/commands.html">Commands</a></li>
+                        <li>|</li>
+                        <li><a href="/faq.html">FAQ</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="https://www.roblox.com/games/2746687316/Games-Unite-Testing-Place">Play</a></li>
+                        <li>|</li>
+                        <li><a href="https://discord.gg/zMmANqqFB5">Discord</a></li>
+                        <li>|</li>
+                        <li><a href="https://www.roblox.com/groups/5563139/Games-Unite">Roblox Group</a></li>
+                    </ul>
                 </div>
+
             </div>
         </div>
     </footer>
 
-    <script type="module" src="js/navfade.js"></script>
-    <script type="module" src="js/cookiehandler.js"></script>
+    <script type="module" src="js/mainNavFade.js"></script>
 </body>
 </html>

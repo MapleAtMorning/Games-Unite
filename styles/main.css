@@ -89,10 +89,6 @@ h1{
 	font-size: clamp(1rem, 3vw, 1.5rem);
 }
 
-main{
-	padding-top: 4.7rem;
-}
-
 .img-info{
 	max-width: 90%;
 	border-radius: 0.5rem;
