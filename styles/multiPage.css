@@ -230,7 +230,16 @@ Modal
 #cookies-button:active{
     background-color: var(--secondaryColor);
     box-shadow: -25px 25px 100px var(--secondaryColor);
-    transition: box-shadow 500ms ease-out;
+    transition: box-shadow 500ms ease-in-out;
+}
+
+.cookies-anim-out{
+    animation: cookiesOut 500ms ease-out;
+}
+
+@keyframes cookiesOut {
+    from{transform: translateX(0%);}
+    to{transform: translateX(-100%);}
 }
 
 @media only screen and (prefers-reduced-motion) {
@@ -241,6 +250,16 @@ Modal
     #cookies-button:active{
         background-color: var(--secondaryColor);
     }
+
+    .cookies-anim-out{
+        animation: cookiesOut 500ms linear;
+    }
+
+    @keyframes cookiesOut {
+        from{opacity: 100%;}
+        to{opacity: 0%;}
+    }
+
 }
 
 /* Misc

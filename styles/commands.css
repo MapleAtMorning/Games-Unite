@@ -28,8 +28,8 @@
     border-width: 0;
 }
 
-li>a{text-decoration: none; color: var(--secondaryColor);}
-li>a:hover{color: var(--secondaryColorDark);}
+.dropdown li>a{text-decoration: none; color: var(--secondaryColor);}
+.dropdown li>a:hover{color: var(--secondaryColorDark);}
 
 .px-20{
     padding-left: 20%;
