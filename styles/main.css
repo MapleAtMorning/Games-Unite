@@ -38,24 +38,31 @@ header{
 	position: absolute;
 }
 
-#carousel-content {
-	position: relative;
-	text-align: center;
-	color: white;
-}
-
 
 /* Carousel Content
 ----------------------------------------
 */
+
+#carousel-content {
+	position: relative;
+	text-align: center;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 h1{
     font-size: clamp(3.5rem, 10vw, 5rem);
     font-weight: 700;
 	filter: drop-shadow(0.3rem 0.3rem 0.25rem #191d1f);
+	margin-bottom: 0;
 }
 
 #tag-line{
 	font-size: 2rem;
+	filter: drop-shadow(0.2em 0.2em 0.1em #191d1f);
+	margin: 0 0 24px 0;
 }
 
 #hero-logo{
@@ -64,14 +71,27 @@ h1{
 	padding: 2.5rem;
 }
 
-#carousel-content h2 {filter: drop-shadow(0.2em 0.2em 0.1em #191d1f);}
+#carousel-content a{
+	padding: 16px;
+	width: 12rem;
+	display: inline-block;
+}
 
-#play-now{
-	background-color: #4bf5a3;
+#carousel-content a:hover{
+	outline: white solid 50px;
+}
+
+#play-now-cta{
+	clip-path: polygon(10px 0%, 100% 0, 100% 100%, 10px 100%, 0% calc(100% - 10px), 0% 10px);
+	background-color: var(--secondaryColor);
 	color: black;
 }
 
-#play-now:hover{background-color: #50ce91;}
+#discord-cta{
+	clip-path: polygon(0 0, calc(100% - 10px) 0%, 100% 10px, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%);
+	background-color: var(--primaryLight);
+	color: #fff;
+}
 
 /* Features / Body 
 ----------------------------------------

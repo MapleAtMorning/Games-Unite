@@ -13,6 +13,6 @@ acceptButton.addEventListener("click", () => {
     })
 })
 
-if (ls.getItem("GUCookiesAccepted" !== null)){
-    console.log("Cookies Accepted")
+if (ls.getItem("GUCookiesAccepted") !== null){
+    cookiesAlert.remove()
 }
