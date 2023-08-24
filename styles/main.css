@@ -75,22 +75,33 @@ h1{
 	padding: 16px;
 	width: 12rem;
 	display: inline-block;
+	text-decoration: none;
+	transition: clip-path 500ms ease-in-out, scale 500ms ease-in-out;
 }
 
 #carousel-content a:hover{
-	outline: white solid 50px;
+	scale: 1.025;
+	position: relative;
 }
 
 #play-now-cta{
-	clip-path: polygon(10px 0%, 100% 0, 100% 100%, 10px 100%, 0% calc(100% - 10px), 0% 10px);
+	clip-path: polygon(10px 0%, 100% 0, 100% 0, 100% 100%, 100% 100%, 10px 100%, 0% calc(100% - 10px), 0% 10px);
 	background-color: var(--secondaryColor);
 	color: black;
 }
 
+#play-now-cta:hover{
+	clip-path: polygon(30px 0%, 100% 0, 100% 0, 100% 100%, 100% 100%, 0px 100%, 10px 66%, 20px 33%);
+}
+
 #discord-cta{
-	clip-path: polygon(0 0, calc(100% - 10px) 0%, 100% 10px, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%);
+	clip-path: polygon(0% 0%, calc(100% - 20px) 0%, calc(100% - 10px) 10px, calc(100% - 10px) calc(100% - 10px), calc(100% - 20px) 100%, 0% 100%);
 	background-color: var(--primaryLight);
 	color: #fff;
+}
+
+#discord-cta:hover{
+	clip-path: polygon(0% 0%, calc(100% - 30px) 0%, calc(100% - 20px) 33%, calc(100% - 10px) 66%, 100% 100%, 0% 100%);
 }
 
 /* Features / Body 
