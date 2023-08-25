@@ -104,9 +104,27 @@ h1{
 	clip-path: polygon(0% 0%, calc(100% - 30px) 0%, calc(100% - 20px) 33%, calc(100% - 10px) 66%, 100% 100%, 0% 100%);
 }
 
+#carousel-content span{
+	filter: drop-shadow(0px 0px 70px #ffffff00);
+	transition: filter 2s linear;
+}
+
+#carousel-content span:first-of-type:hover{
+	filter: drop-shadow(0px 0px 70px var(--secondaryColor));
+}
+
+#carousel-content span:last-of-type:hover{
+	filter: drop-shadow(0px 0px 70px black);
+}
+
+
 /* Features / Body 
 ----------------------------------------
 */
+
+.fifty-fifty{
+	display: flex;
+}
 
 .info-title{
 	font-size: clamp(2rem, 3vw, 3rem);
