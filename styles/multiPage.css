@@ -140,9 +140,19 @@ footer a:hover{
     color: var(--muteText);
 }
 
-.footer-content > img{
+#random-link > img{
     margin: auto;
     margin-top: 15px;
+}
+
+#random-link{
+    width: min-content;
+    height: 54px;
+    margin: auto;
+}
+
+#random-link::after{
+    content: "";
 }
 
 /* Theme color changer */

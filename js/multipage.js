@@ -1,6 +1,7 @@
 const acceptButton = document.getElementById("cookies-button")
 const cookiesAlert = document.getElementById("cookies-modal")
 const ls = window.localStorage
+let rawJSON
 
 acceptButton.addEventListener("click", () => {
     acceptButton.disabled = true
@@ -16,3 +17,19 @@ acceptButton.addEventListener("click", () => {
 if (ls.getItem("GUCookiesAccepted") !== null){
     cookiesAlert.remove()
 }
+
+async function jsonGrab(){
+    const result = await fetch("https://mapleatmorning.github.io/ytrandomjson/ytrandom.json")
+    rawJSON = await result.json()
+    return rawJSON
+}
+await jsonGrab()
+
+let keys = Object.keys(rawJSON)
+
+function grabRandom(){
+    let randomItem = keys[Math.floor(Math.random()*keys.length)]
+    document.getElementById('random-link').href = randomItem
+}
+document.getElementById('random-link').addEventListener("click", grabRandom)
+grabRandom()

@@ -62,7 +62,7 @@ class footer extends HTMLElement{
                     <p>Games Unite is still in testing and you may find bugs. Please feel free to report them in the <a href="https://discord.gg/zMmANqqFB5" target="_blank" aria-label="Opens in new tab">Discord</a></p>
                 </div>
                 
-                <img src="img/GULogo.webp" alt="Games Unite Logo" width="42px">
+                <a id="random-link" target="_blank"><img src="img/GULogo.webp" alt="Games Unite Logo" width="42px"></a>
                 <div class="footer-sect2">
                     <ul>
                         <li><a href="/">Home</a></li>

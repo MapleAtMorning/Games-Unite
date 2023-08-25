@@ -30,9 +30,10 @@ header{
 	background-color: #2f2e31;
 	overflow: hidden;
 	position: relative;
-	transform: translate(0, -76px);
-	padding: 60px 0;
+	transform: translate(0, -60px);
+	/* padding: 60px 0; */
     z-index: 1;
+	height: 100vh;
 }
 
 #main-carousel {
@@ -40,6 +41,11 @@ header{
     width: 100%;
     transform: translate(0, -15vh);
 	position: absolute;
+}
+
+#main-carousel img{
+	min-height: 115vh;
+	min-width: 100vw;
 }
 
 
@@ -54,6 +60,7 @@ header{
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	height: 100%;
 }
 
 #carousel-content a{
@@ -86,7 +93,7 @@ h1{
     font-size: clamp(3.5rem, 10vw, 5rem);
     font-weight: 700;
 	filter: drop-shadow(0.3rem 0.3rem 0.25rem #191d1f);
-	margin-bottom: 0;
+	margin: 0;
 }
 
 #tag-line{
@@ -133,7 +140,7 @@ h1{
 	justify-content: center;
 	display: flex;
 	flex-direction: column;
-	gap: 200px;
+	gap: 80px;
 }
 
 .fifty-fifty{
@@ -168,6 +175,8 @@ h1{
 lite-youtube{
 	margin: auto;
 	max-width: 1200px;
+	width: 100%;
+	clip-path: polygon(var(--image-bevel) 0%, calc(100% - var(--image-bevel)) 0%, 100% var(--image-bevel), 100% calc(100% - var(--image-bevel)), calc(100% - var(--image-bevel)) 100%, var(--image-bevel) 100%, 0% calc(100% - var(--image-bevel)), 0% var(--image-bevel));
 
 }
 
