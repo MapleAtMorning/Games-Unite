@@ -78,6 +78,7 @@ nav .active{opacity: 100%;}
 body{
     background-color: var(--primaryBackground);
     color: var(--textColor);
+    overflow-x: hidden;
 }
 
 a[target="_blank"]::after{ /* Add an image behind each external link */
