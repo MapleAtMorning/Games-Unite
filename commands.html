@@ -51,7 +51,7 @@
 <body>
     <header id="nav-top">
         <gu-header></gu-header>
-        <nav>
+        <nav id="cmds-nav">
             <div>
                 <button type="button" aria-expanded="false" aria-controls="bot_collapse">Bots</button>
                 <ul class="dropdown-menu" id="bot_collapse">
@@ -82,70 +82,56 @@
                     <li><a href="javascript:scrollFunc('crosshair_recoil_scale')">crosshair_recoil_scale</a></li>
                 </ul>
             </div>
-            <div class="col dropdown-center my-3 my-lg-0">
-                <div class="dropdown">
-                    <button class="btn btn-sm btn-success" type="button" data-bs-toggle="dropdown"
-                        data-bs-target="#player_collapse" aria-expanded="false"
-                        aria-controls="player_collapse">Player</button>
-                    <ul class="dropdown-menu text-center bg-none" id="player_collapse">
-                        <li><a href="javascript:scrollFunc('pl_autobhop')">pl_autobhop</a></li>
-                        <li><a href="javascript:scrollFunc('pl_accelerate')">pl_accelerate</a></li>
-                        <li><a href="javascript:scrollFunc('pl_air_accelerate')">pl_air_accelerate</a></li>
-                        <li><a href="javascript:scrollFunc('pl_air_friction')">pl_air_friction</a></li>
-                        <li><a href="javascript:scrollFunc('pl_air_max_gain')">pl_air_max_gain</a></li>
-                        <li><a href="javascript:scrollFunc('pl_air_max_speed')">pl_air_max_speed</a></li>
-                        <li><a href="javascript:scrollFunc('pl_crouch_accelerate')">pl_crouch_accelerate</a></li>
-                        <li><a href="javascript:scrollFunc('pl_crouch_max_speed')">pl_crouch_max_speed</a></li>
-                        <li><a href="javascript:scrollFunc('pl_friction')">pl_friction</a></li>
-                        <li><a href="javascript:scrollFunc('pl_gravity')">pl_gravity</a></li>
-                        <li><a href="javascript:scrollFunc('pl_jump_impulse')">pl_jump_impulse</a></li>
-                        <li><a href="javascript:scrollFunc('pl_ladder_max_speed')">pl_ladder_max_speed</a></li>
-                        <li><a href="javascript:scrollFunc('pl_max_speed')">pl_max_speed</a></li>
-                        <li><a href="javascript:scrollFunc('pl_walk_max_speed')">pl_walk_max_speed</a></li>
-                    </ul>
-                </div>
+            <div>
+                <button type="button" aria-expanded="false" aria-controls="player_collapse">Player</button>
+                <ul class="dropdown-menu" id="player_collapse">
+                    <li><a href="javascript:scrollFunc('pl_autobhop')">pl_autobhop</a></li>
+                    <li><a href="javascript:scrollFunc('pl_accelerate')">pl_accelerate</a></li>
+                    <li><a href="javascript:scrollFunc('pl_air_accelerate')">pl_air_accelerate</a></li>
+                    <li><a href="javascript:scrollFunc('pl_air_friction')">pl_air_friction</a></li>
+                    <li><a href="javascript:scrollFunc('pl_air_max_gain')">pl_air_max_gain</a></li>
+                    <li><a href="javascript:scrollFunc('pl_air_max_speed')">pl_air_max_speed</a></li>
+                    <li><a href="javascript:scrollFunc('pl_crouch_accelerate')">pl_crouch_accelerate</a></li>
+                    <li><a href="javascript:scrollFunc('pl_crouch_max_speed')">pl_crouch_max_speed</a></li>
+                    <li><a href="javascript:scrollFunc('pl_friction')">pl_friction</a></li>
+                    <li><a href="javascript:scrollFunc('pl_gravity')">pl_gravity</a></li>
+                    <li><a href="javascript:scrollFunc('pl_jump_impulse')">pl_jump_impulse</a></li>
+                    <li><a href="javascript:scrollFunc('pl_ladder_max_speed')">pl_ladder_max_speed</a></li>
+                    <li><a href="javascript:scrollFunc('pl_max_speed')">pl_max_speed</a></li>
+                    <li><a href="javascript:scrollFunc('pl_walk_max_speed')">pl_walk_max_speed</a></li>
+                </ul>
             </div>
-            <div class="col dropdown-center my-3 my-lg-0">
-                <div class="dropdown">
-                    <button class="btn btn-sm btn-success" type="button" data-bs-toggle="dropdown"
-                        data-bs-target="#server_collapse" aria-expanded="false"
-                        aria-controls="server_collapse">Server</button>
-                    <ul class="dropdown-menu text-center bg-none" id="server_collapse">
-                        <li><a href="javascript:scrollFunc('sv_cheats')">sv_cheats</a></li>
-                        <li><a href="javascript:scrollFunc('sv_add_owner')">sv_add_owner</a></li>
-                        <li><a href="javascript:scrollFunc('sv_remove_owner')">sv_remove_owner</a></li>
-                        <li><a href="javascript:scrollFunc('gamemode')">gamemode</a></li>
-                        <li><a href="javascript:scrollFunc('gamemodes')">gamemodes</a></li>
-                        <li><a href="javascript:scrollFunc('mp_restartgame')">mp_restartgame</a></li>
-                        <li><a href="javascript:scrollFunc('map')">map</a></li>
-                        <li><a href="javascript:scrollFunc('maps')">maps</a></li>
-                        <li><a href="javascript:scrollFunc('mp_disable_shooting')">mp_disable_shooting</a></li>
-                    </ul>
-                </div>
+            <div>
+                <button type="button" aria-expanded="false" aria-controls="server_collapse">Server</button>
+                <ul class="dropdown-menu" id="server_collapse">
+                    <li><a href="javascript:scrollFunc('sv_cheats')">sv_cheats</a></li>
+                    <li><a href="javascript:scrollFunc('sv_add_owner')">sv_add_owner</a></li>
+                    <li><a href="javascript:scrollFunc('sv_remove_owner')">sv_remove_owner</a></li>
+                    <li><a href="javascript:scrollFunc('gamemode')">gamemode</a></li>
+                    <li><a href="javascript:scrollFunc('gamemodes')">gamemodes</a></li>
+                    <li><a href="javascript:scrollFunc('mp_restartgame')">mp_restartgame</a></li>
+                    <li><a href="javascript:scrollFunc('map')">map</a></li>
+                    <li><a href="javascript:scrollFunc('maps')">maps</a></li>
+                    <li><a href="javascript:scrollFunc('mp_disable_shooting')">mp_disable_shooting</a></li>
+                </ul>
             </div>
-            <div class="col dropdown-center my-3 my-lg-0">
-                <div class="dropdown">
-                    <button class="btn btn-sm btn-success" type="button" data-bs-toggle="dropdown"
-                        data-bs-target="#misc_collapse" aria-expanded="false"
-                        aria-controls="misc_collapse">Misc</button>
-                    <ul class="dropdown-menu text-center bg-none" id="misc_collapse">
-                        <li><a href="javascript:scrollFunc('help')">help</a></li>
-                        <li><a href="javascript:scrollFunc('default_fov')">default_fov</a></li>
-                        <li><a href="javascript:scrollFunc('thinkers')">thinkers</a></li>
-                        <li><a href="javascript:scrollFunc('viewmodel_arms')">viewmodel_arms</a></li>
-                        <li><a href="javascript:scrollFunc('viewmodel_offset')">viewmodel_offset</a></li>
-                        <li><a href="javascript:scrollFunc('viewmodel_flip')">viewmodel_flip</a></li>
-                        <li><a href="javascript:scrollFunc('camera_aspect_ratio')">camera_aspect_ratio</a></li>
-                        <li><a href="javascript:scrollFunc('net_graph')">net_graph</a></li>
-                        <li><a href="javascript:scrollFunc('kill')">kill</a></li>
-                        <li><a href="javascript:scrollFunc('explode')">explode</a></li>
-                        <li><a href="javascript:scrollFunc('impulse101')">impulse101</a></li>
-                        <li><a href="javascript:scrollFunc('clear')">clear</a></li>
-                    </ul>
-                </div>
+            <div>
+                <button type="button" aria-expanded="false" aria-controls="misc_collapse">Misc</button>
+                <ul class="dropdown-menu" id="misc_collapse">
+                    <li><a href="javascript:scrollFunc('help')">help</a></li>
+                    <li><a href="javascript:scrollFunc('default_fov')">default_fov</a></li>
+                    <li><a href="javascript:scrollFunc('thinkers')">thinkers</a></li>
+                    <li><a href="javascript:scrollFunc('viewmodel_arms')">viewmodel_arms</a></li>
+                    <li><a href="javascript:scrollFunc('viewmodel_offset')">viewmodel_offset</a></li>
+                    <li><a href="javascript:scrollFunc('viewmodel_flip')">viewmodel_flip</a></li>
+                    <li><a href="javascript:scrollFunc('camera_aspect_ratio')">camera_aspect_ratio</a></li>
+                    <li><a href="javascript:scrollFunc('net_graph')">net_graph</a></li>
+                    <li><a href="javascript:scrollFunc('kill')">kill</a></li>
+                    <li><a href="javascript:scrollFunc('explode')">explode</a></li>
+                    <li><a href="javascript:scrollFunc('impulse101')">impulse101</a></li>
+                    <li><a href="javascript:scrollFunc('clear')">clear</a></li>
+                </ul>
             </div>
-            </div>
-        </nav>
         </nav>
     </header>
 
@@ -440,9 +426,7 @@
         <gu-footer></gu-footer>
     </footer>
 
-    <script src="js/scroller.js"></script>
-    <script src="js/commands.js"></script>
-    <script type="module" src="js/cookiehandler.js"></script>
+    <script type="module" src="js/multipage.js"></script>
 </body>
 
 </html>

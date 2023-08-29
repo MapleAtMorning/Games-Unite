@@ -7,9 +7,9 @@ class header extends HTMLElement{
             </a>
             <nav>
                 <ul id="nav-item-holder">
-                    <li><a class="active" aria-current="page" href="/">Home</a></li>
-                    <li><a href="commands">Commands</a></li>
-                    <li><a href="faq">FAQ</a></li>
+                    <li><a id="page-home" href="/">Home</a></li>
+                    <li><a id="page-commands" href="commands">Commands</a></li>
+                    <li><a id="page-faq" href="faq">FAQ</a></li>
                 </ul>
             </nav>
         </div>
