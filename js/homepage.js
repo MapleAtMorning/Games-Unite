@@ -23,6 +23,9 @@ for (let i = 0; i < document.querySelectorAll('.anim').length; i++) {
 // Carousel
 // ===============================================================================================================================
 
+const timeBetweenRotate = 7000
+const timeDuringFade = 2000
+
 let img1 = document.getElementById("carousel-img1")
 let img2 = document.getElementById("carousel-img2")
 let img3 = document.getElementById("carousel-img3")
@@ -42,15 +45,15 @@ function nextimg(){
     emptyimg.style.zIndex = 0
     currentimg.style.zIndex = 1
     toimg.style.zIndex = 2
-    toimg.animate([{opacity: 0},{opacity: 1}], 2000)
+    toimg.animate([{opacity: 0},{opacity: 1}], timeDuringFade)
 }
 
 function delayedLoop(delay) {       
   setTimeout(function() { 
     nextimg()                       
-    delayedLoop(7000);     
+    delayedLoop(timeBetweenRotate);     
     currentnum++                        
   }, delay)
 }
 
-delayedLoop(7000);     
+delayedLoop(timeBetweenRotate);     
