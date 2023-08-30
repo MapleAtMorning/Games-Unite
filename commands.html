@@ -53,7 +53,7 @@
         <gu-header></gu-header>
         <nav id="cmds-nav">
             <div>
-                <button type="button" aria-expanded="false" aria-controls="bot_collapse">Bots</button>
+                <button type="button" class="dropdown-button" aria-expanded="false" aria-controls="bot_collapse">Bots</button>
                 <ul class="dropdown-menu" id="bot_collapse">
                     <li><a href="javascript:scrollFunc('bot_add')">bot_add</a></li>
                     <li><a href="javascript:scrollFunc('bot_kick')">bot_kick</a></li>
@@ -64,7 +64,7 @@
                 </ul>
             </div>
             <div>
-                <button type="button" aria-expanded="false" aria-controls="crosshair_collapse">Crosshair</button>
+                <button type="button" class="dropdown-button" aria-expanded="false" aria-controls="crosshair_collapse">Crosshair</button>
                 <ul class="dropdown-menu" id="crosshair_collapse">
                     <li><a href="javascript:scrollFunc('crosshair_alpha')">crosshair_alpha</a></li>
                     <li><a href="javascript:scrollFunc('crosshair_color')">crosshair_color</a></li>
@@ -84,7 +84,7 @@
                 </ul>
             </div>
             <div>
-                <button type="button" aria-expanded="false" aria-controls="player_collapse">Player</button>
+                <button type="button" class="dropdown-button" aria-expanded="false" aria-controls="player_collapse">Player</button>
                 <ul class="dropdown-menu" id="player_collapse">
                     <li><a href="javascript:scrollFunc('pl_autobhop')">pl_autobhop</a></li>
                     <li><a href="javascript:scrollFunc('pl_accelerate')">pl_accelerate</a></li>
@@ -103,7 +103,7 @@
                 </ul>
             </div>
             <div>
-                <button type="button" aria-expanded="false" aria-controls="server_collapse">Server</button>
+                <button type="button" class="dropdown-button" aria-expanded="false" aria-controls="server_collapse">Server</button>
                 <ul class="dropdown-menu" id="server_collapse">
                     <li><a href="javascript:scrollFunc('sv_cheats')">sv_cheats</a></li>
                     <li><a href="javascript:scrollFunc('sv_add_owner')">sv_add_owner</a></li>
@@ -117,7 +117,7 @@
                 </ul>
             </div>
             <div>
-                <button type="button" aria-expanded="false" aria-controls="misc_collapse">Misc</button>
+                <button type="button" class="dropdown-button" aria-expanded="false" aria-controls="misc_collapse">Misc</button>
                 <ul class="dropdown-menu" id="misc_collapse">
                     <li><a href="javascript:scrollFunc('help')">help</a></li>
                     <li><a href="javascript:scrollFunc('default_fov')">default_fov</a></li>
@@ -145,245 +145,245 @@
         <section>
             <div>
                 <h3 id="bot_cmds">Bots</h3>
-                <span id="bot_add">
+                <div id="bot_add">
                     <h4 title="Copy">bot_add - (optional) &lt;amount&gt;</h4>
                     <p>Adds bot(s) to your game.</p>
-                </span>
-                <span id="bot_kick">
+                </div>
+                <div id="bot_kick">
                     <h4 title="Copy">bot_kick - (optional) &lt;bot_name&gt;</h4>
                     <p>Kicks all bots or kicks the bot with the specified name.</p>
-                </span>
-                <span id="bot_mimic">
+                </div>
+                <div id="bot_mimic">
                     <h4 title="Copy">bot_mimic - (0/1) &lt;value&gt;</h4>
                     <p>Makes bots mimic the closest player.</p>
-                </span>
-                <span id="bot_stare">
+                </div>
+                <div id="bot_stare">
                     <h4 title="Copy">bot_stare - (0/1) &lt;value&gt;</h4>
                     <p>Makes bots stare at the closest player.</p>
-                </span>
-                <span id="bot_zombie">
+                </div>
+                <div id="bot_zombie">
                     <h4 title="Copy">bot_zombie - (0/1) &lt;value&gt;</h4>
                     <p>Makes bots follow the closest player.</p>
-                </span>
-                <span id="bot_thinker">
+                </div>
+                <div id="bot_thinker">
                     <h4 title="Copy">bot_thinker - &lt;thinker_name&gt;</h4>
                     <p>Sets the default thinker. Thinkers are bot profiles that describe how a bot behaves.
                         <br> (A list of all thinkers will eventually be made)
                     </p>
-                </span>
+                </div>
 
 
                 <h3 id="pl_cmds">Player / Movement</h3>
-                <span id="pl_autobhop">
+                <div id="pl_autobhop">
                     <h4 title="Copy">pl_autobhop - (0/1) &lt;value&gt;</h4>
                     <p>Sets whether players can bunny hop without having to manually press space every time.
                     </p>
-                </span>
-                <span id="pl_accelerate">
+                </div>
+                <div id="pl_accelerate">
                     <h4 title="Copy">pl_accelerate - &lt;value&gt;</h4>
                     <p>Sets how fast you can accelerate.</p>
-                </span>
-                <span id="pl_air_accelerate">
+                </div>
+                <div id="pl_air_accelerate">
                     <h4 title="Copy">pl_air_accelerate - &lt;value&gt;</h4>
                     <p>Sets how fast you can accelerate while midair.</p>
-                </span>
-                <span id="pl_air_friction">
+                </div>
+                <div id="pl_air_friction">
                     <h4 title="Copy">pl_air_friction - &lt;value&gt;</h4>
                     <p>Sets how fast you slow down while midair.</p>
-                </span>
-                <span id="pl_air_max_gain">
+                </div>
+                <div id="pl_air_max_gain">
                     <h4 title="Copy">pl_air_max_gain - &lt;value&gt;</h4>
                     <p>Sets the maximum amount of speed you can gain while accelerating while midair.</p>
-                </span>
-                <span id="pl_air_max_speed">
+                </div>
+                <div id="pl_air_max_speed">
                     <h4 title="Copy">pl_air_max_speed - &lt;value&gt;</h4>
                     <p>Sets how fast you can go while midair.</p>
-                </span>
-                <span id="pl_crouch_accelerate">
+                </div>
+                <div id="pl_crouch_accelerate">
                     <h4 title="Copy">pl_crouch_accelerate - &lt;value&gt;</h4>
                     <p>Sets how fast you can accelerate while crouched.</p>
-                </span>
-                <span id="pl_crouch_max_speed">
+                </div>
+                <div id="pl_crouch_max_speed">
                     <h4 title="Copy">pl_crouch_max_speed - &lt;value&gt;</h4>
                     <p>Sets how fast you can go while crouched.</p>
-                </span>
-                <span id="pl_friction">
+                </div>
+                <div id="pl_friction">
                     <h4 title="Copy">pl_friction - &lt;value&gt;</h4>
                     <p>Sets how fast you slow down.</p>
-                </span>
-                <span id="pl_gravity">
+                </div>
+                <div id="pl_gravity">
                     <h4 title="Copy">pl_gravity - &lt;value&gt;</h4>
                     <p>Sets how fast gravity acts upon you.</p>
-                </span>
-                <span id="pl_jump_impulse">
+                </div>
+                <div id="pl_jump_impulse">
                     <h4 title="Copy">pl_jump_impulse - &lt;value&gt;</h4>
                     <p>Sets how much speed you gain when you jump.</p>
-                </span>
-                <span id="pl_ladder_max_speed">
+                </div>
+                <div id="pl_ladder_max_speed">
                     <h4 title="Copy">pl_ladder_max_speed - &lt;value&gt;</h4>
                     <p>Sets how fast you can go while climbing.</p>
-                </span>
-                <span id="pl_max_speed">
+                </div>
+                <div id="pl_max_speed">
                     <h4 title="Copy">pl_max_speed - &lt;value&gt;</h4>
                     <p>Sets how fast you can go.</p>
-                </span>
-                <span id="pl_walk_max_speed">
+                </div>
+                <div id="pl_walk_max_speed">
                     <h4 title="Copy">pl_walk_max_speed - &lt;value&gt;</h4>
                     <p>Sets how fast you can go while walking.</p>
-                </span>
+                </div>
 
 
                 <h3 id="sv_cmds">Server Management</h3>
-                <span id="sv_cheats">
+                <div id="sv_cheats">
                     <h4 title="Copy">sv_cheats - (0/1) &lt;value&gt;</h4>
                     <p>Allows <b>ANYONE</b> in the server to use console commands. <br><i>Use at your own risk.</i></p>
-                </span>
-                <span id="sv_add_owner">
+                </div>
+                <div id="sv_add_owner">
                     <h4 title="Copy">sv_add_owner - &lt;player_name&gt;</h4>
                     <p>Makes the identified player a server owner. This gives them access to console
                         commands.</p>
-                </span>
-                <span id="sv_remove_owner">
+                </div>
+                <div id="sv_remove_owner">
                     <h4 title="Copy">sv_remove_owner - &lt;player_name&gt;</h4>
                     <p>Removes the identified player from being a server owner.</p>
-                </span>
-                <span id="gamemode">
+                </div>
+                <div id="gamemode">
                     <h4 title="Copy">gamemode - &lt;gamemode_name&gt;</h4>
                     <p>Sets the current gamemode. Some gamemodes may not be compatible with some maps.</p>
-                </span>
-                <span id="gamemodes">
+                </div>
+                <div id="gamemodes">
                     <h4 title="Copy">gamemodes - (optional) &lt;filter&gt;</h4>
                     <p>Prints out all gamemodes.</p>
-                </span>
-                <span id="mp_restartgame">
+                </div>
+                <div id="mp_restartgame">
                     <h4 title="Copy">mp_restartgame</h4>
                     <p>Restarts the gamemode.</p>
-                </span>
-                <span id="map">
+                </div>
+                <div id="map">
                     <h4 title="Copy">map - &lt;map_name&gt;</h4>
                     <p>Sets the current map. Some maps may not be compatible with some gamemodes.</p>
-                </span>
-                <span id="maps">
+                </div>
+                <div id="maps">
                     <h4 title="Copy">maps - (optional) &lt;filter&gt;</h4>
                     <p>Prints out all maps.</p>
-                </span>
-                <span id="mp_disable_shooting">
+                </div>
+                <div id="mp_disable_shooting">
                     <h4 title="Copy">mp_disable_shooting - (0/1) &lt;value&gt;</h4>
                     <p>Disables Shooting.</p>
-                </span>
+                </div>
             </div>
 
             <div>
                 <h3 id="crosshair_cmds">Crosshair</h3>
-                <span id="crosshair_alpha">
+                <div id="crosshair_alpha">
                     <h4 title="Copy">crosshair_alpha - &lt;value&gt;</h4>
                     <p>Sets the transparency of the threads on your crosshair.</p>
-                </span>
-                <span id="crosshair_color">
+                </div>
+                <div id="crosshair_color">
                     <h4 title="Copy">crosshair_color - (0-255) &lt;red&gt; (0-255) &lt;green&gt; (0-255)
                         &lt;blue&gt;</h4>
                     <p>Sets the color of your crosshair.</p>
-                </span>
-                <span id="crosshair_gap">
+                </div>
+                <div id="crosshair_gap">
                     <h4 title="Copy">crosshair_gap - &lt;value&gt;</h4>
                     <p>Sets the gap between the threads on your crosshair.</p>
-                </span>
-                <span id="crosshair_size">
+                </div>
+                <div id="crosshair_size">
                     <h4 title="Copy">crosshair_size - &lt;value&gt;</h4>
                     <p>Sets the size of the threads on your crosshair.</p>
-                </span>
-                <span id="crosshair_t">
+                </div>
+                <div id="crosshair_t">
                     <h4 title="Copy">crosshair_t - (0-1) &lt;value&gt;</h4>
                     <p>Disables the topmost thread on your crosshair.</p>
-                </span>
-                <span id="crosshair_thickness">
+                </div>
+                <div id="crosshair_thickness">
                     <h4 title="Copy">crosshair_thickness - &lt;value&gt;</h4>
                     <p>Sets the thickness of the threads on your crosshair.</p>
-                </span>
-                <span id="crosshair_dot">
+                </div>
+                <div id="crosshair_dot">
                     <h4 title="Copy">crosshair_dot - (0-1) &lt;value&gt;</h4>
                     <p>Sets whether your crosshair has a dot or not.</p>
-                </span>
-                <span id="crosshair_dot_alpha">
+                </div>
+                <div id="crosshair_dot_alpha">
                     <h4 title="Copy">crosshair_dot_alpha - (0-1) &lt;value&gt;</h4>
                     <p>Sets the transparency of the dot on your crosshair.</p>
-                </span>
-                <span id="crosshair_dot_size">
+                </div>
+                <div id="crosshair_dot_size">
                     <h4 title="Copy">crosshair_dot_size - &lt;value&gt;</h4>
                     <p>Sets the size of the dot on your crosshair.</p>
-                </span>
-                <span id="crosshair_outline">
+                </div>
+                <div id="crosshair_outline">
                     <h4 title="Copy">crosshair_outline - (0-1) &lt;value&gt;</h4>
                     <p>Sets whether your crosshair has outlines or not.</p>
-                </span>
-                <span id="crosshair_outline_alpha">
+                </div>
+                <div id="crosshair_outline_alpha">
                     <h4 title="Copy">crosshair_outline_alpha - (0-1) &lt;value&gt;</h4>
                     <p>Sets the transparency of the outlines on your crosshair.</p>
-                </span>
-                <span id="crosshair_outline_color">
+                </div>
+                <div id="crosshair_outline_color">
                     <h4 title="Copy">crosshair_outline_color - &lt;value&gt;</h4>
                     <p>Sets the color of the outlines on your crosshair.</p>
-                </span>
-                <span id="crosshair_outline_thickness">
+                </div>
+                <div id="crosshair_outline_thickness">
                     <h4 title="Copy">crosshair_outline_thickness - &lt;value&gt;</h4>
                     <p>Sets the thickness of the outlines on your crosshair.</p>
-                </span>
-                <span id="crosshair_recoil_scale">
+                </div>
+                <div id="crosshair_recoil_scale">
                     <h4 title="Copy">crosshair_recoil_scale - &lt;value&gt;</h4>
                     <p>Sets how fast your crosshair grows once recoil kicks in.</p>
-                </span>
+                </div>
 
 
                 <h3 id="misc_cmds">Miscellaneous</h3>
-                <span id="help">
+                <div id="help">
                     <h4 title="Copy">help</h4>
                     <p>Prints out all commands to the console.</p>
-                </span>
-                <span id="default_fov">
+                </div>
+                <div id="default_fov">
                     <h4 title="Copy">default_fov - (1-120) &lt;value&gt;</h4>
                     <p>Sets the field of view.</p>
-                </span>
-                <span id="thinkers">
+                </div>
+                <div id="thinkers">
                     <h4 title="Copy">thinkers - (optional) &lt;filter&gt;</h4>
                     <p>Prints out all thinkers.</p>
-                </span>
-                <span id="viewmodel_arms">
+                </div>
+                <div id="viewmodel_arms">
                     <h4 title="Copy">viewmodel_arms - (0/1) &lt;value&gt;</h4>
                     <p>Sets the visibility of arms in your viewmodel.</p>
-                </span>
-                <span id="viewmodel_offset">
+                </div>
+                <div id="viewmodel_offset">
                     <h4 title="Copy">viewmodel_offset - &lt;x&gt;&lt;y&gt;&lt;z&gt;</h4>
                     <p>Sets the offset of your viewmodel.</p>
-                </span>
-                <span id="viewmodel_flip">
+                </div>
+                <div id="viewmodel_flip">
                     <h4 title="Copy">viewmodel_flip - (0/1) &lt;value&gt;</h4>
                     <p>Flips the viewmodel so weapons are on the left side.</p>
-                </span>
-                <span id="camera_aspect_ratio">
+                </div>
+                <div id="camera_aspect_ratio">
                     <h4 title="Copy">camera_aspect_ratio - (0-1) &lt;value&gt;</h4>
                     <p>Replicates a stretched resolution using decimals converted to percentages</p>
-                </span>
-                <span id="net_graph">
+                </div>
+                <div id="net_graph">
                     <h4 title="Copy">net_graph - (0/1/2) &lt;value&gt;</h4>
                     <p>Show in depth information about the client and the server.</p>
-                </span>
-                <span id="kill">
+                </div>
+                <div id="kill">
                     <h4 title="Copy">kill*</h4>
                     <p>Die. You die. That's it.</p>
-                </span>
-                <span id="explode">
+                </div>
+                <div id="explode">
                     <h4 title="Copy">explode*</h4>
                     <p>Kaboom. You explode.</p>
-                </span>
-                <span id="impulse101">
+                </div>
+                <div id="impulse101">
                     <h4 title="Copy">impulse101</h4>
                     <p>Completely fills the reserve and current magazine of the gun the player is currently
                         holding, and gives you full health.</p>
-                </span>
-                <span id="clear">
+                </div>
+                <div id="clear">
                     <h4 title="Copy">clear</h4>
                     <p>Clears the console.</p>
-                </span>
+                </div>
             </div>
         </section><!--End Container-->
         <p class="text-muted">*May be bugged, sv_cheats may need to be on.</p>
@@ -398,6 +398,7 @@
     </footer>
 
     <script type="module" src="js/multipage.js"></script>
+    <script src="js/commands.js"></script>
 </body>
 
 </html>
