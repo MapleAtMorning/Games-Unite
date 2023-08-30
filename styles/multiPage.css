@@ -39,12 +39,12 @@ header{
     margin: 0;
 }
 
-nav li{
+#nav-item-holder li{
     padding-inline: 5px;
     display: inline;
 }
 
-nav a{
+#nav-item-holder a{
     opacity: 65%;
     text-decoration: none;
     transition: opacity 150ms;
@@ -52,9 +52,9 @@ nav a{
     color: var(--textColor)
 }
 
-nav a:hover, nav a:focus-visible{opacity: 90%;}
+#nav-item-holder a:hover, #nav-item-holder a:focus-visible{opacity: 90%;}
 
-nav .active{opacity: 100%;}
+#nav-item-holder .active{opacity: 100%;}
 
 @media only screen and (width < 500px) {
     #header-logo{

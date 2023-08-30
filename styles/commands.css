@@ -28,6 +28,18 @@
     cursor: pointer;
 }
 
+.dropdown-menu::before{
+    content: "";
+    width: 40px;
+    height: 20px;
+    position: absolute;
+    background-color: var(--secondaryColor);
+    left: 50%;
+    transform: translate(-50%);
+    top: -20px;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
 .dropdown-menu{
     border-width: 0;
     display: flex;
@@ -36,35 +48,39 @@
     text-align: center;
     position: absolute;
     padding: 0;
-    top: 30px;
+    top: 40px;
+    list-style-type: none;
+    padding: 16px;
     background-color: var(--secondaryColor);
+    opacity: 0;
+    display: none;
 }
 
 .dropdown-menu li>a{
     text-decoration: none; 
     color: black;
     background-color: #ffffff00;
+    transition: opacity 250ms ease;
 }
 .dropdown-menu li>a:hover{
-    color: var(--secondaryColorDark);
+    opacity: 65%;
 }
-
-
-@media only screen and (max-width:992px) {
-}
-
 /* Main
 ----------------------------------------
 */
 
 main{
-    padding-top: 7em;
+    padding-top: 65px;
+    text-align: center;
 }
 
-h1,h2{text-align: center;}
 
 h1{font-size: clamp(2.5rem, 8vw, 3.5rem)}
 h2{font-size: clamp(1rem, 4vw, 1.5rem)}
+h3{
+    font-size: clamp(1.5rem, 4vw, 2.5rem);
+    margin: 16px;
+}
 h4{
     font-size: clamp(1.2rem, 3vw, 1.5rem); 
     transition: padding-left cubic-bezier(0.445, 0.05, 0.55, 0.95) 100ms, background-position-x cubic-bezier(0.445, 0.05, 0.55, 0.95) 100ms;
@@ -73,25 +89,31 @@ h4{
     background-position-x: -1em;
     background-repeat: no-repeat;
     cursor: pointer;
+    width: fit-content;
+    margin: auto;
+
 }
 
-
-
 h4 + p {
-    margin-left: 0;
+    margin: 5px 0 10px;
     color: var(--muteText);
 }
 
+main section{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    width: 80%;
+    margin: auto;
+    max-width: 1000px;
+}
+
+main section > *{
+    flex: 1;
+}
+
 @media only screen and (min-width: 992px) { /* Indents descriptions for each comment on desktop devices*/
-    main{
-        padding-top: 10em;
-    }
-
-    h4 + p {
-        margin-left: 1.5em;
-    }
-
-    div > h4:hover{
+    main section h4:hover{
         padding-left: 1em;
         background-position-x: 0;
     } /* I put the hover and everything down here so that on mobile it doesn't accidentally appear! */
