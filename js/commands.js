@@ -1,5 +1,3 @@
-const dropdownButtons = document.getElementsByClassName("dropdown-button")
-const dropdownButtonsArray = Array.prototype.slice.call(dropdownButtons)
 const commandHTML = document.getElementsByTagName('h4')
 const commandArray = Array.prototype.slice.call(commandHTML)
 const copiedPopup = document.getElementById('clipboard-alert')
@@ -65,37 +63,53 @@ commandArray.forEach((element) => {
 
 
 // TODO: Dropdown Manager (Desktop)
+const dropdownButtons = document.getElementsByClassName("dropdown-button")
+const dropdownButtonsArray = Array.prototype.slice.call(dropdownButtons)
 let currentlyOpen
 
 function toggleOpen(element, value){
   const elementDropdown = document.getElementById(element.getAttribute("aria-controls"))
   if (value == "close"){
-    elementDropdown.style.opacity = 0
     elementDropdown.style.display = "none"
     element.setAttribute("aria-expanded", "false")
   }else{
-    elementDropdown.style.opacity = 1
     elementDropdown.style.display = "block"
     element.setAttribute("aria-expanded", "true")
     currentlyOpen = elementDropdown
   }
 }
 
-dropdownButtonsArray.forEach((element) => {
-  element.addEventListener('click', () => {
-  const elementDropdown = document.getElementById(element.getAttribute("aria-controls"))
-  let elementDropdownOpened = element.getAttribute("aria-expanded")
+function closeAll(){
+  for(let i = 0; i < dropdownButtonsArray.length; i++){
+    toggleOpen(dropdownButtonsArray[i], "close")
+  }
+}
 
-  // TODO: Make only one open at a time by checking if you're clicking on a different dropdown, and if you are have the others close.
-  // TODO: If currentlyOpen != elementDropdown close others, change currentlyOpen, and open the new one
-    if(currentlyOpen == elementDropdown){
-      console.log("SAME!")
+document.onclick = function(event){
+  let element = event.target
+  console.log(element.classList[0])
+
+  if(element.classList[0] === "dropdown-button"){
+
+    const elementDropdown = document.getElementById(element.getAttribute("aria-controls"))
+
+    // TODO: Make only one open at a time by checking if you're clicking on a different dropdown, and if you are have the others close.
+    // TODO: If currentlyOpen != elementDropdown close others, change currentlyOpen, and open the new one
+    if(!currentlyOpen){ // If there is no dropdown opened, open the clicked on dropdown.
+      toggleOpen(element, "open")
+
+    }else if (currentlyOpen === elementDropdown){ //If the already opened dropdown is the same as the button clicked on, close it
+      toggleOpen(element, "close")
+      currentlyOpen = null
+
+    }else{ // If a dropdown is currently open but you clicked on a different button, close others and open that new dropdown
+      closeAll()
+      toggleOpen(element, "open")
     }
 
-    // if (elementDropdownOpened == "true"){
-    //   toggleOpen(element, "close")
-    // } else{
-    //   toggleOpen(element, "open")
-    // }
-  })
-})
+  }else if(currentlyOpen){
+    closeAll()
+    currentlyOpen = null
+  }
+  
+}
