@@ -62,7 +62,7 @@ commandArray.forEach((element) => {
 
 
 
-// TODO: Dropdown Manager (Desktop)
+// Dropdown Manager (Desktop)
 const dropdownButtons = document.getElementsByClassName("dropdown-button")
 const dropdownButtonsArray = Array.prototype.slice.call(dropdownButtons)
 let currentlyOpen
@@ -90,11 +90,8 @@ document.onclick = function(event){
   console.log(element.classList[0])
 
   if(element.classList[0] === "dropdown-button"){
-
     const elementDropdown = document.getElementById(element.getAttribute("aria-controls"))
 
-    // TODO: Make only one open at a time by checking if you're clicking on a different dropdown, and if you are have the others close.
-    // TODO: If currentlyOpen != elementDropdown close others, change currentlyOpen, and open the new one
     if(!currentlyOpen){ // If there is no dropdown opened, open the clicked on dropdown.
       toggleOpen(element, "open")
 

@@ -7,8 +7,7 @@
 */
 header{
 	background-color: #1d252900;
-	text-shadow: 0.2rem 0.2rem 0.2rem #000;
-	transition: ease-in background-color 300ms, text-shadow 500ms;
+	transition: ease-in background-color 300ms;
 }
 
 #header-logo{
@@ -16,12 +15,11 @@ header{
 	transition: ease-in filter 500ms;
 }
 
-@media only screen and (min-width:992px){
-	#nav-item-holder{
-		text-shadow: 0.2rem 0.2rem 0.2rem #000;
-		transition: ease-in text-shadow 500ms;
-	}
+#nav-item-holder{
+	text-shadow: 0.2rem 0.2rem 0.2rem #000;
+	transition: ease-in text-shadow 500ms;
 }
+
 
 /* Carousel Handler
 ----------------------------------------
@@ -179,6 +177,22 @@ lite-youtube{
 	width: 100%;
 	clip-path: polygon(var(--image-bevel) 0%, calc(100% - var(--image-bevel)) 0%, 100% var(--image-bevel), 100% calc(100% - var(--image-bevel)), calc(100% - var(--image-bevel)) 100%, var(--image-bevel) 100%, 0% calc(100% - var(--image-bevel)), 0% var(--image-bevel));
 
+}
+
+@media only screen and (width < 1050px){
+	#hero-logo{
+		display: none;
+	}
+}
+
+@media only screen and (width < 600px){
+	#play-now-cta{
+		clip-path: polygon(0 0, 100% 0, 100% calc(100% - 5px), calc(100% - 5px) 100%, 5px 100%, 0% calc(100% - 5px));
+	}
+
+	#discord-cta{
+		clip-path: polygon(0 0, 100% 0, 100% calc(100% - 5px), calc(100% - 5px) 100%, 5px 100%, 0% calc(100% - 5px));
+	}
 }
 
 /* 

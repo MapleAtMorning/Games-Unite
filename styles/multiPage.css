@@ -56,7 +56,7 @@ header{
 
 #nav-item-holder .active{opacity: 100%;}
 
-@media only screen and (width < 500px) {
+@media only screen and (width < 600px) {
     #header-logo{
         display: none !important;   
     }
@@ -82,9 +82,14 @@ body{
 }
 
 a[target="_blank"]::after{ /* Add an image behind each external link */
-    padding-left: 0.25rem;
-    content: url(/img/icons/externallink.svg);
-    filter: invert(45%) sepia(22%) saturate(183%) hue-rotate(166deg) brightness(94%) contrast(87%)
+    content: "";
+    margin-left: 0.25rem;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    mask: url(/img/icons/externallink.svg);
+    -webkit-mask: url(/img/icons/externallink.svg);
+    background-color: currentColor;
 }
 
 
@@ -153,6 +158,8 @@ footer a:hover{
 
 #random-link::after{
     content: "";
+    position: absolute;
+    display: none;
 }
 
 /* Theme color changer */
