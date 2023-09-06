@@ -46,7 +46,7 @@
     position: absolute;
     top: 25px;
     list-style-type: none;
-    padding: 24px 16px 16px;
+    padding: 25px 16px 16px;
     background-color: var(--secondaryColor);
     display: none;
 }
@@ -67,7 +67,6 @@
 main{
     padding-top: 65px;
 }
-
 
 main h1{
     font-size: clamp(2.5rem, 8vw, 3.5rem);

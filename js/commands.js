@@ -87,7 +87,6 @@ function closeAll(){
 
 document.onclick = function(event){
   let element = event.target
-  console.log(element.classList[0])
 
   if(element.classList[0] === "dropdown-button"){
     const elementDropdown = document.getElementById(element.getAttribute("aria-controls"))

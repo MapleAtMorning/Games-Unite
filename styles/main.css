@@ -118,7 +118,7 @@ h1{
 }
 
 #discord-cta{
-	clip-path: polygon(0% 0%, calc(100% - 20px) 0%, calc(100% - 10px) 10px, calc(100% - 10px) calc(100% - 10px), calc(100% - 20px) 100%, 0% 100%);
+	clip-path: polygon(0% 0%, calc(100% - 10px) 0%, 100% 10px, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0% 100%);
 	background-color: var(--primaryLight);
 	color: #fff;
 }
@@ -145,11 +145,13 @@ h1{
 .fifty-fifty{
 	display: flex;
 	gap: 24px;
+	align-items: center;
 }
 
 .fifty-fifty img{
 	width: 45%;
-	height: auto;
+	min-width: 320px;
+	height: fit-content;
 	clip-path: polygon(var(--image-bevel) 0%, calc(100% - var(--image-bevel)) 0%, 100% var(--image-bevel), 100% calc(100% - var(--image-bevel)), calc(100% - var(--image-bevel)) 100%, var(--image-bevel) 100%, 0% calc(100% - var(--image-bevel)), 0% var(--image-bevel));
 }
 
@@ -187,11 +189,44 @@ lite-youtube{
 
 @media only screen and (width < 600px){
 	#play-now-cta{
-		clip-path: polygon(0 0, 100% 0, 100% calc(100% - 5px), calc(100% - 5px) 100%, 5px 100%, 0% calc(100% - 5px));
+		clip-path: polygon(5px 0, calc(100% - 5px) 0, 100% 5px, 100% 100%, 0 100%, 0% 5px);
 	}
 
 	#discord-cta{
 		clip-path: polygon(0 0, 100% 0, 100% calc(100% - 5px), calc(100% - 5px) 100%, 5px 100%, 0% calc(100% - 5px));
+	}
+
+	#play-now-cta:hover{
+		clip-path: polygon(5px 0, calc(100% - 5px) 0, 100% 5px, 100% 100%, 0 100%, 0% 5px);
+		scale: 1;
+	}
+	
+	#discord-cta:hover{
+		clip-path: polygon(0 0, 100% 0, 100% calc(100% - 5px), calc(100% - 5px) 100%, 5px 100%, 0% calc(100% - 5px));
+		scale: 1;
+	}
+
+	#carousel-content a:hover{
+		scale: 1;
+	}
+	
+	#carousel-content a{
+		display: block;
+		margin: 3px auto;
+		overflow: visible;
+	}
+
+	.fifty-fifty{
+		justify-content: center;
+	}
+
+	.fifty-fifty > div{
+		width: 100%;
+		text-align: center;
+	}
+
+	.fifty-fifty img{
+		display: none;
 	}
 }
 
