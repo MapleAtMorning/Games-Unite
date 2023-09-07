@@ -135,11 +135,12 @@ h1{
 #page-content{
 	max-width: 1540px;
 	width: 80%;
-	margin: auto;
+	padding-inline: 10%;
 	justify-content: center;
 	display: flex;
 	flex-direction: column;
 	gap: 80px;
+	overflow-x: hidden;
 }
 
 .fifty-fifty{

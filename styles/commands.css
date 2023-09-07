@@ -7,7 +7,7 @@
 */
 
 #nav-top{
-    border-bottom: solid var(--secondaryColor);
+    border-bottom: solid var(--secondaryColor) 4px;
 }
 
 #cmds-nav{
@@ -64,6 +64,19 @@
     opacity: 65%;
 }
 
+#mobile-cmds-toggle{
+    display: none;
+    height: 56px;
+    width: 63px;
+    padding-left: 8px;
+    margin-top: 3px;
+    background-color: var(--secondaryColor);
+    float: right;
+    border: 0;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 20% 100%, 10% 90%, 10% 10%);
+    overflow-x: visible;
+}
+
 @media only screen and (width < 950px) {
     #cmds-nav{
         gap: 5px;
@@ -81,6 +94,10 @@
         height: 100vh;
         width: 100%;
         display: none;
+    }
+
+    #mobile-cmds-toggle{
+        display: block;
     }
 
     .dropdown-menu{
@@ -139,11 +156,6 @@ main > p:last-of-type{
 }
 
 @media only screen and (width > 1000px) {
-    main section h4:hover{
-        padding-left: 1em;
-        background-position-x: 0;
-    }
-
     main section{
         display: grid;
         grid-auto-flow: column;
@@ -153,6 +165,13 @@ main > p:last-of-type{
         width: 80%;
         margin: auto;
         max-width: 1000px;
+    }
+}
+
+@media only screen and (width > 600px) {
+    main section h4:hover{
+        padding-left: 1em;
+        background-position-x: 0;
     }
 }
 
