@@ -45,6 +45,8 @@ header{
 	min-height: 115vh;
 	min-width: 100vw;
 	position: absolute;
+	left: 50%;
+	transform: translate(-50%);
 }
 
 
