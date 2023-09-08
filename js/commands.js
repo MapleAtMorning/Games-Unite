@@ -1,6 +1,7 @@
 const commandHTML = document.getElementsByTagName('h4')
 const commandArray = Array.prototype.slice.call(commandHTML)
 const copiedPopup = document.getElementById('clipboard-alert')
+const cmdsNav = document.getElementById("cmds-nav")
 let vw = window.innerWidth
 
 function copy (text) {
@@ -13,7 +14,7 @@ function scrollFunc (id) {
   let timeDelay
 
   if (vw < 992) {
-    timeDelay = 350
+    timeDelay = 250
   } else {
     timeDelay = 0
   };
@@ -33,8 +34,10 @@ function scrollFunc (id) {
       }, 1000)
     })
   }, timeDelay)
+  cmdsNav.classList.replace("open-nav", "closed-nav")
 
   //! this is hell and unreadable I do not know javascript well, this was entierly self taught and thrown together
+  //! I am kinda better at JS but I just do not want to touch this anymore. it works??? i guess??????
 }
 
 // This is to add the copy functionality to each command.
@@ -65,7 +68,8 @@ commandArray.forEach((element) => {
 // Dropdown Manager (Desktop)
 const dropdownButtons = document.getElementsByClassName("dropdown-button")
 const dropdownButtonsArray = Array.prototype.slice.call(dropdownButtons)
-let currentlyOpen
+let currentlyOpenDropdown
+let isNavOpen = false
 
 function toggleOpen(element, value){
   const elementDropdown = document.getElementById(element.getAttribute("aria-controls"))
@@ -73,9 +77,9 @@ function toggleOpen(element, value){
     elementDropdown.style.display = "none"
     element.setAttribute("aria-expanded", "false")
   }else{
-    elementDropdown.style.display = "block"
+    elementDropdown.style.display = "flex"
     element.setAttribute("aria-expanded", "true")
-    currentlyOpen = elementDropdown
+    currentlyOpenDropdown = elementDropdown
   }
 }
 
@@ -86,32 +90,37 @@ function closeAll(){
 }
 
 document.onclick = function(event){
-  let element = event.target
+  const element = event.target
 
   if(element.classList[0] === "dropdown-button"){
     const elementDropdown = document.getElementById(element.getAttribute("aria-controls"))
 
-    if(!currentlyOpen){ // If there is no dropdown opened, open the clicked on dropdown.
+    if(!currentlyOpenDropdown){ // If there is no dropdown opened, open the clicked on dropdown.
       toggleOpen(element, "open")
 
-    }else if (currentlyOpen === elementDropdown){ //If the already opened dropdown is the same as the button clicked on, close it
+    }else if (currentlyOpenDropdown === elementDropdown){ //If the already opened dropdown is the same as the button clicked on, close it
       toggleOpen(element, "close")
-      currentlyOpen = null
+      currentlyOpenDropdown = null
 
     }else{ // If a dropdown is currently open but you clicked on a different button, close others and open that new dropdown
       closeAll()
       toggleOpen(element, "open")
     }
-
-  }else if(currentlyOpen){
+    
+  }else if(currentlyOpenDropdown){
     closeAll()
-    currentlyOpen = null
+    currentlyOpenDropdown = null
   }
   
   // Mobile navigation toggler
-  if(element.id === "mobile-cmds-toggle"){ 
-    // TODO: PLACEHOLDER as I ran out of time atm
-    /* clip-path: polygon(0 0, 100% 0, 100% 0%, 0 0%); */
-
+  if(element.id === "mobile-cmds-toggle"){
+    if (!isNavOpen){
+      isNavOpen = true
+      cmdsNav.classList.replace("closed-nav", "open-nav")
+    }else{
+      isNavOpen = false
+      cmdsNav.classList.replace("open-nav", "closed-nav")
+    }
+    console.log(isNavOpen)
   }
 }
