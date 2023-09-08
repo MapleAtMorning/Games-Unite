@@ -25,7 +25,7 @@
     position: relative;
 }
 
-#cmds-nav button{
+.dropdown-button{
     width: 7em;
     color: black;
     background-color: var(--secondaryColor);
@@ -75,6 +75,7 @@
     border: 0;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 20% 100%, 10% 90%, 10% 10%);
     overflow-x: visible;
+    cursor: pointer;
 }
 
 @media only screen and (width < 950px) {
@@ -88,20 +89,28 @@
     #cmds-nav{
         background-color: var(--primaryLight);
         flex-direction: column;
-        z-index: 100;
+        z-index: -1;
         position: absolute;
-        justify-content: start;
-        height: 100vh;
+        justify-content: center;
+        height: calc(100vh - 64px);
+        margin-top: 64px;
         width: 100%;
-        display: none;
+        gap: 5%;
+        transition: clip-path 1s ease-in-out;
+        /* display: none; */
     }
 
     #mobile-cmds-toggle{
         display: block;
     }
 
+    .dropdown-button{
+        font-size: 2rem;
+        clip-path: polygon(5px 0%, calc(100% - 5px) 0%, 100% 5px, 100% calc(100% - 5px), calc(100% - 5px) 100%, 5px 100%, 0% calc(100% - 5px), 0% 5px);
+    }
+
     .dropdown-menu{
-        position: static;
+        z-index: 10;
     }
 }
 /* Main

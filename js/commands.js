@@ -108,4 +108,10 @@ document.onclick = function(event){
     currentlyOpen = null
   }
   
+  // Mobile navigation toggler
+  if(element.id === "mobile-cmds-toggle"){ 
+    // TODO: PLACEHOLDER as I ran out of time atm
+    /* clip-path: polygon(0 0, 100% 0, 100% 0%, 0 0%); */
+
+  }
 }

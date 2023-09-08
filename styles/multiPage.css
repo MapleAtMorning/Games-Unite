@@ -87,6 +87,7 @@ a[target="_blank"]::after{ /* Add an image behind each external link */
     display: inline-block;
     width: 16px;
     height: 16px;
+    transform: translate(-3px, 3px);
     mask: url(/img/icons/externallink.svg);
     -webkit-mask: url(/img/icons/externallink.svg);
     background-color: currentColor;
