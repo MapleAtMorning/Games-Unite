@@ -39,13 +39,26 @@ main > div{
 }
 
 .split + span{
+    display: inline-block;
     width: 1px;
     background-color: var(--primaryLight);
     transform: translateY(25px);
 }
 
-@media only screen and (min-width: 992px) {
-    hr{
+@media only screen and (width < 850px) {
+    main > div{
+        display: block;
+        flex-direction: column;
+        align-items: center;
+        margin-inline: 5%;
+    }
+
+    .split {
+        width: 100%;
+        padding: 0;
+    }
+
+    .split + span{
         display: none;
     }
 }
