@@ -1,71 +1,168 @@
+:root{
+    --dropdown-bevel: 10px;
+}
+
 /* Navigation
 ----------------------------------------
 */
 
-#nav-scroller{
-    background-color: var(--primaryColor);
-    width: 100%;
-    margin-top: 3.6em;
+#nav-top{
+    border-bottom: solid var(--secondaryColor) 4px;
 }
 
-.btn-success{
+#cmds-nav{
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+}
+
+#cmds-nav > div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.dropdown-button{
     width: 7em;
-    margin: 0 0.6em 0 0.6em;
     color: black;
-    --bs-btn-bg: var(--secondaryColor);
-    --bs-btn-hover-bg: #45bd83;
-    --bs-btn-active-color: var(--secondaryColor);
-    --bs-btn-border-color: #45bd83;
-    --bs-btn-hover-border-color: var(--secondaryColorDark);
+    background-color: var(--secondaryColor);
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 5px), calc(100% - 5px) 100%, 5px 100%, 0% calc(100% - 5px));
+    padding: 6px;
+    border: none;
+    cursor: pointer;
 }
 
-.bg-none{
-    background-color: rgba(0,0,0,0); 
+#cmds-nav button:active{
+    color: #fff;
 }
 
 .dropdown-menu{
-    position: relative;
     border-width: 0;
+    clip-path: polygon(10px 15px, calc(50% - 20px) 15px, 50% 0, calc(50% + 20px) 15px, calc(100% - 10px) 15px, 100% 25px, 100% calc(100% - 10px), calc(100% - 10px) 100%, 10px 100%, 0 calc(100% - 10px), 0 25px);
+    width: max-content;
+    text-align: center;
+    position: absolute;
+    top: 25px;
+    flex-direction: column;
+    list-style-type: none;
+    padding: 25px 16px 16px;
+    background-color: var(--secondaryColor);
+    display: none;
 }
 
-li>a{text-decoration: none; color: var(--secondaryColor);}
-li>a:hover{color: var(--secondaryColorDark);}
-
-.px-20{
-    padding-left: 20%;
-    padding-right: 20%;
+.dropdown-menu a{
+    text-decoration: none; 
+    color: black;
+    background-color: #ffffff00;
+    transition: opacity 250ms ease;
+}
+.dropdown-menu a:hover{
+    opacity: 65%;
 }
 
+#mobile-cmds-toggle{
+    display: none;
+    height: 56px;
+    width: 63px;
+    padding-left: 8px;
+    margin-top: 3px;
+    background-color: var(--secondaryColor);
+    float: right;
+    border: 0;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 20% 100%, 10% 90%, 10% 10%);
+    overflow-x: visible;
+    cursor: pointer;
+}
 
-@media only screen and (min-width:992px) {
+@media only screen and (width < 950px) {
+    #cmds-nav{
+        gap: 5px;
+        font-size: 1rem;
+    }
+}
 
-    
-    .dropdown-menu{
-        width: 100%;
+@media only screen and (width < 600px) {
+    #cmds-nav{
+        background-color: var(--primaryLight);
+        flex-direction: column;
+        z-index: -1;
         position: absolute;
-        transform: translateX(-15%);
+        justify-content: center;
+        height: calc(100vh - 64px);
+        margin-top: 64px;
+        width: 100%;
+        gap: 5%;
+        transition: clip-path 1s ease-in-out;
+    }
+
+    #cmds-nav > div{
+        position: static;
+    }
+
+    #mobile-cmds-toggle{
+        display: block;
+    }
+
+    .dropdown-button{
+        font-size: 2rem;
+        clip-path: polygon(5px 0%, calc(100% - 5px) 0%, 100% 5px, 100% calc(100% - 5px), calc(100% - 5px) 100%, 5px 100%, 0% calc(100% - 5px), 0% 5px);
+    }
+
+    .dropdown-menu{
+        z-index: 10;
+        top: 50%;
+        left: 50%;
+        width: 80%;
+        min-height: 70vh;
+        height: max-content;
+        clip-path: polygon(15px 0%, calc(100% - 15px) 0%, 100% 15px, 100% calc(100% - 15px), calc(100% - 15px) 100%, 15px 100%, 0% calc(100% - 15px), 0% 15px);
         background-color: var(--primaryColor);
-        font-size: 1vw;
+        padding: 16px;
+        transform: translate(-50%, -50%);
+        justify-content: center;
+        font-size: 5vmin;
+    }
+
+    .dropdown-menu a{
+        color: var(--textColor);
+        opacity: 100%;
+    }
+
+    .open-nav{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
     }
     
-    .dropdown .bg-none{
-        min-width: 15vw;
+    .closed-nav{
+        clip-path: polygon(0 0, 100% 0, 100% 0%, 0 0%);
     }
 }
-
 /* Main
 ----------------------------------------
 */
 
 main{
-    padding-top: 7em;
+    padding-top: 65px;
 }
 
-h1,h2{text-align: center;}
-
-h1{font-size: clamp(2.5rem, 8vw, 3.5rem)}
-h2{font-size: clamp(1rem, 4vw, 1.5rem)}
-h4{
+main h1{
+    font-size: clamp(2.5rem, 8vw, 3.5rem);
+    margin: 0;
+    text-align: center;
+}
+main h2{
+    font-size: clamp(1rem, 4vw, 1.5rem);
+    margin: 0;
+    font-weight: 100;
+    text-align: center;
+}
+main h3{
+    font-size: clamp(1.5rem, 8vw, 2.5rem);
+    margin-bottom: 16px;
+}
+main h4{
     font-size: clamp(1.2rem, 3vw, 1.5rem); 
     transition: padding-left cubic-bezier(0.445, 0.05, 0.55, 0.95) 100ms, background-position-x cubic-bezier(0.445, 0.05, 0.55, 0.95) 100ms;
     background-image: url(/img/icons/clipboard.svg);
@@ -73,28 +170,44 @@ h4{
     background-position-x: -1em;
     background-repeat: no-repeat;
     cursor: pointer;
+    width: fit-content;
+    margin: 0;
+    font-weight: 100;
 }
-
-
 
 h4 + p {
-    margin-left: 0;
+    margin: 5px 0 20px;
     color: var(--muteText);
+    padding-left: 16px;
 }
 
-@media only screen and (min-width: 992px) { /* Indents descriptions for each comment on desktop devices*/
-    main{
-        padding-top: 10em;
-    }
+main section{
+    width: 80%;
+    margin: auto;
+}
 
-    h4 + p {
-        margin-left: 1.5em;
-    }
+main > p:last-of-type{
+    text-align: center;
+}
 
-    div > h4:hover{
+@media only screen and (width > 1000px) {
+    main section{
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: 1fr;
+        justify-content: center;
+        gap: 15%;
+        width: 80%;
+        margin: auto;
+        max-width: 1000px;
+    }
+}
+
+@media only screen and (width > 600px) {
+    main section h4:hover{
         padding-left: 1em;
         background-position-x: 0;
-    } /* I put the hover and everything down here so that on mobile it doesn't accidentally appear! */
+    }
 }
 
 /* Animations for search

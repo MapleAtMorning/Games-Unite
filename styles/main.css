@@ -1,10 +1,13 @@
+:root{
+	--image-bevel: 15px;
+}
+
 /* Header
 ----------------------------------------
 */
 header{
 	background-color: #1d252900;
-	text-shadow: 0.2rem 0.2rem 0.2rem #000;
-	transition: ease-in background-color 300ms, text-shadow 500ms;
+	transition: ease-in background-color 300ms;
 }
 
 #header-logo{
@@ -12,11 +15,12 @@ header{
 	transition: ease-in filter 500ms;
 }
 
-@media only screen and (min-width:992px){
-	#nav-item-holder{
-		text-shadow: 0.2rem 0.2rem 0.2rem #000;
-		transition: ease-in text-shadow 500ms;
-	}
+#nav-item-holder{
+	transition: ease-in text-shadow 500ms;
+}
+
+.nav-light a{
+	color: white;
 }
 
 /* Carousel Handler
@@ -26,36 +30,79 @@ header{
 	background-color: #2f2e31;
 	overflow: hidden;
 	position: relative;
-	transform: translate(0, -76px);
-	padding-top: 76px;
+	transform: translate(0, -60px);
+	/* padding: 60px 0; */
     z-index: 1;
+	height: 100vh;
 }
 
 #main-carousel {
-	opacity: 0.6;
+	opacity: 0.7;
     width: 100%;
     transform: translate(0, -15vh);
 	position: absolute;
 }
 
-#carousel-content {
-	position: relative;
-	text-align: center;
-	color: white;
+#main-carousel img{
+	min-height: 115vh;
+	min-width: 100vw;
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%);
 }
 
 
 /* Carousel Content
 ----------------------------------------
 */
+
+#carousel-content {
+	position: relative;
+	text-align: center;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+}
+
+#carousel-content a{
+	padding: 16px;
+	width: 12rem;
+	display: inline-block;
+	text-decoration: none;
+	transition: clip-path 500ms ease-in-out, scale 500ms ease-in-out;
+}
+
+#carousel-content a:hover{
+	scale: 1.025;
+	position: relative;
+}
+
+#carousel-content span{
+	filter: drop-shadow(0px 0px 70px #ffffff00);
+	transition: filter 2s linear;
+}
+
+#carousel-content span:first-of-type:hover{
+	filter: drop-shadow(0px 0px 70px var(--secondaryColor));
+}
+
+#carousel-content span:last-of-type:hover{
+	filter: drop-shadow(0px 0px 70px #fff);
+}
+
 h1{
     font-size: clamp(3.5rem, 10vw, 5rem);
     font-weight: 700;
 	filter: drop-shadow(0.3rem 0.3rem 0.25rem #191d1f);
+	margin: 0;
 }
 
 #tag-line{
 	font-size: 2rem;
+	filter: drop-shadow(0.2em 0.2em 0.1em #191d1f);
+	margin: 0 0 24px 0;
 }
 
 #hero-logo{
@@ -64,42 +111,179 @@ h1{
 	padding: 2.5rem;
 }
 
-#carousel-content h2 {filter: drop-shadow(0.2em 0.2em 0.1em #191d1f);}
-
-#play-now{
-	background-color: #4bf5a3;
+#play-now-cta{
+	clip-path: polygon(10px 0%, 100% 0, 100% 0, 100% 100%, 100% 100%, 10px 100%, 0% calc(100% - 10px), 0% 10px);
+	background-color: var(--secondaryColor);
 	color: black;
 }
 
-#play-now:hover{background-color: #50ce91;}
+#play-now-cta:hover{
+	clip-path: polygon(30px 0%, 100% 0, 100% 0, 100% 100%, 100% 100%, 0px 100%, 10px 66%, 20px 33%);
+}
+
+#discord-cta{
+	clip-path: polygon(0% 0%, calc(100% - 10px) 0%, 100% 10px, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0% 100%);
+	background-color: var(--primaryColor);
+	color: var(--textColor);
+}
+
+#discord-cta:hover{
+	clip-path: polygon(0% 0%, calc(100% - 30px) 0%, calc(100% - 20px) 33%, calc(100% - 10px) 66%, 100% 100%, 0% 100%);
+}
+
 
 /* Features / Body 
 ----------------------------------------
 */
 
+#page-content{
+	max-width: 1540px;
+	width: 80%;
+	padding-inline: 10%;
+	justify-content: center;
+	display: flex;
+	flex-direction: column;
+	gap: 80px;
+	margin: auto;
+	overflow-x: hidden;
+}
+
+.fifty-fifty{
+	display: flex;
+	gap: 24px;
+	align-items: center;
+}
+
+.fifty-fifty img{
+	width: 45%;
+	min-width: 320px;
+	height: fit-content;
+	clip-path: polygon(var(--image-bevel) 0%, calc(100% - var(--image-bevel)) 0%, 100% var(--image-bevel), 100% calc(100% - var(--image-bevel)), calc(100% - var(--image-bevel)) 100%, var(--image-bevel) 100%, 0% calc(100% - var(--image-bevel)), 0% var(--image-bevel));
+}
+
+.fifty-fifty > div{
+	width: 65%;
+	height: auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
 .info-title{
 	font-size: clamp(2rem, 3vw, 3rem);
+	margin: 0;
 }
 
-.features-title{
-	font-size: clamp(2rem, 3vw, 3rem);
-}
-
-.features-paragraph, .info-paragraph{
+.info-paragraph{
 	font-size: clamp(1rem, 3vw, 1.5rem);
+	margin: 16px 0;
 }
 
-main{
-	padding-top: 4.7rem;
+lite-youtube{
+	margin: auto;
+	max-width: 1200px;
+	width: 100%;
+	clip-path: polygon(var(--image-bevel) 0%, calc(100% - var(--image-bevel)) 0%, 100% var(--image-bevel), 100% calc(100% - var(--image-bevel)), calc(100% - var(--image-bevel)) 100%, var(--image-bevel) 100%, 0% calc(100% - var(--image-bevel)), 0% var(--image-bevel));
+
 }
 
-.img-info{
-	max-width: 90%;
-	border-radius: 0.5rem;
+@media only screen and (width < 1050px){
+	#hero-logo{
+		display: none;
+	}
 }
 
-h4{
-	font-size: clamp(1.5rem, 3vw, 2rem);
+@media only screen and (width < 600px){
+	#play-now-cta{
+		clip-path: polygon(5px 0, calc(100% - 5px) 0, 100% 5px, 100% 100%, 0 100%, 0% 5px);
+	}
+
+	#discord-cta{
+		clip-path: polygon(0 0, 100% 0, 100% calc(100% - 5px), calc(100% - 5px) 100%, 5px 100%, 0% calc(100% - 5px));
+	}
+
+	#play-now-cta:hover{
+		clip-path: polygon(5px 0, calc(100% - 5px) 0, 100% 5px, 100% 100%, 0 100%, 0% 5px);
+		scale: 1;
+	}
+	
+	#discord-cta:hover{
+		clip-path: polygon(0 0, 100% 0, 100% calc(100% - 5px), calc(100% - 5px) 100%, 5px 100%, 0% calc(100% - 5px));
+		scale: 1;
+	}
+
+	#carousel-content a:hover{
+		scale: 1;
+	}
+	
+	#carousel-content a{
+		display: block;
+		margin: 3px auto;
+		overflow: visible;
+	}
+
+	.fifty-fifty{
+		justify-content: center;
+	}
+
+	.fifty-fifty > div{
+		width: 100%;
+		text-align: center;
+	}
+
+	.fifty-fifty img{
+		display: none;
+	}
+}
+
+/* 
+Anims
+----------------------------------------
+*/
+@media (prefers-reduced-motion: no-preference) {
+	.anim-left{
+		animation: left 1s 1 paused;
+	}
+	
+	.anim-right{
+		animation: right 1s 1 paused;
+	}
+
+	.anim-fade{
+		animation: fade 1s 1 paused;
+	}
+	
+}
+
+@keyframes left {
+	from{
+		opacity: 0;
+		transform: translateX(-5em);
+	}
+	to{
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes right {
+	from{
+		opacity: 0;
+		transform: translateX(5em);
+	}
+	to{
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+@keyframes fade {
+	from{
+		opacity: 0;
+	}
+	to{
+		opacity: 1;
+	}
 }
 
 /* 

@@ -38,165 +38,68 @@
     <link rel="apple-touch-icon" href="img/GULogo.webp">
     <link rel="icon" href="img/GULogoBlack.ico" media="(prefers-color-scheme: light)">
     <link rel="icon" href="img/GULogo.ico" media="(prefers-color-scheme: dark)">
-    
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- Styles -->
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web" rel="stylesheet">
+    <script src="/js/htmlManager.js"></script>
+    <script type="module" src="/js/themeManager.js"></script>
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/multiPage.css">
     <link rel="stylesheet" href="styles/faq.css">
 </head>
 <body>
-    <header class="px-lg-5 py-2 navbar navbar-dark navbar-expand-lg fixed-top default-theming" id="nav-top">
-        <div class="container-fluid">
-            
-            <div class="navbar-brand">
-                <a href="/"><img id="header-logo" src="img/GULogo.webp" alt="Games Unite Logo" width="48" height="48"></a>
-                <p class="d-none d-sm-inline">Games Unite</p>
-            </div>
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            
-            <div class="offcanvas offcanvas-end" id="navbarSupportedContent" aria-labelledby="navbarSupportedContent">
-                <div class="offcanvas-header">
-                    <h3 id="offcanvaslabel" class="mt-3">Games Unite</h3>
-                    <button type="button" class="btn-close btn-close-white offcanvas-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <ul class="navbar-nav offcanvas-body justify-content-lg-end" id="nav-item-holder">
-                    <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="commands">Commands</a></li>
-                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="faq">FAQ</a></li>
-                </ul>
-            </div>
-            
-        </div>
+    <header id="nav-top">
+        <gu-header></gu-header>
     </header>
 
-    <!-- Modal Body -->
-    <aside class="modal fade" id="cookiesModal" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false" aria-labelledby="cookiesModal" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h3 class="modal-title" id="cookiesModalTitle">Cookies</h3>
-                </div>
-                <div class="modal-body">
-                    <p>First off, thanks for visiting the Games Unite website. <br> We have cookies to save theme preferences for those who need high contrast, and one to track that you've seen this message.<br> The cookies I make will never leave this site. <br> We <b>DO</b> have Google Analytics, however. If this makes you uncomfortable, please consider checking out uBlock origin. <br> Other than that, please enjoy your stay! &lt;3</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">Accept</button>
-                </div>
-            </div>
-        </div>
-    </aside>
+    <gu-cookies></gu-cookies>
 
     <main>
-        <h1 class="m-0">Frequently Asked</h1>
-        <h2 class="mb-4 text-muted">Please stop asking and suggesting the same things over and over again.</h2>
-        <hr>
-        <h3 class="m-0">Questions</h3>
-
-        <div class="container">
-            <div class="row row-cols-1 row-cols-md-2">
-
-                <div class="col">
-                    <h4>When will the full release come out?</h4>
-                    <p>No one knows, the game being developed slowly and it's not the biggest priority in the dev's lives.</p>
-                </div>
-
-                <div class="col">
-                    <h4>How do I turn off the hud?</h4>
-                    <p>Pressing F1 will disable the hud, if you want your guns gone as well for screenshots or similar I would recommend using viewmodel_offset</p>
-                </div>
-
-            </div>
-
-            <div class="row row-cols-1 row-cols-md-2">
-
-                <div class="col">
+        <h1>Frequently Asked</h1>
+        
+        <div>
+            <div class="split">
+                <h3>Questions</h3>
+                <div>
                     <h4>How do I use commands?</h4>
                     <p>Open console by using tilde(~) and type "help" or go to <a href="commands">commands</a> to see commands.</p>
                 </div>
-
-                <div class="col">
-                    <h4>Help! I've been banned??</h4>
-                    <p>If you believe you've been falsely banned in-game or from the <a href="https://discord.gg/zMmANqqFB5" target="_blank" aria-label="Opens in new tab">Discord <img class="external" src="img/icons/externallink.svg" alt="Opens in new tab"></a> server please submit an appeal in the <a href="https://discord.gg/ACZySvcWvw" target="_blank" aria-label="Opens in new tab">Support Server <img class="external" src="img/icons/externallink.svg" alt="Opens in new tab"></a> </p>
+                <div>
+                    <h4>When's the next update?</h4>
+                    <p>No one knows, the game being developed slowly and it's not the biggest priority in the dev's lives.</p>
                 </div>
-
-                <!-- TODO: Change IMG here to an after tag as well. should probably find a way to find any target _blank url and add the after to it. -->
-
-            </div>
-            <div class="row row-cols-1">
-
-                <div class="col">
+                <div>
+                    <h4>How do I turn off the hud?</h4>
+                    <p>Pressing F1 will disable the hud, if you want your guns gone as well for screenshots or similar I would recommend using viewmodel_offset</p>
+                </div>
+                <div>
                     <h4>How do I switch maps?</h4>
                     <p>In a private server where you have permissions, open the console by using tilde(~) and type "maps" to see all maps, and then type "map <i>mapname</i>" to change the map</p>
                 </div>
-
             </div>
-        </div>
-
-        <hr>
-
-        <h3>Suggestions</h3>
-
-        <div class="container">
-            <div class="row row-cols-1 row-cols-md-2">
-                <div class="col">
+            <span></span>
+            <div class="split">
+                <h3>Suggestions</h3>
+                <div>
                     <h4>Gamemodes</h4>
-                    <p>More gamemodes are already planned and are being worked on. You can already play gungame and sandbox though!</p>
+                    <p>More gamemodes are already planned and are being worked on. The two implemented gamemodes include Gun Game and Sandbox.</p>
                 </div>
-                <div class="col">
+                <div>
                     <h4>Loadouts</h4>
                     <p>Loadouts are disabled currently until fully released.</p>
                 </div>
-            </div>
-
-            <div class="row row-cols-1 row-cols-md-1">
-                <div class="col">
+                <div>
                     <h4>Fixing spawns</h4>
-                    <p>The spawning algorithm is constantly being tweaked and updated with each update.</p>
+                    <p>The spawning algorithm is constantly being tweaked and updated.</p>
                 </div>
             </div>
-
         </div>
     </main>
 
     <footer>
-        <div class="container-fluid">
-            <form id="theme-picker" action="#">
-                <fieldset>
-                    <legend class="visually-hidden">Pick a theme</legend>
-                    <input type="radio" name="theme" id="default" checked>
-                    <label class="visually-hidden" for="default">
-                        Default theme
-                    </label>
-                    
-                    <input type="radio" name="theme" id="contrast">
-                    <label class="visually-hidden" for="contrast">
-                        High contrast theme
-                    </label>
-
-                    <input type="radio" name="theme" id="light">
-                    <label class="visually-hidden" for="light">
-                        Light theme
-                    </label>
-                </fieldset>
-            </form>
-            <div class="row row-cols-1 row-cols-md-2">
-                <div class="col">
-                    <div class="row"><p class="p-0">Please keep in mind this website is unofficial and community ran, although approved by kennyjeopardy. Games Unite is still in testing and you may find bugs. Please feel free to report them in the <a href="https://discord.gg/zMmANqqFB5" target="_blank" aria-label="Opens in new tab">Discord</a></p></div>
-                </div>
-                <div class="col">
-                    <div class="row"><p class="d-none d-md-inline p-0">If you want to contribute to the website, it's all being run through <a href="https://github.com/MapleAtMorning/Games-Unite" target="_blank" aria-label="Opens in new tab">Github Pages!</a> Please feel free to make an issue if you think there's something you want changed, alternatively you could change it yourself and send a pull request.</p></div>
-                </div>
-            </div>
-        </div>
+        <gu-footer></gu-footer>
     </footer>
     
-    <script type="module" src="js/cookiehandler.js"></script>
+    <script type="module" src="js/multipage.js"></script>
 </body>
 </html>
