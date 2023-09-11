@@ -211,6 +211,7 @@ Modal
     width: 80%;
     max-width: 780px;
     min-height: 140px;
+    font-size: clamp(0.75em, 1.5vw, 1em);
     background-color: var(--primaryLight);
     z-index: 100;
     clip-path: polygon(100% 0, calc(100% - 80px) 100%, 0 100%, 0 0);
@@ -251,6 +252,7 @@ Modal
     transition: box-shadow 500ms ease-in-out;
 }
 
+
 .cookies-anim-out{
     animation: cookiesOut 500ms ease-out;
 }
@@ -268,14 +270,57 @@ Modal
     #cookies-button:active{
         background-color: var(--secondaryColor);
     }
-
+    
     .cookies-anim-out{
         animation: cookiesOut 500ms linear;
     }
-
+    
     @keyframes cookiesOut {
         from{opacity: 100%;}
         to{opacity: 0%;}
+    }
+
+}
+
+@media only screen and (width < 725px) {
+    #cookies-modal{
+        bottom: 0;
+        width: 100%;
+        min-height: 140px;
+        font-size: clamp(0.85em, 1.5vw, 1em);
+        clip-path: none;
+    }
+
+    #cookies-modal div{margin: 15px; width: 100%;}
+
+    #cookies-button{
+        width: 75px;
+        height: 75px;
+        position: absolute;
+        right: 0;
+        bottom: 100%;
+        transform: rotate(0) translate(0, 0);
+        clip-path: polygon(20px 0%, 100% 0, 100% 100%, 0 100%, 0% 20px);
+    }
+
+    #cookies-modal img{
+        position: absolute;
+        right: 0;
+        bottom: 50%;
+        height: 75px;
+        top: -110px;
+        pointer-events: none;
+    }
+
+    #cookies-button:hover{box-shadow: 0px 0px 25px var(--secondaryColorDark);}
+    #cookies-button:active{
+        box-shadow: 0px 0px 30px var(--secondaryColor);
+        transition: box-shadow 500ms ease-in-out;
+    }
+    
+    @keyframes cookiesOut {
+        from{transform: translateY(0%);}
+        to{transform: translateY(200%);}
     }
 
 }
