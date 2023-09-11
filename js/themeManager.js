@@ -19,11 +19,12 @@ function themeChanger() {
     try {
         savedTheme = ls.getItem("GUTheme")
         if (!savedTheme) {
-            throw ("No theme")
+            throw ("No theme, possibly first time visiting")
         }
     } catch (error) {
-        savedTheme = "contrast"
-        ls.setItem("GUTheme", "contrast")
+        savedTheme = "default"
+        ls.setItem("GUTheme", "default")
+        document.getElementById("default").checked = true
         console.warn("Theme couldn't load:", error)
     } finally {
         if (savedTheme !== 'light') {
