@@ -16,10 +16,12 @@ header{
 }
 
 #nav-item-holder{
-	text-shadow: 0.2rem 0.2rem 0.2rem #000;
 	transition: ease-in text-shadow 500ms;
 }
 
+.nav-light a{
+	color: white;
+}
 
 /* Carousel Handler
 ----------------------------------------
@@ -121,7 +123,7 @@ h1{
 
 #discord-cta{
 	clip-path: polygon(0% 0%, calc(100% - 10px) 0%, 100% 10px, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0% 100%);
-	background-color: var(--primaryLight);
+	background-color: var(--primaryColor);
 	color: var(--textColor);
 }
 

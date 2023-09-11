@@ -20,6 +20,54 @@ for (let i = 0; i < document.querySelectorAll('.anim').length; i++) {
     observer.observe(document.querySelectorAll('.anim')[i]);
 };
 
+// Scrollfade
+// ===============================================================================================================================
+const header = document.getElementById("nav-top")
+const nav = document.getElementsByTagName('nav')[0]
+const navItems = document.getElementById('nav-item-holder')
+const root = document.querySelector(':root')
+const rootstyle = getComputedStyle(root)
+const headerLogo = document.getElementById('header-logo')
+
+
+window.onscroll = scrollFade
+window.onresize = scrollFade
+
+function scrollFade() {
+    const primary = rootstyle.getPropertyValue('--primaryColor')
+    
+    if (document.documentElement.scrollTop < 100) { // When at top of page
+        header.style.backgroundColor = primary + '00'
+        shadow('0.2rem ')
+        
+        if (window.localStorage.getItem("GUTheme") === "light"){
+            nav.classList.add("nav-light")
+            headerLogo.src = '/img/GULogo.webp'
+        }else if(nav.classList.contains("nav-light")){ //If not light but nav-light
+            nav.classList.remove("nav-light")
+        }
+    } else { // When NOT at top of page
+        header.style.backgroundColor = primary + 'ff'
+        shadow('0 ')
+
+        if (window.localStorage.getItem("GUTheme") === "light" && nav.classList.contains("nav-light")){
+            nav.classList.remove("nav-light")
+            headerLogo.src = '/img/GULogoBlack.webp'
+        }
+    }
+};
+scrollFade()
+
+function shadow(distance) {
+    headerLogo.style.filter = 'drop-shadow(' + distance + distance + distance + '#000)'
+    header.style.textShadow = distance + distance + distance + '#000'
+    if (window.innerWidth > 992) {
+        // navItems.style.textShadow = distance + distance + distance + '#000'
+    }
+}
+
+
+
 // Carousel
 // ===============================================================================================================================
 

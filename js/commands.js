@@ -110,6 +110,7 @@ document.onclick = function(event){
   }else if(currentlyOpenDropdown){
     closeAll()
     currentlyOpenDropdown = null
+    isNavOpen = false
   }
   
   // Mobile navigation toggler

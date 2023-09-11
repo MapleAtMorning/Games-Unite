@@ -1,6 +1,7 @@
 const ls = window.localStorage
 const root = document.querySelector(':root')
-// const headerLogo = document.getElementById('header-logo')
+const header = document.getElementById("nav-top")
+const headerLogo = document.getElementById('header-logo')
 let savedTheme
 
 function themeColorUpdater(primary, primarylight, background, secondary, secondarydark, text, mute) {
@@ -11,6 +12,7 @@ function themeColorUpdater(primary, primarylight, background, secondary, seconda
     root.style.setProperty('--secondaryColorDark', secondarydark)
     root.style.setProperty('--textColor', text)
     root.style.setProperty('--muteText', mute)
+    header.style.backgroundColor = primary + 'ff'
 }
 
 function themeChanger() {
@@ -24,11 +26,11 @@ function themeChanger() {
         ls.setItem("GUTheme", "contrast")
         console.warn("Theme couldn't load:", error)
     } finally {
-        // if (savedTheme !== 'light') {
-        //     headerLogo.src = '/img/GULogo.webp'
-        // }else{
-        //     headerLogo.src = '/img/GULogoBlack.webp'
-        // }
+        if (savedTheme !== 'light') {
+            headerLogo.src = '/img/GULogo.webp'
+        }else{
+            headerLogo.src = '/img/GULogoBlack.webp'
+        }
 
         if (savedTheme === 'contrast') {
             themeColorUpdater(
@@ -73,6 +75,13 @@ colorThemes.forEach((themeOption) => {
         ls.setItem("GUTheme", themeOption.id)
         themeChanger()
     })
+
+    if (themeOption.id === ls.getItem("GUTheme")) {
+        themeOption.checked = true
+    }else{
+        themeOption.checked = false
+    }
 })
+
 
 themeChanger()

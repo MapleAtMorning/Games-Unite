@@ -4,7 +4,6 @@
     --primaryBackground: #181d1f;
     --secondaryColor: #4bf5a3;
     --secondaryColorDark: #46aa7a;
-    
     --textColor: #ffffff;
     --muteText: #6c757d;
 }
@@ -44,7 +43,7 @@ header{
     display: inline;
 }
 
-#nav-item-holder a{
+nav a{
     opacity: 65%;
     text-decoration: none;
     transition: opacity 150ms;

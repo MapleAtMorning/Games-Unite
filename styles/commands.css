@@ -127,7 +127,8 @@
     }
 
     .dropdown-menu a{
-        color: white;
+        color: var(--textColor);
+        opacity: 100%;
     }
 
     .open-nav{
