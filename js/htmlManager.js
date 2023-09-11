@@ -40,14 +40,14 @@ class footer extends HTMLElement{
             <form id="theme-picker" action="#">
                 <fieldset>
                     <legend class="visually-hidden">Pick a theme</legend>
-                    <input type="radio" name="theme" id="default" checked>
-                    <label class="visually-hidden" for="default">
-                        Default theme
-                    </label>
-                    
                     <input type="radio" name="theme" id="contrast">
                     <label class="visually-hidden" for="contrast">
                         High contrast theme
+                    </label>
+                    
+                    <input type="radio" name="theme" id="default" checked>
+                    <label class="visually-hidden" for="default">
+                        Default theme
                     </label>
 
                     <input type="radio" name="theme" id="light">

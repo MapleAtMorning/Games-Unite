@@ -122,7 +122,7 @@ h1{
 #discord-cta{
 	clip-path: polygon(0% 0%, calc(100% - 10px) 0%, 100% 10px, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0% 100%);
 	background-color: var(--primaryLight);
-	color: #fff;
+	color: var(--textColor);
 }
 
 #discord-cta:hover{

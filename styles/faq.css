@@ -41,7 +41,7 @@ main > div{
 .split + span{
     display: inline-block;
     width: 1px;
-    background-color: var(--primaryLight);
+    background-color: var(--muteText);
     transform: translateY(25px);
 }
 
