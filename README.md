@@ -14,7 +14,7 @@ If you have an idea for a new feature or improvement to the website, or if you h
 ## Notes
 
 ### Version Numbering
-First number: Rewrite number. Will probably always stay 1. <br>
+First number: Rewrite number. <br>
 Second number: Major update number. Updates with each 'major' update. <br>
 Third number: Minor update / patch update.<br>
 
