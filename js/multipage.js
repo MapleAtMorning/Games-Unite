@@ -2,6 +2,7 @@ const acceptButton = document.getElementById("cookies-button")
 const cookiesAlert = document.getElementById("cookies-modal")
 const ls = window.localStorage
 let rawJSON
+let keys
 
 // Cookies Accept
 acceptButton.addEventListener("click", () => {
@@ -34,12 +35,20 @@ async function jsonGrab(){
     rawJSON = await result.json()
     return rawJSON
 }
-await jsonGrab()
 
-let keys = Object.keys(rawJSON)
+async function refreshKeys(){
+    await jsonGrab()
+    keys = Object.keys(rawJSON)
+}
 
-function grabRandom(){
-    let randomItem = keys[Math.floor(Math.random()*keys.length)]
+async function grabRandom(){
+    if (!keys || keys.length <= 0){ // I know this technically misses a video, but I'm fine with that.
+        await refreshKeys()
+    }
+    let randNum = Math.floor(Math.random()*keys.length)
+    let randomItem = keys[randNum]
+    keys.splice(randNum, 1)
+    // console.log(`Keys Length: ${keys.length} \nRandom Number: ${randNum}`)
     document.getElementById('random-link').href = randomItem
 }
 document.getElementById('random-link').addEventListener("click", grabRandom)
