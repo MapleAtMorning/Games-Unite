@@ -112,8 +112,7 @@ delayedLoop(timeBetweenRotate);
 const huma = document.getElementById("hiddenhuma")
 
 function hidehuma(){
-    let i = Math.round(Math.random() * 25)
-    console.log(i)
+    let i = Math.floor(Math.random() * 25 + 1)
     if (i == 1){
         huma.style.display = "block"
     }
