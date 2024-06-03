@@ -104,4 +104,19 @@ function delayedLoop(delay) {
   }, delay)
 }
 
-delayedLoop(timeBetweenRotate);     
+delayedLoop(timeBetweenRotate);
+
+// Huma
+// ===============================================================================================================================
+
+const huma = document.getElementById("hiddenhuma")
+
+function hidehuma(){
+    let i = Math.round(Math.random() * 25)
+    console.log(i)
+    if (i == 1){
+        huma.style.display = "block"
+    }
+}
+
+hidehuma()
