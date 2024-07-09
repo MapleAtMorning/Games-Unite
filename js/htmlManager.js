@@ -9,6 +9,7 @@ class header extends HTMLElement{
                 <ul id="nav-item-holder">
                     <li><a id="page-index" href="/">Home</a></li>
                     <li><a id="page-commands" href="commands">Commands</a></li>
+                    <li><a id="page-configs" href="configs">Configs</a></li>
                     <li><a id="page-faq" href="faq">FAQ</a></li>
                 </ul>
             </nav>
@@ -19,7 +20,7 @@ class header extends HTMLElement{
 class cookies extends HTMLElement{
     connectedCallback() {
         this.innerHTML = `
-        <aside id="cookies-modal" tabindex="-1" aria-labelledby="cookies-modal" aria-hidden="true">
+        <aside id="cookies-modal" tabindex="-1" aria-labelledby="cookies-modal" aria-hidden="true" style="display:none">
             <button id="cookies-button" type="button"></button>
             <img src="img/icons/checkmark.svg" alt="">
             <div>

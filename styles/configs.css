@@ -1,0 +1,51 @@
+main{
+    min-height: calc(100vh - 160px);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-rows: 1fr;
+    gap: 20px;
+    padding: 50px;
+}
+
+/* Cards ==================================== */
+
+.config-card{
+    text-align: center;
+    position: relative;
+    padding: 25px;
+    outline: 1px white;
+    background-color: var(--primaryColor);
+    z-index: 10;
+    max-height: 450px;
+}
+
+.config-card .image-wrapper{
+    width: calc(100% - 50px);
+    height: 50%;
+}
+
+.config-card img{
+    height: 100%;
+    margin: auto;
+}
+
+.config-card h2{
+    margin-bottom: 0;
+}
+
+.config-card > p{
+    width: 100%;
+    margin-top: 1em;
+    min-height: 50px;
+    background-color: var();
+}
+
+@media only screen and (width < 600px){
+    main, .config-card{
+        padding: 25px 0;
+    }
+
+    .config-card{
+        width: 100vw;
+    }
+}
