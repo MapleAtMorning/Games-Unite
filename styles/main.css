@@ -293,4 +293,27 @@ Footer
 
 footer{
 	margin-top: 1.75rem;
+	position: relative;
+}
+
+#hiddenhuma{
+	position: absolute;
+	z-index: -1;
+	right: clamp(5%, 3vw, 0px);
+	top: -50%;
+	width: 150px;
+}
+
+@media only screen and (width < 1700px){
+
+	#hiddenhuma{
+		right: 0px;
+	}
+}
+
+@media only screen and (width < 1500px){
+
+	#hiddenhuma{
+		right: -150px;
+	}
 }
