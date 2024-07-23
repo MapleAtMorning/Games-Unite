@@ -69,9 +69,13 @@ class footer extends HTMLElement{
                     <ul>
                         <li><a href="/">Home</a></li>
                         <li>|</li>
-                        <li><a href="/commands.html">Commands</a></li>
+                        <li><a href="/commands">Commands</a></li>
                         <li>|</li>
-                        <li><a href="/faq.html">FAQ</a></li>
+                        <li><a href="/configs">Configs</a></li>
+                        <li>|</li>
+                        <li><a href="/commands">Commands</a></li>
+                        <li>|</li>
+                        <li><a href="/faq">FAQ</a></li>
                     </ul>
                     <ul>
                         <li><a href="https://www.roblox.com/games/2746687316/Games-Unite-Testing-Place">Play</a></li>
@@ -89,13 +93,12 @@ class footer extends HTMLElement{
 }
 
 class configcard extends HTMLElement{
-    static observedAttributes = ["src", "title", "author", "config"];
     connectedCallback(){
         this.innerHTML = `
         <div class="image-wrapper">
             <img src="${this.getAttribute("src")}" alt="">
         </div>
-        <h2>${this.getAttribute("title")}</h2>
+        <h2>${this.getAttribute("cfgtitle")}</h2>
         <cite>${this.getAttribute("author")}</cite><br>
         <p>${this.getAttribute("config")}</p>
         `

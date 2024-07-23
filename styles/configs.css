@@ -3,8 +3,19 @@
 	--card-bevel: 15px;
 }
 
-main{
+main {
     min-height: calc(100vh - 160px);
+}
+
+main > p:last-of-type{
+    text-align: center;
+}
+
+a.text-muted:hover{
+    color: var(--secondaryColor) !important;
+}
+
+.card-holder {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     grid-template-rows: 1fr;
