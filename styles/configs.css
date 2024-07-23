@@ -1,3 +1,8 @@
+:root{
+	--image-bevel: 5px;
+	--card-bevel: 15px;
+}
+
 main{
     min-height: calc(100vh - 160px);
     display: grid;
@@ -9,7 +14,8 @@ main{
 
 /* Cards ==================================== */
 
-.config-card{
+
+gu-config-card{
     text-align: center;
     position: relative;
     padding: 25px;
@@ -17,23 +23,30 @@ main{
     background-color: var(--primaryColor);
     z-index: 10;
     max-height: 450px;
+	clip-path: polygon(var(--card-bevel) 0%, calc(100% - var(--card-bevel)) 0%, 100% var(--card-bevel), 100% calc(100% - var(--card-bevel)), calc(100% - var(--card-bevel)) 100%, var(--card-bevel) 100%, 0% calc(100% - var(--card-bevel)), 0% var(--card-bevel));
 }
 
-.config-card .image-wrapper{
+gu-config-card .image-wrapper{
     width: calc(100% - 50px);
     height: 50%;
-}
-
-.config-card img{
-    height: 100%;
     margin: auto;
+    display: flex;
+    justify-content: center;
 }
 
-.config-card h2{
+gu-config-card img{
+    max-width: 100%;    
+    max-height: 100%;
+    margin: auto;
+	clip-path: polygon(var(--image-bevel) 0%, calc(100% - var(--image-bevel)) 0%, 100% var(--image-bevel), 100% calc(100% - var(--image-bevel)), calc(100% - var(--image-bevel)) 100%, var(--image-bevel) 100%, 0% calc(100% - var(--image-bevel)), 0% var(--image-bevel));
+
+}
+
+gu-config-card h2{
     margin-bottom: 0;
 }
 
-.config-card > p{
+gu-config-card > p{
     width: 100%;
     margin-top: 1em;
     min-height: 50px;
@@ -41,11 +54,11 @@ main{
 }
 
 @media only screen and (width < 600px){
-    main, .config-card{
+    main, gu-config-card{
         padding: 25px 0;
     }
 
-    .config-card{
+    gu-config-card{
         width: 100vw;
     }
 }

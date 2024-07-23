@@ -17,6 +17,7 @@ class header extends HTMLElement{
         `
     }
 }
+
 class cookies extends HTMLElement{
     connectedCallback() {
         this.innerHTML = `
@@ -87,6 +88,21 @@ class footer extends HTMLElement{
     }
 }
 
+class configcard extends HTMLElement{
+    static observedAttributes = ["src", "title", "author", "config"];
+    connectedCallback(){
+        this.innerHTML = `
+        <div class="image-wrapper">
+            <img src="${this.getAttribute("src")}" alt="">
+        </div>
+        <h2>${this.getAttribute("title")}</h2>
+        <cite>${this.getAttribute("author")}</cite><br>
+        <p>${this.getAttribute("config")}</p>
+        `
+    }
+}
+
 customElements.define('gu-header', header)
 customElements.define('gu-footer', footer)
 customElements.define('gu-cookies', cookies)
+customElements.define('gu-config-card', configcard)
