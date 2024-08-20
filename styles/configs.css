@@ -23,6 +23,15 @@ a.text-muted:hover{
     padding: 50px;
 }
 
+.random-holder {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 25%);
+    justify-content: center;
+    grid-template-rows: 1fr;
+    gap: 20px;
+    padding: 50px;
+}
+
 /* Cards ==================================== */
 
 
@@ -57,13 +66,25 @@ gu-config-card h2{
     margin-bottom: 0;
 }
 
-gu-config-card > p{
+gu-config-card > textarea{
     width: 100%;
     margin-top: 1em;
-    min-height: 50px;
+    min-height: 80px;
+    text-align: center;
+    resize: none;
+    background-color: var(--primaryBackground);
+    border: none;
+    color: var(--textColor);
+	clip-path: polygon(var(--image-bevel) 0%, calc(100% - var(--image-bevel)) 0%, 100% var(--image-bevel), 100% calc(100% - var(--image-bevel)), calc(100% - var(--image-bevel)) 100%, var(--image-bevel) 100%, 0% calc(100% - var(--image-bevel)), 0% var(--image-bevel));
     background-color: var();
 }
 
+@media only screen and (width < 920px){
+    .card-holder, .random-holder{
+        padding: 0 0 15px 0;
+        grid-template-columns: 1fr;
+    }
+}
 @media only screen and (width < 600px){
     main, gu-config-card{
         padding: 25px 0;
@@ -72,4 +93,31 @@ gu-config-card > p{
     gu-config-card{
         width: 100vw;
     }
+
+}
+
+/* Reroll */
+.reroll-customizer{
+    display: flex;
+    justify-content: center;
+}
+
+#reroll-btn{
+    height: 80px;
+    width: 80px;
+    border: none;
+    border-radius: 0;
+    background-color: var(--secondaryColor);
+    background-image: url(../img/icons/dice.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 80%;
+}
+
+.modifiers{
+    background-color: var(--primaryColor);
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
 }

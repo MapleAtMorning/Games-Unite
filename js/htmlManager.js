@@ -100,7 +100,7 @@ class configcard extends HTMLElement{
         </div>
         <h2>${this.getAttribute("cfgtitle")}</h2>
         <cite>${this.getAttribute("author")}</cite><br>
-        <p>${this.getAttribute("config")}</p>
+        <textarea readonly>${this.getAttribute("config")}</textarea>
         `
     }
 }

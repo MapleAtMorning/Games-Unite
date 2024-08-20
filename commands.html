@@ -112,10 +112,12 @@
                     <li><a href="javascript:scrollFunc('sv_remove_owner')">sv_remove_owner</a></li>
                     <li><a href="javascript:scrollFunc('gamemode')">gamemode</a></li>
                     <li><a href="javascript:scrollFunc('gamemodes')">gamemodes</a></li>
-                    <li><a href="javascript:scrollFunc('mp_restartgame')">mp_restartgame</a></li>
                     <li><a href="javascript:scrollFunc('map')">map</a></li>
                     <li><a href="javascript:scrollFunc('maps')">maps</a></li>
+                    <li><a href="javascript:scrollFunc('mp_restartgame')">mp_restartgame</a></li>
                     <li><a href="javascript:scrollFunc('mp_disable_shooting')">mp_disable_shooting</a></li>
+                    <li><a href="javascript:scrollFunc('mp_pause_time')">mp_pause_time</a></li>
+                    <li><a href="javascript:scrollFunc('mp_set_round_time')">mp_set_round_time</a></li>
                 </ul>
             </div>
             <div>
@@ -256,10 +258,6 @@
                     <h4 title="Copy">gamemodes - (optional) &lt;filter&gt;</h4>
                     <p>Prints out all gamemodes.</p>
                 </div>
-                <div id="mp_restartgame">
-                    <h4 title="Copy">mp_restartgame</h4>
-                    <p>Restarts the gamemode.</p>
-                </div>
                 <div id="map">
                     <h4 title="Copy">map - &lt;map_name&gt;</h4>
                     <p>Sets the current map. Some maps may not be compatible with some gamemodes.</p>
@@ -268,16 +266,28 @@
                     <h4 title="Copy">maps - (optional) &lt;filter&gt;</h4>
                     <p>Prints out all maps.</p>
                 </div>
+                <div id="mp_restartgame">
+                    <h4 title="Copy">mp_restartgame</h4>
+                    <p>Restarts the gamemode.</p>
+                </div>
                 <div id="mp_disable_shooting">
                     <h4 title="Copy">mp_disable_shooting - (0/1) &lt;value&gt;</h4>
                     <p>Disables Shooting.</p>
+                </div>
+                <div id="mp_pause_time">
+                    <h4 title="Copy">mp_pause_time - (true/false) &lt;toggle&gt;</h4>
+                    <p>Pauses the game timer.</p>
+                </div>
+                <div id="mp_set_round_time">
+                    <h4 title="Copy">mp_set_round_time - &lt;value&gt;</h4>
+                    <p>Sets the round time to a specific value. This also resets the round timer.</p>
                 </div>
             </div>
 
             <div>
                 <h3 id="crosshair_cmds">Crosshair</h3>
                 <div id="crosshair_alpha">
-                    <h4 title="Copy">crosshair_alpha - &lt;value&gt;</h4>
+                    <h4 title="Copy">crosshair_alpha - (0-1) &lt;value&gt;</h4>
                     <p>Sets the transparency of the threads on your crosshair.</p>
                 </div>
                 <div id="crosshair_color">
@@ -294,7 +304,7 @@
                     <p>Sets the size of the threads on your crosshair.</p>
                 </div>
                 <div id="crosshair_t">
-                    <h4 title="Copy">crosshair_t - (0-1) &lt;value&gt;</h4>
+                    <h4 title="Copy">crosshair_t - (0/1) &lt;value&gt;</h4>
                     <p>Disables the topmost thread on your crosshair.</p>
                 </div>
                 <div id="crosshair_thickness">
@@ -302,7 +312,7 @@
                     <p>Sets the thickness of the threads on your crosshair.</p>
                 </div>
                 <div id="crosshair_dot">
-                    <h4 title="Copy">crosshair_dot - (0-1) &lt;value&gt;</h4>
+                    <h4 title="Copy">crosshair_dot - (0/1) &lt;value&gt;</h4>
                     <p>Sets whether your crosshair has a dot or not.</p>
                 </div>
                 <div id="crosshair_dot_alpha">
@@ -314,7 +324,7 @@
                     <p>Sets the size of the dot on your crosshair.</p>
                 </div>
                 <div id="crosshair_outline">
-                    <h4 title="Copy">crosshair_outline - (0-1) &lt;value&gt;</h4>
+                    <h4 title="Copy">crosshair_outline - (0/1) &lt;value&gt;</h4>
                     <p>Sets whether your crosshair has outlines or not.</p>
                 </div>
                 <div id="crosshair_outline_alpha">
@@ -369,11 +379,11 @@
                     <p>Show in depth information about the client and the server.</p>
                 </div>
                 <div id="kill">
-                    <h4 title="Copy">kill*</h4>
+                    <h4 title="Copy">kill *</h4>
                     <p>Die. You die. That's it.</p>
                 </div>
                 <div id="explode">
-                    <h4 title="Copy">explode*</h4>
+                    <h4 title="Copy">explode *</h4>
                     <p>Kaboom. You explode.</p>
                 </div>
                 <div id="impulse101">
