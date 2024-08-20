@@ -177,12 +177,16 @@ footer input[type="radio"]{
 
 footer input[type="radio"]#contrast{outline: 3px #ffffff solid; mix-blend-mode: difference;}
 footer input[type="radio"]#contrast:checked{background-color: #fff;}
+footer input[type="radio"]#contrast:focus, footer input[type="radio"]#contrast:hover{background-color: #ffffff50;}
 
 footer input[type="radio"]#default{outline: 3px #3b454b solid;}
 footer input[type="radio"]#default:checked{background-color: #3b454b;}
+footer input[type="radio"]#default:focus, footer input[type="radio"]#default:hover{background-color: #3b454b50;}
 
 footer input[type="radio"]#light{outline: 3px #fff  solid;}
 footer input[type="radio"]#light:checked{background-color: #fff;}
+footer input[type="radio"]#light:focus, footer input[type="radio"]#light:hover{background-color: #ffffff50;}
+
 
 footer fieldset{border: none;}
 

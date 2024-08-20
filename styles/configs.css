@@ -103,15 +103,32 @@ gu-config-card > textarea{
 }
 
 #reroll-btn{
-    height: 80px;
+    height: calc(80px + var(--card-bevel));
     width: 80px;
     border: none;
     border-radius: 0;
     background-color: var(--secondaryColor);
     background-image: url(../img/icons/dice.svg);
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center calc(var(--card-bevel)/2);
     background-size: 80%;
+    position: relative;
+    /* clip-path: polygon(10px 0px, 100% 0, 100% 100%, 10px 100%, 0px 70px, 0px 10px); */
+    transition: clip-path 500ms ease-in-out, background 200ms ease-in-out;
+    clip-path: polygon(var(--card-bevel) 0%, 100% 0, 100% 100%, calc(100% - var(--card-bevel)) calc(100% - var(--card-bevel)), var(--card-bevel) calc(100% - var(--card-bevel)), 0 calc(100% - var(--card-bevel) * 2), 0% var(--card-bevel));
+}
+
+#reroll-btn:hover{
+    clip-path: polygon(var(--image-bevel) 0%, 100% 0, 100% 100%, calc(100% - var(--card-bevel)) calc(100% - var(--card-bevel)), var(--image-bevel) calc(100% - var(--card-bevel)), 0 calc(100% - var(--image-bevel) * 4), 0% var(--image-bevel));
+    background-size: 90%;
+    background-position: center calc(var(--card-bevel)/4);
+}
+
+#reroll-btn:active{
+    background-size: 70%;
+    background-position: center calc(var(--card-bevel)/1.5);
+    background-color: var(--secondaryColorDark);
+
 }
 
 .modifiers{
@@ -120,4 +137,32 @@ gu-config-card > textarea{
     display: flex;
     flex-direction: column;
     text-align: center;
+    clip-path: polygon(0 0, calc(100% - var(--card-bevel)) 0%, 100% var(--card-bevel), 100% calc(100% - var(--card-bevel)), calc(100% - var(--card-bevel)) 100%, var(--card-bevel) 100%, 0% calc(100% - var(--card-bevel)));
+}
+
+.modifiers label{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+}
+
+.modifiers input{
+    appearance: none;
+    border: 2px solid var(--textColor);
+    width: 20px;
+    height: 20px;
+    margin: 0 auto 3px;
+    position: relative;
+    transform: rotate(45deg);
+}
+
+.modifiers input:checked::after{
+    content: "";
+    position: absolute;
+    width: calc(100% - 2px);
+    left: 1px;
+    height: calc(100% - 2px);
+    top: 1px;
+    background-color: var(--textColor);
 }

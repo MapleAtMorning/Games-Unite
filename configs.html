@@ -54,37 +54,52 @@
     <gu-cookies></gu-cookies>
     <main>
         <div class="card-holder">
+            <!-- TODO: TAKE NEW PHOTO FOR DEFAULT USING AK -->
             <gu-config-card cfgtitle="Default" author="Games Unite" config="crosshair_alpha 0.15; crosshair_gap 6; crosshair_size 10; crosshair_thickness 2; crosshair_color 255 244 222; crosshair_t 0; crosshair_recoil_scale 1; crosshair_outline 1; crosshair_outline_thickness 1; crosshair_outline_color 0 0 0;  crosshair_outline_alpha 0.75; crosshair_dot 0; crosshair_dot_alpha 0; crosshair_dot_size 2; viewmodel_arms 1; viewmodel_offset 0 0 0; viewmodel_flip 0; default_fov 85; camera_aspect_ratio 1;" src="img/screenshots/configs/Default.png"> </gu-config-card>
             <gu-config-card cfgtitle="The Bum" author="Underscore" config="viewmodel_offset 0.08 -0.70 0.4; default_fov 90; camera_aspect_ratio 0.5; crosshair_t 1; crosshair_size 8; crosshair_dot 1; crosshair_color 255 227 36" src="img/screenshots/configs/The Bum.png"> </gu-config-card>
             <gu-config-card cfgtitle="The Gay" author="Ryan" config="crosshair_gap 3; crosshair_color 0 255 0; crosshair_alpha 0; crosshair_t 1; crosshair_size 8; crosshair_gap 3; viewmodel_offset 0 -0.25 0; default_fov 105" src="img/screenshots/configs/The Gay.png"> </gu-config-card>
             <gu-config-card cfgtitle="Small Crosshair" author="Kiera" config="crosshair_gap 2; crosshair_recoil_scale 0; crosshair_outline_alpha 0; crosshair_thickness 2; crosshair_alpha 0.1; crosshair_size 7" src="img/screenshots/configs/Small Crosshair.png"> </gu-config-card>
             <gu-config-card cfgtitle="what" author="Mak" config="viewmodel_arms 0; viewmodel_offset -2 0 10; default_fov 70" src="img/screenshots/configs/what.png"> </gu-config-card>
             <gu-config-card cfgtitle="Dogged" author="Slavic Doggo" config="default_fov 120; crosshair_gap 1; crosshair_size 1; viewmodel_arms 0; viewmodel_offset -.3 -.7 -1" src="img/screenshots/configs/Dogged.png"> </gu-config-card>
+            <gu-config-card cfgtitle="Casual Dot" author="Ruby" config="crosshair_outline_alpha 1; crosshair_gap -2; crosshair_size 2; crosshair_recoil_scale 0; default_fov 105; net_graph 0; viewmodel_arms 0; viewmodel_offset -1 -1 2" src="TODO"> </gu-config-card>
             <gu-config-card cfgtitle="Sk1tlxs Centered" author="sk1tlxs" config="viewmodel_offset 0.2 -2 1; crosshair_gap -1; crosshair_size 2; crosshair_recoil_scale 0;" src="img/screenshots/configs/Sk1tlxs Centered.png"> </gu-config-card>
             <gu-config-card cfgtitle="Sk1tlxs Tiny" author="sk1tlxs" config="crosshair_recoil_scale 0; crosshair_outline_alpha 0; viewmodel_offset -1.5 -1.5 0; crosshair_color 204 0 102; crosshair_size 3; crosshair_gap -3; default_fov 85; net_graph 0; viewmodel_arms 0" src="img/screenshots/configs/Sk1tlxs Tiny.png"> </gu-config-card>
             <gu-config-card cfgtitle="Sk1tlxs Tinier" author="sk1tlxs" config="crosshair_color 250 150 20; viewmodel_offset -2 -4 3; net_graph 0; crosshair_recoil_scale 0; crosshair_thickness 3; crosshair_size 2; crosshair_gap -2" src="img/screenshots/configs/Sk1tlxs Tinier.png"> </gu-config-card>
             <!-- TODO: When hovering on an image, get a zoomed in version to be able to see the crosshair. Clicking on an image puts it in fullscreen. -->
         </div>
         <div class="random-holder">
-            <gu-config-card id="random1" cfgtitle="Slop" author="MapleAtMorning" config="" src="img/GULogo.webp"></gu-config-card>
-            <gu-config-card id="random2" cfgtitle="Slop: The Sequel" author="MapleAtMorning" config="" src="img/GULogo.webp"></gu-config-card>
-        </div>
-        <div class="reroll-customizer">
-            <button id="reroll-btn" title="Reroll"></button>    
-            <div class="modifiers">
-                <input type="checkbox" checked id="crosshair-mod">
-                <label for="crosshair-mod">Crosshair</label>
-                <input type="checkbox" checked id="crosshair-outline-mod">
-                <label for="crosshair-outline-mod">Crosshair Outline</label>
-                <input type="checkbox" checked id="crosshair-dot-mod">
-                <label for="crosshair-dot-mod">Crosshair Dot</label>
-                <input type="checkbox" checked id="viewmodel-mod">
-                <label for="viewmodel-mod">Viewmodel</label>
-                <input type="checkbox" checked id="fov-mod">
-                <label for="fov-mod">FOV</label>
-                <input type="checkbox" checked id="aspect-ratio-mod">
-                <label for="aspect-ratio-mod">Aspect Ratio</label>
+            <gu-config-card id="random1" cfgtitle="Slop" author="MapleAtMorning" config=""
+                src="img/GULogo.webp"></gu-config-card>
+            <div class="reroll-customizer">
+                <button id="reroll-btn" title="Reroll"></button>
+                <div class="modifiers">
+                    <label for="crosshair-mod">
+                        <input type="checkbox" checked id="crosshair-mod">
+                        Crosshair
+                    </label>
+                    <label for="crosshair-outline-mod">
+                        <input type="checkbox" checked id="crosshair-outline-mod">
+                        Crosshair Outline
+                    </label>
+                    <label for="crosshair-dot-mod">
+                        <input type="checkbox" checked id="crosshair-dot-mod">
+                        Crosshair Dot
+                    </label>
+                    <label for="viewmodel-mod">
+                        <input type="checkbox" checked id="viewmodel-mod">
+                        Viewmodel
+                    </label>
+                    <label for="fov-mod">
+                        <input type="checkbox" checked id="fov-mod">
+                        FOV
+                    </label>
+                    <label for="aspect-ratio-mod">
+                        <input type="checkbox" checked id="aspect-ratio-mod">
+                        Aspect Ratio
+                    </label>
+                </div>
             </div>
+        </div>
         </div>
         <p class="text-muted">
             Config missing? Make a <a class="text-muted" href="https://github.com/MapleAtMorning/Games-Unite/pulls" target="_blank">pull request</a>on the GitHub!

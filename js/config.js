@@ -2,7 +2,6 @@
 // ===============================================================================================================================
 
 const random1 = document.getElementById("random1")
-const random2 = document.getElementById("random2")
 const rerollBtn = document.getElementById("reroll-btn")
 
 const crosshairMod = document.getElementById("crosshair-mod")
@@ -42,12 +41,7 @@ const viewmodelList = [
 const fov = {command:"default_fov", value:0, type:"range", min:45, max:120}
 const aspect_ratio = {command:"camera_aspect_ratio", value:0, type:"range", min:0, max:1}
 
-async function makeBothConfigs(){
-    await makeRandomConfig(1)
-    makeRandomConfig(2)
-}
-
-async function makeRandomConfig(element){
+async function makeRandomConfig(){
     // CROSSHAIR
     let crosshairPromise = new Promise((resolve, reject) => {
         if (crosshairMod.checked){makeRandomCrosshair()} 
@@ -81,14 +75,8 @@ async function makeRandomConfig(element){
 
     // I thought this promise would fix something but it didn't. I'm keeping this in just in case. Welp.
     await Promise.all([crosshairPromise, crosshairOutlinePromise, crosshairDotPromise, viewmodelPromise, fovPromise, aspectRatioPromise])
-    if (element == 1){
-        for (const child of random1.children) {
-            if (child.tagName == "TEXTAREA"){child.innerHTML = currentCommands}
-        }
-    }else{
-        for (const child of random2.children) {
-            if (child.tagName == "TEXTAREA"){child.innerHTML = currentCommands}
-        }
+    for (const child of random1.children) {
+        if (child.tagName == "TEXTAREA"){child.innerHTML = currentCommands}
     }
     currentCommands = "";
 
@@ -253,6 +241,6 @@ function getRandomNumber(max){
     return Math.floor(Math.random()*max)+1
 }
 
-rerollBtn.onclick = function(){makeBothConfigs()}
+rerollBtn.onclick = function(){makeRandomConfig()}
 
-makeBothConfigs()
+makeRandomConfig()
