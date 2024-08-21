@@ -96,7 +96,7 @@ class configcard extends HTMLElement{
     connectedCallback(){
         this.innerHTML = `
         <div class="image-wrapper">
-            <img src="${this.getAttribute("src")}" alt="">
+            <img class="gu-config-img" src="${this.getAttribute("src")}" alt="">
         </div>
         <h2>${this.getAttribute("cfgtitle")}</h2>
         <cite>${this.getAttribute("author")}</cite><br>

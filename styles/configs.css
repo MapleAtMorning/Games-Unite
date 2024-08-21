@@ -11,6 +11,18 @@ main > p:last-of-type{
     text-align: center;
 }
 
+main h1{
+    font-size: clamp(2.5rem, 8vw, 3.5rem);
+    margin: 30px 0 0;
+    text-align: center;
+}
+main > h2{
+    font-size: clamp(1rem, 4vw, 1.5rem);
+    margin: 0 0 30px;
+    font-weight: 100;
+    text-align: center;
+}
+
 a.text-muted:hover{
     color: var(--secondaryColor) !important;
 }
@@ -20,7 +32,7 @@ a.text-muted:hover{
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     grid-template-rows: 1fr;
     gap: 20px;
-    padding: 50px;
+    padding: 10px 50px 50px;
 }
 
 .random-holder {
@@ -32,7 +44,9 @@ a.text-muted:hover{
     padding: 50px;
 }
 
-/* Cards ==================================== */
+/* Cards
+----------------------------------------
+*/
 
 
 gu-config-card{
@@ -52,14 +66,25 @@ gu-config-card .image-wrapper{
     margin: auto;
     display: flex;
     justify-content: center;
+    transition: filter 500ms ease-in-out;
 }
 
 gu-config-card img{
     max-width: 100%;    
     max-height: 100%;
+    position: relative;
     margin: auto;
+    cursor: pointer;
+    transition: transform 350ms ease-in-out;
 	clip-path: polygon(var(--image-bevel) 0%, calc(100% - var(--image-bevel)) 0%, 100% var(--image-bevel), 100% calc(100% - var(--image-bevel)), calc(100% - var(--image-bevel)) 100%, var(--image-bevel) 100%, 0% calc(100% - var(--image-bevel)), 0% var(--image-bevel));
+}
 
+gu-config-card img:hover{
+    transform: scale(1.1);
+}
+
+gu-config-card .image-wrapper:has(img:hover){
+    filter: drop-shadow(0 0 12px var(--primaryLight));
 }
 
 gu-config-card h2{
@@ -67,7 +92,8 @@ gu-config-card h2{
 }
 
 gu-config-card > textarea{
-    width: 100%;
+    width: calc(100% - 10px);
+    height: 25%; /* Kinda sketch. But it works!*/
     margin-top: 1em;
     min-height: 80px;
     text-align: center;
@@ -76,7 +102,6 @@ gu-config-card > textarea{
     border: none;
     color: var(--textColor);
 	clip-path: polygon(var(--image-bevel) 0%, calc(100% - var(--image-bevel)) 0%, 100% var(--image-bevel), 100% calc(100% - var(--image-bevel)), calc(100% - var(--image-bevel)) 100%, var(--image-bevel) 100%, 0% calc(100% - var(--image-bevel)), 0% var(--image-bevel));
-    background-color: var();
 }
 
 @media only screen and (width < 920px){
@@ -87,16 +112,18 @@ gu-config-card > textarea{
 }
 @media only screen and (width < 600px){
     main, gu-config-card{
-        padding: 25px 0;
+        padding: 25px 5px;
     }
 
     gu-config-card{
-        width: 100vw;
+        width: calc(100% - 10px);
     }
 
 }
 
-/* Reroll */
+/* Reroll 
+----------------------------------------
+*/
 .reroll-customizer{
     display: flex;
     justify-content: center;
@@ -165,4 +192,61 @@ gu-config-card > textarea{
     height: calc(100% - 2px);
     top: 1px;
     background-color: var(--textColor);
+}
+
+.modifiers input:hover::after, .modifiers input:focus::after{
+    content: "";
+    position: absolute;
+    width: calc(100% - 2px);
+    left: 1px;
+    height: calc(100% - 2px);
+    top: 1px;
+    background-color: var(--textColor);
+    opacity: 50%;
+}
+
+
+/* Fullscreen
+----------------------------------------
+*/
+
+#fullscreen-img-holder{
+    position: fixed;
+    background-color: #181d1fc1;
+    background-repeat: repeat;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 105;
+    backdrop-filter: blur(3px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#fullscreen-img-holder.not-fullscreen{
+    display: none;
+}
+
+#fullscreen-img{
+    max-height: 100%;
+    max-width: 100%;
+    margin: auto;
+}
+
+#exit-fullscreen-btn{
+    position: absolute;
+    top: 35px;
+    right: 35px;
+    height: 80px;
+    width: 80px;
+    cursor: pointer;
+    border: none;
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: var(--secondaryColorDark);
+    background-image: url("../img/icons/cross.svg");
+	clip-path: polygon(var(--image-bevel) 0%, calc(100% - var(--image-bevel)) 0%, 100% var(--image-bevel), 100% calc(100% - var(--image-bevel)), calc(100% - var(--image-bevel)) 100%, var(--image-bevel) 100%, 0% calc(100% - var(--image-bevel)), 0% var(--image-bevel));
 }

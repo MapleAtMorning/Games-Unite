@@ -192,7 +192,6 @@ function makeRandomViewmodel(){
     });
 }
 
-
 function rangeType(obj){
     obj.value = ((Math.random() * (obj.max - obj.min)) + obj.min)
 
@@ -244,3 +243,29 @@ function getRandomNumber(max){
 rerollBtn.onclick = function(){makeRandomConfig()}
 
 makeRandomConfig()
+
+// Fullscreen Images
+// ===============================================================================================================================
+
+const configImgs = Array.prototype.slice.call(document.getElementsByClassName('gu-config-img'))
+
+const fullscreenImgHolder = document.getElementById("fullscreen-img-holder")
+const fullscreenImg = document.getElementById("fullscreen-img")
+const exitFullscreenBtn = document.getElementById("exit-fullscreen-btn")
+
+function openFullscreenImg(ImgToOpen){
+    fullscreenImg.src = ImgToOpen
+    fullscreenImgHolder.classList.remove("not-fullscreen")
+}
+
+function closeFullscreenImg(){
+    fullscreenImg.src = ""
+    fullscreenImgHolder.classList.add("not-fullscreen")
+}
+
+configImgs.forEach((element) => {
+    element.addEventListener('click', () => {
+        openFullscreenImg(element.src)
+    })
+})
+exitFullscreenBtn.onclick = function(){closeFullscreenImg()}
