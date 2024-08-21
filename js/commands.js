@@ -44,7 +44,7 @@ function scrollFunc (id) {
 commandArray.forEach((element) => {
   element.addEventListener('click', () => {
     vw = window.innerWidth
-    if (vw > 992) {
+    if (vw > 600) {
       const commandName = element.innerHTML.split(' ')
       copy(commandName[0])
 

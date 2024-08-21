@@ -9,6 +9,7 @@ class header extends HTMLElement{
                 <ul id="nav-item-holder">
                     <li><a id="page-index" href="/">Home</a></li>
                     <li><a id="page-commands" href="commands">Commands</a></li>
+                    <li><a id="page-configs" href="configs">Configs</a></li>
                     <li><a id="page-faq" href="faq">FAQ</a></li>
                 </ul>
             </nav>
@@ -16,10 +17,11 @@ class header extends HTMLElement{
         `
     }
 }
+
 class cookies extends HTMLElement{
     connectedCallback() {
         this.innerHTML = `
-        <aside id="cookies-modal" tabindex="-1" aria-labelledby="cookies-modal" aria-hidden="true">
+        <aside id="cookies-modal" tabindex="-1" aria-labelledby="cookies-modal" aria-hidden="true" style="display:none">
             <button id="cookies-button" type="button"></button>
             <img src="img/icons/checkmark.svg" alt="">
             <div>
@@ -67,9 +69,13 @@ class footer extends HTMLElement{
                     <ul>
                         <li><a href="/">Home</a></li>
                         <li>|</li>
-                        <li><a href="/commands.html">Commands</a></li>
+                        <li><a href="/commands">Commands</a></li>
                         <li>|</li>
-                        <li><a href="/faq.html">FAQ</a></li>
+                        <li><a href="/configs">Configs</a></li>
+                        <li>|</li>
+                        <li><a href="/commands">Commands</a></li>
+                        <li>|</li>
+                        <li><a href="/faq">FAQ</a></li>
                     </ul>
                     <ul>
                         <li><a href="https://www.roblox.com/games/2746687316/Games-Unite-Testing-Place">Play</a></li>
@@ -86,6 +92,20 @@ class footer extends HTMLElement{
     }
 }
 
+class configcard extends HTMLElement{
+    connectedCallback(){
+        this.innerHTML = `
+        <div class="image-wrapper">
+            <img class="gu-config-img" src="${this.getAttribute("src")}" alt="">
+        </div>
+        <h2>${this.getAttribute("cfgtitle")}</h2>
+        <cite>${this.getAttribute("author")}</cite><br>
+        <textarea readonly>${this.getAttribute("config")}</textarea>
+        `
+    }
+}
+
 customElements.define('gu-header', header)
 customElements.define('gu-footer', footer)
 customElements.define('gu-cookies', cookies)
+customElements.define('gu-config-card', configcard)

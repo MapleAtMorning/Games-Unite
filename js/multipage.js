@@ -18,6 +18,8 @@ acceptButton.addEventListener("click", () => {
 
 if (ls.getItem("GUCookiesAccepted") !== null){
     cookiesAlert.remove()
+}else{
+    cookiesAlert.style.display = "block"
 }
 
 // Add active to header
