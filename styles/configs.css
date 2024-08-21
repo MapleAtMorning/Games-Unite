@@ -194,7 +194,7 @@ gu-config-card > textarea{
     background-color: var(--textColor);
 }
 
-.modifiers input:hover::after, .modifiers input:focus::after{
+.modifiers input:hover:not(:checked)::after, .modifiers input:focus-visible::after{
     content: "";
     position: absolute;
     width: calc(100% - 2px);
@@ -223,6 +223,7 @@ gu-config-card > textarea{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    cursor: pointer;
 }
 
 #fullscreen-img-holder.not-fullscreen{
@@ -230,9 +231,10 @@ gu-config-card > textarea{
 }
 
 #fullscreen-img{
-    max-height: 100%;
+    max-height: 90dvh;
     max-width: 100%;
-    margin: auto;
+    margin: 25px auto;
+    cursor: default;
 }
 
 #exit-fullscreen-btn{

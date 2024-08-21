@@ -269,3 +269,7 @@ configImgs.forEach((element) => {
     })
 })
 exitFullscreenBtn.onclick = function(){closeFullscreenImg()}
+fullscreenImgHolder.addEventListener("click", (event) => {
+    if (!event.target.closest("#fullscreen-img")){closeFullscreenImg()}
+    // Weird workaround so that clicking on the image doesn't back out.
+})
